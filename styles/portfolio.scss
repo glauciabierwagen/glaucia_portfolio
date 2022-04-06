@@ -1,0 +1,181 @@
+
+.portfolio-b h1 p {
+font-size: 24px;
+}
+.portfolio-b {
+  background-size: contain;
+}
+.portfolio-b .box-container {
+  display: flex;
+  justify-content: center;
+    flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.portfolio-b .box-container .box {
+  height: 70rem;
+  width: 35rem;
+  /*border-radius: 2.5rem 2.5rem 5em;*/
+  margin: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+}  
+.portfolio-b .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.portfolio-b .box-container .box:hover img {
+  transform: scale(1.2);
+}  
+.hover__container {
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+  border: 2px solid #dddddd;
+  border-radius: 50%;
+  align-items: center;
+}
+.hover__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #5f6d7ebb;
+  opacity: 0;
+}
+.hover__text a {
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+}
+.hover__text a:hover {
+  transform: scale(1.1);
+}
+.hover__container:hover .hover__text {
+  transition: 0.4s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+.projects__item-img {
+   width: 100%;
+  height: 100%;
+}
+.projects__item-text {
+  font-family: "Nunito",sans-serif;
+  color: rgb(116, 113, 113);
+  font-size: 18px;
+  line-height: 2.1;
+  padding-bottom: 5px;
+  align-items: center;
+}
+  
+.projects_info {
+  display:flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+
+.show-btn {
+  position: absolute;
+  margin: 10px 5px 3px 5px;
+  display: inline-block;
+  padding: 3px 3px 3px 3px;
+  width: auto;
+  font-size: 59px;
+  font-family: "Nunito",sans-serif;
+  color: #fff;
+  border: 0;
+  box-shadow: 2px 2px 5px #000;
+  height: 3rem;
+  border-radius: 5rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    color: white;
+    background-color: #1abc9c;
+  }
+  &:active {
+    background-color: #1abc9c;
+    color: white; 
+  }
+  &:focus {
+    background-color: #1abc9c;;
+    color: white; 
+  }
+}
+
+.btn btn-space {
+  background-color: #1abc9c;
+}
+.space_button {
+  padding-bottom: 3px;
+}
+
+.message /*.bhromaon-show-text, .fluffy-show-text, .genesis-show-text, .monticello-show-text, .spotify-show-text*/ {
+  display: inline-block;
+  font-size: 10px;
+  font-family: "Nunito",sans-serif;
+  color: #777;
+  line-height: 1.4;
+  border:1px solid #777;
+      /*padding-left: 110px;*/
+  
+      /*position:absolute;
+      top: -100%; /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+      /*left:0;
+      right:0;
+      margin: auto;
+      width:100px;
+      height:20px;
+        border:1px solid red;*/
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+  
+.dropdown {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  color: white;
+  /*padding: 14px 16px;*/
+  background-color: inherit;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-family: inherit;
+  margin: 0;
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index:1;
+}
+  
+.dropdown:hover {
+  background-color: #ddd;
+  color: white;
+}
+  
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
