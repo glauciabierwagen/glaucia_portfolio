@@ -1,0 +1,477 @@
+body {
+    margin: 0;
+    background-color:  #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.page_total {
+    background-color: #ffffff;
+    min-height: 3354px;
+    max-width: 1126px;
+    width: 100%;
+    height: 100%;
+    height: 100vh; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head {
+    position: absolute;
+    top:0;
+    background-color:  #ffffff;
+    max-height: 78px;
+    max-width: 1111px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/* Settings of logo*/
+
+.logo {
+    width: 185.34px;
+    height: 31.97px;
+    width: 100%
+}
+
+.top {
+    position: sticky; 
+    top: 22px;
+    left: 143.92px;
+}
+
+.end {
+    position: relative;
+    top: 92px;
+    left: 13px;
+}
+
+/* Settings Container*/
+
+.container {
+    margin:50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container_end {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.first {  
+    max-width: 1126px; 
+    max-height: 496px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.second {
+    position: relative;
+    bottom: 54px;
+    max-height: 108px;
+    max-width: 1126px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.third {
+    position: relative;
+    max-width: 1095px; 
+    max-height: 204px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fourth {
+    max-height: 98px;
+    max-width: 1110px; 
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.fifth { 
+    max-width: 1121x; 
+    max-height: 575px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.sixth {
+    position: relative;
+    top:104px;
+    max-width: 1121px; 
+    max-height: 521px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.seventh {
+    position: relative;
+    top:104px;
+    max-width: 1110px; 
+     max-height: 609px;
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+ }
+
+/* Settings Navigation*/
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center; 
+}
+.nav>li {
+    margin-left: 38px;
+    position: relative;
+    right: 39px;
+}
+
+.nav_design {
+    text-decoration-line:none;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 35px;
+    font-size: 14px;
+    color:#2F281E;
+}
+
+.nav_end {
+    list-style-type: none;
+    position: relative;
+    top: 167px;
+    margin: 5px;
+}
+
+/* Settings button*/
+
+.btn_top_design1 {
+    max-width: 234px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn_top_design2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn_signin {   
+    position: relative;
+    right: 10px;
+    padding: 14px;
+    max-width: 110px;
+    max-height: 46px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1;
+    border-color: #BCD0E5;
+    color: #173A56;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.btn_signup {
+    position: relative; 
+    padding: 14px;
+    max-width: 102px;
+    max-height: 46px;
+    width: 100%;
+    background-color: #FF9900;
+    border: none;
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn_get_started {
+    position: relative; 
+    max-width: 458px;
+    max-height: 95px;
+    width: 100%;
+}
+
+.btn_link_container {
+    position: relative;
+    top: 25px;
+    right: 25px;
+    max-width: 366px;
+    min-height: 53px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn_page {
+    max-width: 175px;
+    max-height: 53px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF9900;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.btn_signup_now {
+    padding: 8px;
+    max-width: 131px;
+    max-height: 39px;
+    width: 100%;
+    background-color: #FF9900;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Settings Titles and Text*/
+
+.main_title {
+    max-width: 518px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2F281E;
+}
+
+.over_titles {
+    position: relative;
+    top: 30px;  
+}
+
+.text_sub {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #544837;
+    padding: 2px;
+}
+
+.text_list {
+    position: relative;
+    left: 15px;
+    bottom: 18px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2F281E;
+}
+
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    color: #2F281E;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: #2F281E;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 2px;
+}
+
+.professionals {
+    max-width: 486px;
+    max-height: 531px;
+}
+
+.managers {
+    max-width: 496px;
+    max-height: 437px;
+    width: 100%;
+}
+
+.marketers {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 486px;
+    width: 100%;
+}
+
+/* Settings Images*/
+
+.first_image {
+    max-height: 496px;
+    max-width: 605px;
+    width: 100%;
+    display: inline-block;
+}
+
+.second_image {
+    max-width: 520px;
+    max-height: 574px;
+    transform: rotate(30deg); /* It was used to experiment the effect*/
+}
+
+.third_image {
+    max-width: 535px;
+    max-height: 521px;
+    transform:rotate(15deg) /* It was used to experiment the effect*/
+}
+
+.fourth_image {
+    max-width: 542px;
+    max-height: 609px;
+}
+
+.icon {
+    max-width: 50px;
+    max-height: 50px;
+    width: 100%;
+}
+
+/* Settings Miscelaneous*/
+
+.link_design {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF9900;
+}
+
+.link_design_text {
+    text-decoration-line: underline;
+}
+
+.lines_div {
+    max-width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.box {
+    max-width: 260px;
+    max-height: 182px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:  2px;
+    padding-left: 6px;
+    
+}
+
+.check_list {
+    max-width: 430px;
+    max-height: 62px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.line {
+    margin-top: 156px;
+    width: 1109px;
+    height: 1px;
+    background: #BCD0E5;
+}
+
+footer {
+    max-height: 308px;
+    min-width: 1109px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block_signup {
+    min-height: 301px;
+    min-width: 325px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+
+.email_image {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
