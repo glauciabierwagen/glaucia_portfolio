@@ -1,0 +1,70 @@
+@use 'fonts';
+@use 'colors';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 700px;
+}
+.main__container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    max-height: 700px;
+}
+.main__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    max-height: 500px;
+    font-family: $main-font; 
+    margin-top: 35px;
+    margin-left: 40px;
+}
+.main__text-box-txt {
+    display: flex;
+    flex-direction: column;
+}
+.main span {
+    @include span;
+}
+.small-title {
+    @include smallTitle;
+}
+.main__title {
+    font-size: 50px;
+}
+.main__text-box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mybutton;
+    font-size: 20px;
+
+}
+.main__text-box button:hover {
+    @include buttonHoverPurple;
+}
+.main__image {
+    display: flex;
+    align-items: flex-start;
+    width: 80%; 
+    margin-left: 40px;
+}
+.main__image img {
+    max-width: 550px;
+    max-height: 550px;
+}
+
+@media  screen and (max-width: 600px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+    } 
+}
