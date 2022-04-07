@@ -1,0 +1,26 @@
+footer {
+    min-height: 271px;
+    max-width: 100%;
+    background: #232323;;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo_container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.icons {
+    display:flex;
+    align-content: center;
+    flex-direction: row;
+}
+
+main {
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 320px;
+}
