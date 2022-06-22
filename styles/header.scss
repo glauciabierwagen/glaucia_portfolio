@@ -1,19 +1,17 @@
 
-.btn {
+/*.btn {
   padding: 0.7rem 3rem;
   background: #333;
   color: #fff;
   cursor: pointer;
   margin-top: 1rem;
-  font-size: 3rem;
+  font-size: 20px;
   border-radius: 5rem;
-  text-transform: capitalize;
-}
+}*/
   
 .btn i {
   padding: 0 0.5rem;
-  font-size: 1.8rem;
-  }
+}
   
 .btn:hover {
   background: var(--yellow);
@@ -27,7 +25,6 @@
   border-bottom: 0.1rem solid #fff4;
   color: #fff;
   padding-top: 1.5em;
-  text-transform: capitalize;
 }
   
  .heading span {
@@ -99,7 +96,7 @@ header .navbar ul li a:hover {
   padding: 0.7rem 3rem;
   cursor: pointer;
   margin-top: 1rem;
-  font-size: 5rem;
+  font-size: 20px;
   border-radius: 5rem;
 }
 
