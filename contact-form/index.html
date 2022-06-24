@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="banner">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details to contact me!</p>
+        </div>
+        <div class="green-bg">
+          <button type="button">Contact</button>
+        </div>
+        <form action="https://formsubmit.co/galsilv@alumni.usp.br" method="post" class="contact-form">
+          <h1>Leave your message</h1>
+          <div class="social-media">
+            <a href="https://www.facebook.com/"  style="text-decoration:none" target="_blank"> 
+              <i class="fab fa-facebook-f"></i> 
+            </a>
+            <a href="https://github.com/glauciabierwagen" style="text-decoration:none" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gl%C3%A1ucia-bierwagen-09860420/" style="text-decoration:none" target="_blank"> 
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <p>or use your email for registration</p>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="your-name"
+              name="name"
+              placeholder="Name"
+              class="box"
+              required
+             />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input 
+              type="email"
+              id="email"
+              name="emailaddress"
+              placeholder="Email"
+              class="box"
+              required
+            />
+          </div>
+          <div class="input-group">
+          <i class="fa-solid fa-align-center"></i>
+          <input
+            type="text"
+            id="your-subject"
+            name="subject"
+            placeholder="Subject"
+            class="box"
+          />
+          </div>
+          <div class="input-group">
+          <i class="fa-solid fa-comment"></i>
+            <input
+              name="text"
+              id="message"
+              cols="30"
+              rows="10"
+              class="box"
+              placeholder="Leave your message"
+              required
+              />  
+           </div>
+          <button type="button" name="submit" value="SEND MESSAGE">Submit</button>
+          <div class="backpage">
+            <a href="../index.html" style="text-decoration:none" target="_blank"> 
+              <i class="fa-solid fa-rotate-left"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

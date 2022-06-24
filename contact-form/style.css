@@ -83,7 +83,7 @@ html {
   cursor: pointer;
 }
 
-.signup-form {
+.contact-form {
   width: 60rem;
   height: 100%;
   position: absolute;
@@ -97,11 +97,11 @@ html {
   transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.container.change .signup-form {
+.container.change .contact-form {
   left: 40rem;
 }
 
-.signup-form h1 {
+.contact-form h1 {
   font-size: 4rem;
   color: #3aaf9f;
 }
@@ -123,7 +123,22 @@ html {
   color: #555;
 }
 
-.signup-form p {
+.backpage i {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #777;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #555;
+  
+}
+
+.contact-form p {
   font-size: 1.8rem;
   color: #555;
   margin-bottom: 2rem;
@@ -151,7 +166,7 @@ html {
   color: #555;
 }
 
-.signup-form button {
+.contact-form button {
   width: 16rem;
   height: 5rem;
   background-color: #3aaf9f;
@@ -163,3 +178,4 @@ html {
   margin-top: 3rem;
   cursor: pointer;
 }
+
