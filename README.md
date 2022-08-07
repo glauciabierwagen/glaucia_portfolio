@@ -32,7 +32,7 @@
   <img src="https://github.com/glauciabierwagen/glaucia_portfolio/blob/main/images/readmeimage5.png" width="950"  heigth="850"/>
 </p>
 <p align="center">
-[Visit the site](https://glauciabierwagen.github.io/glaucia_portfolio/)
+  <a href="https://glauciabierwagen.github.io/glaucia_portfolio/ target"_blank>Visit the site</a>
 </p>
 
  
