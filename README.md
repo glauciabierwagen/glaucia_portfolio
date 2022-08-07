@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://github.com/glauciabierwagen/glaucia_portfolio/blob/main/images/readmeimage.png" width="950"  heigth="850"/>
 </p>
-<br>
+<h1></h1>
 
 <p align="center">
   <img src="https://github.com/glauciabierwagen/glaucia_portfolio/blob/main/images/readmeimage2.png" width="950"  heigth="850"/>
