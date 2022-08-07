@@ -31,5 +31,8 @@
 <p align="center">
   <img src="https://github.com/glauciabierwagen/glaucia_portfolio/blob/main/images/readmeimage5.png" width="950"  heigth="850"/>
 </p>
-          [Visit the site](https://glauciabierwagen.github.io/glaucia_portfolio/) 
+<p align="center">
+[Visit the site](https://glauciabierwagen.github.io/glaucia_portfolio/)
+</p>
+
  
