@@ -12,9 +12,21 @@ const colors = [
   "#e04e39",
 ];
 
-const techs = ["Literature", "React", "Vue", "Angular", "Node", "Sass", "Ember"];
+const techs = ["Literature", "Course Paper", "Vue", "Angular", "Node", "Sass", "Ember"];
+
+const modals = ["modal1", "modal2", "modal3", "modal4", "modal5", "modal6", "modal7"];
 
 let current = 1;
+
+let modalcurrent = 1;
+
+const modalStyle = () => {
+  heading.style.color = colors[modalcurrent - 1];
+  heading.textContent = techs[modalcurrent - 1];
+  btn.style.backgroundColor = colors[modalcurrent -1];
+  btn.firstElementChild.textContent = modals[modalcurrent - 1];
+};
+
 
 const textStyle = () => {
   heading.style.color = colors[current - 1];
@@ -37,6 +49,8 @@ let interval = setInterval(() => {
   });
   textStyle();
   current++;
+  modalStyle();
+  modalcurrent++;
 }, 5000);
 
 boxes.forEach((box) => {
@@ -47,10 +61,16 @@ boxes.forEach((box) => {
     box.classList.add("active");
 
     current = box.classList[1].split("-")[1] * 1;
+    modalcurrent = box.classList[1].split("-")[1] * 1;
 
     textStyle();
 
-    clearInterval(interval);
+    //clearInterval(interval);
+
+    //modalStyle();
+
+   clearInterval(interval);
+
   });
 });
 
