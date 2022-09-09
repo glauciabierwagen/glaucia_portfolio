@@ -277,8 +277,10 @@ html {
 }
 
 .modal-header h1{
-    font-weight: bold;
+    font-weight: normal;
     text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
 }
 
 .modal-header, .modal-body, .modal-footer{
