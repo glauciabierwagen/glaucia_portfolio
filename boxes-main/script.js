@@ -12,20 +12,20 @@ const colors = [
   "#e04e39",
 ];
 
-const techs = ["Literature", "Course Paper", "Vue", "Angular", "Node", "Sass", "Ember"];
+const techs = ["Literature", "Course Paper", "Thesis", "Text", "Text", "Text", "Text"];
 
-const modals = ["modal1", "modal2", "modal3", "modal4", "modal5", "modal6", "modal7"];
+//const modals = ["modal1", "modal2", "modal3", "modal4", "modal5", "modal6", "modal7"];
 
 let current = 1;
 
-let modalcurrent = 1;
+//let modalcurrent = 1;
 
-const modalStyle = () => {
-  heading.style.color = colors[modalcurrent - 1];
-  heading.textContent = techs[modalcurrent - 1];
-  btn.style.backgroundColor = colors[modalcurrent -1];
-  btn.firstElementChild.textContent = modals[modalcurrent - 1];
-};
+//const modalStyle = () => {
+// heading.style.color = colors[modalcurrent - 1];
+//  heading.textContent = techs[modalcurrent - 1];
+// btn.style.backgroundColor = colors[modalcurrent -1];
+//  btn.firstElementChild.textContent = modals[modalcurrent - 1];
+//};
 
 
 const textStyle = () => {
@@ -49,8 +49,8 @@ let interval = setInterval(() => {
   });
   textStyle();
   current++;
-  modalStyle();
-  modalcurrent++;
+  //modalStyle();
+  //modalcurrent++;
 }, 5000);
 
 boxes.forEach((box) => {
@@ -61,7 +61,7 @@ boxes.forEach((box) => {
     box.classList.add("active");
 
     current = box.classList[1].split("-")[1] * 1;
-    modalcurrent = box.classList[1].split("-")[1] * 1;
+    
 
     textStyle();
 
@@ -94,5 +94,18 @@ function closeModal(mn) {
   document.body.style.overflow = 'auto';
 }
 
-
-
+const text = ["Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper templ", "Testetteetetetete"]
+//function modalType {
+//  switch (techs) {
+//      case 'Literature':
+//     print('Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend. Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel')   
+//      break;
+  
+//   case 'Course Paper':
+//      alert( 'Okay we support these browsers too' );
+//   break;
+  
+//  default:
+//  alert( 'We hope that this page looks ok!' );
+// }
+//}
