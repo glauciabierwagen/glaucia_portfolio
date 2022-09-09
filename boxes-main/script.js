@@ -12,7 +12,7 @@ const colors = [
   "#e04e39",
 ];
 
-const techs = ["JS", "React", "Vue", "Angular", "Node", "Sass", "Ember"];
+const techs = ["Literature", "React", "Vue", "Angular", "Node", "Sass", "Ember"];
 
 let current = 1;
 
