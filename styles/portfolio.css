@@ -244,4 +244,24 @@
   display: block;
 }
 
+.social-media {
+  display: flex;
+}
+
+.social-media i {
+  width: 7rem;
+  height: 7rem;
+  margin-left: 8rem;
+  border: 0.1rem solid #777;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 2rem;
+  color: #555;
+}
+
+
 /*https://www.w3schools.com/css/css_dropdowns.asp*/

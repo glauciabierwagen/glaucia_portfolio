@@ -217,3 +217,22 @@ font-size: 24px;
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+.social-media {
+  display: flex;
+  left: 5rem;
+}
+
+.social-media i {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #777;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 2rem;
+  color: #555;
+}
+
