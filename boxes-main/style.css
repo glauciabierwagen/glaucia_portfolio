@@ -50,6 +50,7 @@ html {
   letter-spacing: 0.1rem;
   border: none;
   margin-top: 3.5rem;
+  margin-left: 30px;
   transition: background-color 0.3s;
   cursor: pointer;
   box-shadow: rgb(149, 148, 148) solid 2px;
@@ -261,7 +262,7 @@ html {
     width: 100vw;
     height: 100vh;
     display: none;
-}
+  }
 
 .modal-content {
     margin: 0 auto;
@@ -273,6 +274,7 @@ html {
     font-size: 20px;
     color:  rgb(116, 113, 113);
     line-height: 1.5;
+    border-radius: 4%;
     
 }
 
@@ -287,3 +289,19 @@ html {
     padding: 10px;
 }
 
+.modal-footer {
+  margin-left: 220px;
+}
+.button-space {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  left: 30px;
+}
+
+.img-fluid {
+  display: flex;
+  margin-left: 170px;
+  width: 300px;
+  margin-bottom: 20px;
+}

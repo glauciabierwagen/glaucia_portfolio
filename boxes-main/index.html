@@ -11,7 +11,10 @@
     <div class="container center">
       <div class="header center">
         <h2 class="heading"> The online code editor for <span>JS</span></h2>
-        <button class="btn"  onclick="openModal('dv-modal')"><span>JS</span></button> 
+        <div class="button-space"> 
+        <button class="btn"  onclick="openModal('dv-modal')"><span>JS</span></button>
+        <button class="btn"  onclick="openModal('dv-modal')"><span>JS</span></button>
+      </div>  
          
         
       </div>
@@ -80,26 +83,22 @@
       <div class="modal-header">
           <h1>Course Paper</h1>
       </div>
-
+      
       <div class="modal-body">
+        <div> 
+          <img class="img-fluid" src="researching.jpg" alt="Researching" />
           <p>Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
               Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
               nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
               natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
               faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
               amet scelerisque augue. </p>
-          <p>
-              Integer in augue felis. Quisque bibendum luctus sapien in egestas. Proin ullamcorper tempus eleifend.
-              Sed at sollicitudin libero. Maecenas sodales condimentum sapien vel mattis. Nam lacinia risus vel
-              nisl venenatis rhoncus. Duis sit amet massa maximus, mollis mi ac, pellentesque purus. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dictum neque
-              faucibus fringilla pellentesque. Phasellus malesuada aliquet augue. Mauris at eleifend risus, sit
-              amet scelerisque augue</p>            
+                   
       </div>
       <div class="modal-footer">
-          <button class="btn"  onclick="closeModal('dv-modal')">Close</button>
+          <button class="btn" onclick="closeModal('dv-modal')">Close</button>
       </div>
-  </div>
+  </div>  
 </div>   
     <script src="script.js"></script>
   </body>
