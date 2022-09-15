@@ -33,7 +33,7 @@ const textStyle = () => {
   heading.textContent = techs[current - 1];
   btn.style.backgroundColor = colors[current -1];
   btn.firstElementChild.textContent = techs[current - 1];
-};
+ };
 
 
 
