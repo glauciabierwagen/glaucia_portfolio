@@ -240,7 +240,7 @@ html {
 
 .content {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 950px;
     background-color: #eee;
     padding: 10px;
 }
@@ -267,7 +267,7 @@ html {
 .modal-content {
     margin: 0 auto;
     margin-top: 3%;
-    max-width: 700px;
+    max-width: 750px;
     background-color: #eee;
     padding: 0;
     box-shadow: 0 0 2px #fff;
@@ -278,6 +278,13 @@ html {
     
 }
 
+.modal-content p {
+  font-weight: normal;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+}
+
 .modal-header h1{
     font-weight: normal;
     text-align: center;
@@ -285,6 +292,13 @@ html {
     font-size: 35px;
 }
 
+.modal-content h3{
+  font-weight: normal;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  padding: 5px;
+}
 .modal-header, .modal-body, .modal-footer{
     padding: 10px;
 }
@@ -292,16 +306,26 @@ html {
 .modal-footer {
   margin-left: 220px;
 }
+
 .button-space {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  left: 30px;
+  left: 40px;
 }
 
 .img-fluid {
   display: flex;
-  margin-left: 170px;
-  width: 300px;
-  margin-bottom: 20px;
+  margin-left: 270px;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.modal-content li {
+  list-style-type: circle;
+  font-weight: normal;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  padding-bottom: 12px;
 }
