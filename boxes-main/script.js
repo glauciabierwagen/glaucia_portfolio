@@ -12,7 +12,7 @@ const colors = [
   "#e04e39",
 ];
 
-const techs = ["Literature", "Course Paper", "Thesis", "Text", "Text", "Text", "Text"];
+const techs = ["Literature", "Course Paper", "Thesis", "Previous studies", "Seminars", "Workshops", "Readings"];
 
 //const modals = ["modal1", "modal2", "modal3", "modal4", "modal5", "modal6", "modal7"];
 
