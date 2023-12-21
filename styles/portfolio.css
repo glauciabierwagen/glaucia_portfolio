@@ -55,12 +55,6 @@
           align-items: center;
 }
 
-.canva_project {
-  max-width: 520px;
-  width: 100%;
-  max-height: 590px;
-}
-
 .hover__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,6 +246,7 @@
 
 .social-media {
   display: flex;
+  left: 4rem;
 }
 
 .social-media i {
