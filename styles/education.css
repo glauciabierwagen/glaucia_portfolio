@@ -4,6 +4,7 @@
 }
 
 .education .box-container1 {
+ 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,6 +82,15 @@
   margin-top: 20px;
   width: 100%;
   max-height: 250px;
+  max-width: 250px;
+  box-shadow: 0.3rem  0.3rem 1rem rgba(0,0,0,0.3);
+
+ border-radius: 10%}
+
+ .image3 {
+  margin-top: 20px;
+  width: 100%;
+  max-height: 350px;
   max-width: 250px;
   box-shadow: 0.3rem  0.3rem 1rem rgba(0,0,0,0.3);
 
