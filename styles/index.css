@@ -5,7 +5,8 @@
 @import url(education.css);
 @import url(portfolio.css);
 @import url(bootstrap.css);
-@import url(contact.css);;
+@import url(contact.css);
+@import url(footer.css);
 
 :root {
   --yellow: #1abc9c;
@@ -57,12 +58,12 @@ html::-webkit-scrollbar-thumb {
 body {
   background: rgba(255, 251, 251, 0);
   overflow-x: hidden;
-  padding-left: 35rem;
+ /* padding-left: 35rem;*/
 }
 
 section {
-  min-height: 100vh;
-  padding: 0.1rem;
+ min-height: 100vh;
+ padding: 0.1rem;  
 }
 
 #menu {
