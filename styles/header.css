@@ -39,4 +39,5 @@ header .navbar ul li a:hover{background:var(--yellow)}
 
 .image{margin-top:350px;width:100%;
     max-height:250px;max-width:250px;
-    margin-bottom:20px}
+    margin-bottom:20px;
+border-radius: #1abc9c}
