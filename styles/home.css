@@ -1,12 +1,16 @@
 .home{background-size:cover;
-    display:-webkit-box;display:-ms-flexbox;
-    display:flex;-webkit-box-pack:center;
-    -ms-flex-pack:center;justify-content:center;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+    -ms-flex-pack:  center;
+    justify-content:center;
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
-
-    -ms-flex-flow:column;flex-flow:column
-    ;padding:0 15rem}
+    -ms-flex-flow:column;
+    flex-flow:column;
+    
+    padding:0 15rem}
 
     .home h3{font-size:2.5rem;color:#fff}
     
@@ -32,3 +36,58 @@
 
 .btn{padding:0.7rem 3rem;cursor:pointer;
     margin-top:1rem;font-size:5rem;border-radius:5%}
+
+.container-card {
+    display: flex; /* Alinha os elementos filhos em linha */
+    /*border: 1px solid #ccc; Borda para o card */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Margem externa */
+    /*border-radius: 8px;  Cantos arredondados */
+    max-width: 1600px; /* Largura máxima */
+}
+
+.card-imagem {
+    margin-top: 4rem;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.card-imagem img {
+    width: 350px; /* Largura da imagem */
+    height: 350px; /* Altura da imagem */
+    object-fit: cover; /* Garante que a imagem não distorce */
+    border-radius: 4px; /* Cantos arredondados na imagem */
+
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5%;
+  box-shadow: 0.3rem  0.3rem 1rem rgba(0,0,0,0.3);}
+
+.card-texto {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+.card-texto h2 {
+    margin-top: 0; /* Remove margem superior padrão */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.card-texto p {
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+    line-height: 1.5; /* Espaçamento entre linhas do texto */
+}
+
+.card-texto a {
+    display: inline-block; /* Para o link se comportar como um bloco */
+    background-color: #007bff; /* Cor de fundo do link */
+    color: white; /* Cor do texto do link */
+    padding: 10px 15px; /* Espaçamento interno do link */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.card-texto a:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
