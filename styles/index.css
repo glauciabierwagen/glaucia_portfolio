@@ -116,7 +116,7 @@ section {
 }
 
 @media (max-width: 400px) {
-  header {
+  header .container-card {
     width: 100vw;
 }
 
