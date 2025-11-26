@@ -27,7 +27,7 @@ img « {
 }
 
 .portfolio-b .box-container .box {
-  height: 49rem;
+  height: 51rem;
   width: 35rem;
   margin: 2rem;
   border-radius: 5%;
@@ -131,6 +131,16 @@ img « {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  padding-bottom: 15px;
+  text-align: center;
+  justify-items: center;
+  
 }
 
 .show-btn {
