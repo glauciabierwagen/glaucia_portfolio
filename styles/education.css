@@ -95,3 +95,66 @@
   box-shadow: 0.3rem  0.3rem 1rem rgba(0,0,0,0.3);
 
  border-radius: 10%}
+
+  .education body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+ }
+
+
+.container_education {
+  display: flex;
+  width: 80vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+ 
+}
+
+.panel h3 {
+  font-size: 18px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+
+.panel.active {
+  flex: 5;
+
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
