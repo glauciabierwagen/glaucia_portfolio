@@ -113,6 +113,21 @@ section {
   html {
     font-size: 50%;
   }
+
+   .home {
+    padding: 1rem 2rem;
+  }
+
+  .footer-container {
+    padding: 0 2rem; 
+  }
+
+   .container-card {
+    flex-direction: column; /* Muda para coluna em telas menores */
+    /* Outras propriedades flexbox podem ser ajustadas aqui */
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 400px) {
