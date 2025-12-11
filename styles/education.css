@@ -1,6 +1,7 @@
 .education {
   /*background: url(../images/background2.png), no-repeat;*/
   background-size: cover;
+   padding: 2rem 9%;
 }
 
 .education .box-container1 {
