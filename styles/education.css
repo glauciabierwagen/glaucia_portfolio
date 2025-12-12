@@ -1,10 +1,11 @@
 .education {
   /*background: url(../images/background2.png), no-repeat;*/
   background-size: cover;
-   padding: 2rem 9%;
+   padding: 4rem 9%;
+   align-items: center;
 }
 
-.education .box-container1 {
+/*.education .box-container1 {
  
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +96,7 @@
   max-width: 250px;
   box-shadow: 0.3rem  0.3rem 1rem rgba(0,0,0,0.3);
 
- border-radius: 10%}
+ border-radius: 10%}*/
 
   .education body {
   display: flex;
@@ -110,15 +111,15 @@
 
 .container_education {
   display: flex;
-  width: 80vw;
+  width: 75vw;
 }
 
 .panel {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60vh;
-  border-radius: 50px;
+  height: 50vh;
+  border-radius: 30px;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
