@@ -1,8 +1,8 @@
 const socialLinks = [
-  { href: 'https://github.com/glauciabierwagen',                                        img: '/images/github.png',    label: 'Github' },
-  { href: 'https://www.facebook.com/glaucia.silva.121',                                 img: '/images/facebook.png',  label: 'Facebook' },
-  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',         img: '/images/Linkedin.png',  label: 'LinkedIn' },
-  { href: 'https://www.instagram.com/galbierwagen/',                                     img: '/images/instagram.png', label: 'Instagram' },
+  { href: 'https://github.com/glauciabierwagen',                                        img: `${import.meta.env.BASE_URL}images/github.png`,    label: 'Github' },
+  { href: 'https://www.facebook.com/glaucia.silva.121',                                 img: `${import.meta.env.BASE_URL}images/facebook.png`,  label: 'Facebook' },
+  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',         img: `${import.meta.env.BASE_URL}images/Linkedin.png`,  label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/galbierwagen/',                                     img: `${import.meta.env.BASE_URL}images/instagram.png`, label: 'Instagram' },
 ]
 
 export default function Footer() {

@@ -4,7 +4,7 @@ const items = [
   {
     id: 1,
     label: 'My history',
-    img: '/images/about/history.png',
+    img: `${import.meta.env.BASE_URL}images/about/history.png`,
     title: 'My history',
     content: (
       <h2 className="mb-5">
@@ -25,7 +25,7 @@ const items = [
   {
     id: 2,
     label: 'Programming Knowledge',
-    img: '/images/about/programming.png',
+    img: `${import.meta.env.BASE_URL}images/about/programming.png`,
     title: 'Programming Skills',
     content: (
       <h2 className="mb-4">
@@ -39,7 +39,7 @@ const items = [
   {
     id: 3,
     label: 'Teaching',
-    img: '/images/about/teaching.png',
+    img: `${import.meta.env.BASE_URL}images/about/teaching.png`,
     title: 'Teaching Skills',
     content: (
       <h2 className="mb-4">
@@ -57,7 +57,7 @@ const items = [
   {
     id: 4,
     label: 'Researching',
-    img: '/images/about/researcher.png',
+    img: `${import.meta.env.BASE_URL}images/about/researcher.png`,
     title: 'Researcher',
     content: (
       <h2 className="mb-4">
@@ -75,7 +75,7 @@ const items = [
   {
     id: 5,
     label: 'Language Skills',
-    img: '/images/about/language.png',
+    img: `${import.meta.env.BASE_URL}images/about/language.png`,
     title: 'Language Skills',
     content: (
       <h2 className="mb-4">
@@ -90,7 +90,7 @@ const items = [
   {
     id: 6,
     label: 'Hobbies',
-    img: '/images/about/hobbies.png',
+    img: `${import.meta.env.BASE_URL}images/about/hobbies.png`,
     title: 'Hobbies',
     content: (
       <h2 className="mb-4">

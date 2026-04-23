@@ -8,7 +8,7 @@ export default function HomeSection() {
             <div className="card-imagem">
               <img
                 className="projects__item-img"
-                src="/images/FotoCV2.jpg"
+                src={`${import.meta.env.BASE_URL}images/FotoCV2.jpg`}
                 alt="Gláucia Silva Bierwagen"
               />
             </div>
@@ -35,7 +35,7 @@ export default function HomeSection() {
               rel="noopener noreferrer"
             >
               <button className="btn">
-                Short video about me &gt; <img src="/images/favicon.ico" alt="" />
+                Short video about me &gt; <img src={`${import.meta.env.BASE_URL}images/favicon.ico`} alt="" />
               </button>
             </a>
           </div>
