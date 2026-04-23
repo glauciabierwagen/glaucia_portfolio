@@ -1,6 +1,3 @@
-import profileImg from '../../../images/FotoCV2.jpg'
-import faviconImg from '../../../images/favicon.ico'
-
 export default function HomeSection() {
   return (
     <section className="home" id="home">
@@ -11,7 +8,7 @@ export default function HomeSection() {
             <div className="card-imagem">
               <img
                 className="projects__item-img"
-                src={profileImg}
+                src="/images/FotoCV2.jpg"
                 alt="Gláucia Silva Bierwagen"
               />
             </div>
@@ -38,7 +35,7 @@ export default function HomeSection() {
               rel="noopener noreferrer"
             >
               <button className="btn">
-                Short video about me &gt; <img src={faviconImg} alt="" />
+                Short video about me &gt; <img src="/images/favicon.ico" alt="" />
               </button>
             </a>
           </div>

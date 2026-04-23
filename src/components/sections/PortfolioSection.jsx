@@ -1,16 +1,10 @@
 import { useState } from 'react'
-import petImg       from '../../../images/projects/petadotption.png'
-import uxImg        from '../../../images/projects/uxportfolio.png'
-import bootstrapImg from '../../../images/projects/bootstrap.png'
-import boxesImg     from '../../../images/projects/boxes-main.png'
-import blogImg      from '../../../images/projects/blog.png'
-import minhaProvaImg from '../../../images/projects/Minha Prova.png'
 
 const projects = [
   {
     id: 1,
     title: "Pet Adoption's Project",
-    img: petImg,
+    img: '/images/projects/petadotption.png',
     href: './petadoption-project/index.html',
     linkLabel: 'Pet Adoptions Project\nClick to see the website!',
     description: "Pet's adoptions page.\nGroup project.\nBuilt on: Figma, CSS, Sass,\nJavascript, HTML.",
@@ -18,7 +12,7 @@ const projects = [
   {
     id: 2,
     title: 'Quizz App Educational',
-    img: uxImg,
+    img: '/images/projects/uxportfolio.png',
     href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1/',
     linkLabel: 'UX/UI Portfolio\nClick to see the website!',
     description: 'UX/UI Portfolio.\nQuizz App Educational.\nBuilt on: Wix Studio, Figma.',
@@ -26,7 +20,7 @@ const projects = [
   {
     id: 3,
     title: 'Bootstrap Test Project',
-    img: bootstrapImg,
+    img: '/images/projects/bootstrap.png',
     href: './bootstrap/index.html',
     linkLabel: 'Bootstrap Test Project\nClick to see the website!',
     description: 'Bootstrap Project.\nBuilt on: CSS, HTML,\nBootstrap.',
@@ -34,7 +28,7 @@ const projects = [
   {
     id: 4,
     title: 'Boxes Landing Page',
-    img: boxesImg,
+    img: '/images/projects/boxes-main.png',
     href: './boxes-main/index.html',
     linkLabel: 'Boxes Landing Page\nClick to see the website!',
     description: 'Landing Page (boxes).\nBuilt on: CSS, HTML,\nJavaScript.',
@@ -42,7 +36,7 @@ const projects = [
   {
     id: 5,
     title: 'Blogs post',
-    img: blogImg,
+    img: '/images/projects/blog.png',
     href: 'https://www.uxmasterpiece.net/blog',
     linkLabel: "Blog's Posts\nClick to see the website!",
     description: "Blog's post.\nUX Research Exercise.\nBuilt on: Wix Studio and\nMedium Article.",
@@ -50,7 +44,7 @@ const projects = [
   {
     id: 6,
     title: 'UX/UI Website Project',
-    img: uxImg,
+    img: '/images/projects/uxportfolio.png',
     href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project',
     linkLabel: 'UX/UI Website Project\nClick to see the website!',
     description: 'UX/UI Portfolio.\nWebsite Organization.\nBuilt on: Figma and Wix.',
@@ -58,7 +52,7 @@ const projects = [
   {
     id: 7,
     title: 'Minha Prova App',
-    img: minhaProvaImg,
+    img: '/images/projects/Minha Prova.png',
     href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1-1',
     linkLabel: 'UX/UI Portfolio\nClick to see the website!',
     description: 'UX/UI Portfolio.\nMinha Prova.\nBuilt on: Figma and Wix.',

@@ -1,16 +1,10 @@
 import { useState } from 'react'
-import historyImg    from '../../../images/about/history.png'
-import programmingImg from '../../../images/about/programming.png'
-import teachingImg   from '../../../images/about/teaching.png'
-import researcherImg from '../../../images/about/researcher.png'
-import languageImg   from '../../../images/about/language.png'
-import hobbiesImg    from '../../../images/about/hobbies.png'
 
 const items = [
   {
     id: 1,
     label: 'My history',
-    img: historyImg,
+    img: '/images/about/history.png',
     title: 'My history',
     content: (
       <h2 className="mb-5">
@@ -31,7 +25,7 @@ const items = [
   {
     id: 2,
     label: 'Programming Knowledge',
-    img: programmingImg,
+    img: '/images/about/programming.png',
     title: 'Programming Skills',
     content: (
       <h2 className="mb-4">
@@ -45,7 +39,7 @@ const items = [
   {
     id: 3,
     label: 'Teaching',
-    img: teachingImg,
+    img: '/images/about/teaching.png',
     title: 'Teaching Skills',
     content: (
       <h2 className="mb-4">
@@ -63,7 +57,7 @@ const items = [
   {
     id: 4,
     label: 'Researching',
-    img: researcherImg,
+    img: '/images/about/researcher.png',
     title: 'Researcher',
     content: (
       <h2 className="mb-4">
@@ -81,7 +75,7 @@ const items = [
   {
     id: 5,
     label: 'Language Skills',
-    img: languageImg,
+    img: '/images/about/language.png',
     title: 'Language Skills',
     content: (
       <h2 className="mb-4">
@@ -96,7 +90,7 @@ const items = [
   {
     id: 6,
     label: 'Hobbies',
-    img: hobbiesImg,
+    img: '/images/about/hobbies.png',
     title: 'Hobbies',
     content: (
       <h2 className="mb-4">

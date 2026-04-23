@@ -1,13 +1,8 @@
-import githubImg    from '../../images/github.png'
-import facebookImg  from '../../images/facebook.png'
-import linkedinImg  from '../../images/Linkedin.png'
-import instagramImg from '../../images/instagram.png'
-
 const socialLinks = [
-  { href: 'https://github.com/glauciabierwagen',                                               img: githubImg,    label: 'Github' },
-  { href: 'https://www.facebook.com/glaucia.silva.121',                                        img: facebookImg,  label: 'Facebook' },
-  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',                img: linkedinImg,  label: 'LinkedIn' },
-  { href: 'https://www.instagram.com/galbierwagen/',                                            img: instagramImg, label: 'Instagram' },
+  { href: 'https://github.com/glauciabierwagen',                                        img: '/images/github.png',    label: 'Github' },
+  { href: 'https://www.facebook.com/glaucia.silva.121',                                 img: '/images/facebook.png',  label: 'Facebook' },
+  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',         img: '/images/Linkedin.png',  label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/galbierwagen/',                                     img: '/images/instagram.png', label: 'Instagram' },
 ]
 
 export default function Footer() {
