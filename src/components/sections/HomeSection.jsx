@@ -1,5 +1,5 @@
-import profileImg from '../../images/FotoCV2.jpg'
-import faviconImg from '../../images/favicon.ico'
+import profileImg from '../../../images/FotoCV2.jpg'
+import faviconImg from '../../../images/favicon.ico'
 
 export default function HomeSection() {
   return (
