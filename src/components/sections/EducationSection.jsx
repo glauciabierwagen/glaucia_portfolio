@@ -44,7 +44,18 @@ const panels = [
 ]
 
 export default function EducationSection() {
-  const [activeId, setActiveId] = useState(1)
+  const [activeIdx, setActiveIdx] = useState(0)
+
+  const prev = () => setActiveIdx(i => (i - 1 + panels.length) % panels.length)
+  const next = () => setActiveIdx(i => (i + 1) % panels.length)
+
+  const getPosition = (idx) => {
+    const diff = (idx - activeIdx + panels.length) % panels.length
+    if (diff === 0) return 'active'
+    if (diff === 1) return 'next'
+    if (diff === panels.length - 1) return 'prev'
+    return 'hidden'
+  }
 
   return (
     <section className="education" id="education">
@@ -55,24 +66,34 @@ export default function EducationSection() {
         <div className="divider-custom-line"></div>
       </div>
 
-      <div className="container_education">
-        {panels.map(({ id, bg, text }) => (
-          <div
-            key={id}
-            className={`panel${activeId === id ? ' active' : ''}`}
-            style={{ backgroundImage: `url('${bg}')` }}
-            onClick={() => setActiveId(id)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={e => e.key === 'Enter' && setActiveId(id)}
-          >
-            <h3>
-              {text.split('\n').map((line, i) => (
-                <span key={i}>{line}<br /></span>
-              ))}
-            </h3>
-          </div>
-        ))}
+      <div className="edu-carousel">
+        <button className="edu-arrow edu-arrow--prev" onClick={prev} aria-label="Previous">&#8249;</button>
+
+        <div className="edu-track">
+          {panels.map(({ id, bg, text }, idx) => {
+            const pos = getPosition(idx)
+            return (
+              <div
+                key={id}
+                className={`edu-card edu-card--${pos}`}
+                style={{ backgroundImage: `url('${bg}')` }}
+                onClick={() => pos !== 'hidden' && setActiveIdx(idx)}
+                role="button"
+                tabIndex={pos !== 'hidden' ? 0 : -1}
+                onKeyDown={e => e.key === 'Enter' && pos !== 'hidden' && setActiveIdx(idx)}
+              >
+                <div className="edu-card__overlay" />
+                <div className="edu-card__text">
+                  {text.split('\n').map((line, i) => (
+                    <span key={i}>{line || '\u00A0'}<br /></span>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <button className="edu-arrow edu-arrow--next" onClick={next} aria-label="Next">&#8250;</button>
       </div>
     </section>
   )
