@@ -17,7 +17,7 @@ img « {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4.5rem 4rem;
-  padding: 3rem 18rem;
+  padding: 3rem 22rem;
   justify-items: stretch;
 }
 
@@ -66,7 +66,7 @@ img « {
 
 .hover__container {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -142,19 +142,19 @@ img « {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 20px 20px;
-  gap: 6px;
+  padding: 8px 14px 12px;
+  gap: 4px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 .title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: "Nunito", sans-serif;
   color: #222;
   font-weight: 700;
-  padding: 14px 20px 6px;
+  padding: 4px 12px 2px;
   text-align: center;
   margin: 0;
   letter-spacing: 0.02em;
