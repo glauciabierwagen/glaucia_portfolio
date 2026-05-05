@@ -44,7 +44,7 @@ const projects = [
   {
     id: 6,
     title: 'UX/UI Website Project',
-    img: `${import.meta.env.BASE_URL}images/projects/teaching.png`,
+    img: `${import.meta.env.BASE_URL}images/teaching.png`,
     href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project',
     linkLabel: 'UX/UI Website Project\nClick to see the website!',
     description: 'UX/UI Portfolio.\nWebsite Organization.\nBuilt on: Figma and Wix.',
