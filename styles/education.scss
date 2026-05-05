@@ -2,6 +2,11 @@
 .education {
   background-size: cover;
 }
+
+.container_education {
+  display: flex;
+  width: 100%;
+}
 .education .box-container1 {
   display: flex;
   align-items: center;
