@@ -65,6 +65,10 @@ section {
  padding: 0.05rem;  
 }
 
+.page-section {
+  padding: 2rem 0;
+}
+
 /* media queries  */
 
 @media (max-width: 1200px) {
