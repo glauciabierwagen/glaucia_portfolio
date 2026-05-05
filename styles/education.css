@@ -126,7 +126,7 @@
 .edu-track {
   flex: 1;
   position: relative;
-  height: 480px;
+  height: 520px;
 }
 
 .edu-card {
@@ -162,35 +162,56 @@
 
 /* Active – center */
 .edu-card--active {
-  width: 480px;
-  height: 450px;
+  width: 460px;
+  height: 440px;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 3;
+  z-index: 5;
   filter: none;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  cursor: default;
 }
 .edu-card--active .edu-card__overlay { background: transparent; }
 .edu-card--active .edu-card__text { opacity: 1; }
 
-/* Prev – left side */
-.edu-card--prev {
-  width: 360px;
-  height: 370px;
-  transform: translate(calc(-50% - 340px), -50%) scale(0.88);
-  z-index: 2;
-  filter: blur(3px) brightness(0.35);
+/* Prev1 – immediate left */
+.edu-card--prev1 {
+  width: 340px;
+  height: 360px;
+  transform: translate(calc(-50% - 410px), -50%) scale(0.85);
+  z-index: 4;
+  filter: blur(2px) brightness(0.5);
 }
-.edu-card--prev .edu-card__text { opacity: 0; }
+.edu-card--prev1 .edu-card__text { opacity: 0; }
 
-/* Next – right side */
-.edu-card--next {
-  width: 360px;
-  height: 370px;
-  transform: translate(calc(-50% + 340px), -50%) scale(0.88);
-  z-index: 2;
-  filter: blur(3px) brightness(0.35);
+/* Next1 – immediate right */
+.edu-card--next1 {
+  width: 340px;
+  height: 360px;
+  transform: translate(calc(-50% + 410px), -50%) scale(0.85);
+  z-index: 4;
+  filter: blur(2px) brightness(0.5);
 }
-.edu-card--next .edu-card__text { opacity: 0; }
+.edu-card--next1 .edu-card__text { opacity: 0; }
+
+/* Prev2 – far left */
+.edu-card--prev2 {
+  width: 260px;
+  height: 280px;
+  transform: translate(calc(-50% - 720px), -50%) scale(0.7);
+  z-index: 3;
+  filter: blur(4px) brightness(0.3);
+}
+.edu-card--prev2 .edu-card__text { opacity: 0; }
+
+/* Next2 – far right */
+.edu-card--next2 {
+  width: 260px;
+  height: 280px;
+  transform: translate(calc(-50% + 720px), -50%) scale(0.7);
+  z-index: 3;
+  filter: blur(4px) brightness(0.3);
+}
+.edu-card--next2 .edu-card__text { opacity: 0; }
 
 /* Hidden */
 .edu-card--hidden {
@@ -206,7 +227,7 @@
 .edu-arrow {
   background: none;
   border: none;
-  color: #fff;
+  color: #333;
   font-size: 6rem;
   line-height: 1;
   cursor: pointer;
