@@ -64,7 +64,6 @@ function ProjectCard({ title, img, href, linkLabel, description }) {
 
   return (
     <div className="box">
-      <h2 className="title">{title}</h2>
       <div className="hover__container">
         <div className="hover__text">
           <a href={href} target="_blank" rel="noopener noreferrer" title="Click to see the website!">
@@ -74,24 +73,25 @@ function ProjectCard({ title, img, href, linkLabel, description }) {
         <img className="projects__item-img" src={img} alt={`Screenshot of ${title}`} />
       </div>
       <div className="projects_info">
-        <div className="dropdown">
-          <button className="show-btn btn-lg" onClick={() => setOpen(o => !o)}>
-            {open ? 'Show less' : 'Show more'}
-          </button>
-          {open && (
-            <div className="dropdown-content p-1 text-muted">
-              <p>
-                {description.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
-              </p>
-            </div>
-          )}
-        </div>
+        <h2 className="title">{title}</h2>
+        <button className="show-btn" onClick={() => setOpen(o => !o)}>
+          {open ? 'Show less' : 'Show more'}
+        </button>
+        {open && (
+          <div className="dropdown-content p-1 text-muted" style={{ display: 'block', textAlign: 'center', padding: '8px 0 4px', fontSize: '1.4rem', color: '#555' }}>
+            <p>
+              {description.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   )
 }
 
 export default function PortfolioSection() {
+  const [visible, setVisible] = useState(6)
+
   return (
     <section className="portfolio-b" id="portfolio">
       <h1 className="heading"><span>My works</span></h1>
@@ -103,8 +103,16 @@ export default function PortfolioSection() {
       </div>
 
       <div className="box-container">
-        {projects.map(p => <ProjectCard key={p.id} {...p} />)}
+        {projects.slice(0, visible).map(p => <ProjectCard key={p.id} {...p} />)}
       </div>
+
+      {visible < projects.length && (
+        <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+          <button className="show-btn" onClick={() => setVisible(v => v + 3)}>
+            Show more
+          </button>
+        </div>
+      )}
     </section>
   )
 }
