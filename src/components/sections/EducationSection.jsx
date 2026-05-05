@@ -9,7 +9,7 @@ const panels = [
   {
     id: 2,
     bg: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&h=600&fit=crop&crop=faces&auto=format&q=80',
-    text: 'Pedagogy\nUniversity of São Paulo\n2000 - 2004\n\nTeacher of Elementary School\nPHD in Communication\nCity Hall of São Paulo\n2005 - 2019',
+    text: 'Pedagogy\nUniversity of São Paulo\n2000 - 2004\n\nTeacher of Elementary School\nCity Hall of São Paulo\n2005 - 2019',
   },
   {
     id: 3,
@@ -52,8 +52,10 @@ export default function EducationSection() {
   const getPosition = (idx) => {
     const diff = (idx - activeIdx + panels.length) % panels.length
     if (diff === 0) return 'active'
-    if (diff === 1) return 'next'
-    if (diff === panels.length - 1) return 'prev'
+    if (diff === 1) return 'next1'
+    if (diff === 2) return 'next2'
+    if (diff === panels.length - 1) return 'prev1'
+    if (diff === panels.length - 2) return 'prev2'
     return 'hidden'
   }
 
@@ -77,7 +79,7 @@ export default function EducationSection() {
                 key={id}
                 className={`edu-card edu-card--${pos}`}
                 style={{ backgroundImage: `url('${bg}')` }}
-                onClick={() => pos !== 'hidden' && setActiveIdx(idx)}
+                onClick={() => pos !== 'hidden' && pos !== 'active' && setActiveIdx(idx)}
                 role="button"
                 tabIndex={pos !== 'hidden' ? 0 : -1}
                 onKeyDown={e => e.key === 'Enter' && pos !== 'hidden' && setActiveIdx(idx)}
