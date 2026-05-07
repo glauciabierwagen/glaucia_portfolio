@@ -33,6 +33,9 @@ export default function QuizzApp() {
   const prev = () => setCurrent(i => (i - 1 + researchImages.length) % researchImages.length)
   const next = () => setCurrent(i => (i + 1) % researchImages.length)
 
+  // Lightbox state: null = closed, number = index of zoomed image
+  const [zoomed, setZoomed] = useState(null)
+
   return (
     <div className="project-page">
 
@@ -100,11 +103,13 @@ export default function QuizzApp() {
             &#8592;
           </button>
 
-          {/* Card */}
+          {/* Card - click image to zoom */}
           <figure className="carousel__card">
             <img
               src={researchImages[current].src}
               alt={researchImages[current].caption}
+              onClick={() => setZoomed(current)}
+              title="Click to zoom"
             />
             <figcaption>{researchImages[current].caption}</figcaption>
           </figure>
@@ -168,6 +173,18 @@ export default function QuizzApp() {
           Next Project &#8250;
         </a>
       </div>
+
+      {/* ── LIGHTBOX OVERLAY ── renders when an image is zoomed */}
+      {zoomed !== null && (
+        <div className="lightbox-overlay" onClick={() => setZoomed(null)}>
+          <button className="lightbox-close" onClick={() => setZoomed(null)} aria-label="Close">&times;</button>
+          <img
+            src={researchImages[zoomed].src}
+            alt={researchImages[zoomed].caption}
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
 
     </div>
   )
