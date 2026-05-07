@@ -1,5 +1,11 @@
+// AboutSection.jsx - This section shows an 'About me' grid with clickable cards.
+// Each card opens a modal (a pop-up window) with more details about that topic.
+
+// useState lets us store which modal is currently open (or null if none is open)
 import { useState } from 'react'
 
+// 'items' is the data array for the about cards.
+// Each object has an id, label (button text), img (card image), title, and content (JSX).
 const items = [
   {
     id: 1,
@@ -105,14 +111,18 @@ const items = [
   },
 ]
 
+// AboutModal is a separate component that renders the pop-up window.
+// It receives 'item' (the data to display) and 'onClose' (a function to close it) as props.
 function AboutModal({ item, onClose }) {
   return (
+    // Clicking the dark backdrop (outside the modal box) also closes the modal.
+    // e.target === e.currentTarget checks if the click was on the backdrop itself, not inside.
     <div
       className="portfolio-modal modal"
       style={{ display: 'block', background: 'rgba(0,0,0,0.6)', position: 'fixed', inset: 0, zIndex: 2000, overflowY: 'auto' }}
       onClick={e => { if (e.target === e.currentTarget) onClose() }}
-      role="dialog"
-      aria-modal="true"
+      role="dialog"        // Accessibility: tells screen readers this is a dialog
+      aria-modal="true"   // Accessibility: marks it as a modal dialog
     >
       <div className="modal-dialog modal-xl" style={{ margin: '2rem auto' }}>
         <div className="modal-content">
@@ -149,29 +159,36 @@ function AboutModal({ item, onClose }) {
 }
 
 export default function AboutSection() {
+  // activeModal stores the currently selected item object.
+  // When null, no modal is shown. When an item is set, the modal appears.
   const [activeModal, setActiveModal] = useState(null)
 
   return (
+    // id="about" links this section to the About menu item in the Navbar
     <section className="page-section portfolio" id="about">
       <div className="container">
         <h1 className="heading"><span>About me</span></h1>
+
+        {/* Decorative divider with a star icon */}
         <div className="divider-custom">
           <div className="divider-custom-line"></div>
           <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
           <div className="divider-custom-line"></div>
         </div>
 
+        {/* Loop over the items array to render one card per skill/topic */}
         <div className="row justify-content-center">
           {items.map(item => (
             <div key={item.id} className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
-                role="button"
-                tabIndex={0}
-                onClick={() => setActiveModal(item)}
-                onKeyDown={e => e.key === 'Enter' && setActiveModal(item)}
+                role="button"       // Makes it behave like a button for accessibility
+                tabIndex={0}        // Allows keyboard navigation (Tab key focus)
+                onClick={() => setActiveModal(item)}                        // Open modal on click
+                onKeyDown={e => e.key === 'Enter' && setActiveModal(item)}  // Open modal on Enter key
                 style={{ cursor: 'pointer' }}
               >
+                {/* Overlay that appears on hover showing the label and a + icon */}
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
                     {item.label}<br /><i className="fas fa-plus fa-3x"></i>
@@ -184,6 +201,8 @@ export default function AboutSection() {
         </div>
       </div>
 
+      {/* Only render the modal when an item is selected (activeModal is not null).
+          The && operator means: if activeModal is truthy, render <AboutModal>. */}
       {activeModal && (
         <AboutModal item={activeModal} onClose={() => setActiveModal(null)} />
       )}
