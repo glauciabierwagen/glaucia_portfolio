@@ -220,7 +220,7 @@
 .rd-panel {
   position: relative;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   border-radius: 16px;
   overflow: hidden;
   max-width: 1150px;
