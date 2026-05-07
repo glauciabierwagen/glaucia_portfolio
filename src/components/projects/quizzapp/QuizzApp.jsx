@@ -35,6 +35,13 @@ export default function QuizzApp() {
 
   // Lightbox state: null = closed, number = index of zoomed image
   const [zoomed, setZoomed] = useState(null)
+  // Research detail modal: opens 3-col panel when clicking the first slide
+  const [showResearchDetail, setShowResearchDetail] = useState(false)
+
+  const handleCardClick = (index) => {
+    if (index === 0) setShowResearchDetail(true)
+    else setZoomed(index)
+  }
 
   return (
     <div className="project-page">
@@ -103,13 +110,13 @@ export default function QuizzApp() {
             &#8592;
           </button>
 
-          {/* Card - click image to zoom */}
+          {/* Card - first slide opens detail panel, others open lightbox */}
           <figure className="carousel__card">
             <img
               src={researchImages[current].src}
               alt={researchImages[current].caption}
-              onClick={() => setZoomed(current)}
-              title="Click to zoom"
+              onClick={() => handleCardClick(current)}
+              title={current === 0 ? 'Click to see details' : 'Click to zoom'}
             />
             <figcaption>{researchImages[current].caption}</figcaption>
           </figure>
@@ -183,6 +190,32 @@ export default function QuizzApp() {
             alt={researchImages[zoomed].caption}
             onClick={e => e.stopPropagation()}
           />
+        </div>
+      )}
+
+      {/* ── RESEARCH DETAIL PANEL ── 3-col modal: main image | thumbnails | text */}
+      {showResearchDetail && (
+        <div className="rd-overlay" onClick={() => setShowResearchDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowResearchDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgResearch} alt="Research process" />
+            </div>
+
+            {/* Col 2: title + description */}
+            <div className="rd-text">
+              <h3>Researching process</h3>
+              <p>
+                A FigJam board was created to document and organize key references,
+                including inspirations, competitor analysis, research findings, and user
+                flowcharts. This serves as a centralized resource, making it easier to
+                visualize insights, track progress, and ensure user-centered design
+                decisions throughout the project.
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
