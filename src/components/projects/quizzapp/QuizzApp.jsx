@@ -1,0 +1,135 @@
+// QuizzApp.jsx - Project detail page for the Quiz App UX/UI project.
+// Layout follows the portfolio design system: Nunito font, #1abc9c accent, card sections.
+// Structure: hero (title + description | screenshot), research images, challenges text.
+
+// Link is used for the back button - it navigates to '/' without a full page reload.
+import { Link } from 'react-router-dom'
+import './quizzapp.css'
+
+// Research process images from the live project
+const researchImages = [
+  {
+    src: 'https://static.wixstatic.com/media/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png/v1/fit/w_1138,h_639,q_90,enc_avif,quality_auto/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png',
+    caption: 'Researching process',
+  },
+  {
+    src: 'https://static.wixstatic.com/media/de8cf7_214617bad4204c3bb0468e4a704d9ad4~mv2.png/v1/fit/w_1046,h_596,q_90,enc_avif,quality_auto/de8cf7_214617bad4204c3bb0468e4a704d9ad4~mv2.png',
+    caption: 'Developing the Style Guide',
+  },
+]
+
+export default function QuizzApp() {
+  return (
+    <div className="project-page">
+
+      {/* ── Back link - uses React Router Link to go back to the portfolio without reload ── */}
+      <Link to="/" className="project-back">
+        &#8592; Back to Portfolio
+      </Link>
+
+      {/* ── HERO SECTION ── two columns: text | screenshot */}
+      <section className="project-hero">
+        <div className="project-hero__text">
+          <h1 className="project-title">Quiz App</h1>
+          <p className="project-role">UX/UI Designer</p>
+
+          <p className="project-description">
+            The main idea of the project is to provide an educational content creation and
+            management platform. The project is still in progress. An interface system has been
+            developed to enhance the educational experience, including content creation and
+            management, activity planning and tracking, and data-driven insights through
+            dashboards that monitor student performance. These features help educators make
+            informed decisions and improve learning outcomes.
+          </p>
+          <p className="project-description">
+            Additionally, an interactive quiz game has been designed to engage students through
+            gamified learning and instant feedback, making the learning process more dynamic and
+            motivating. Landing pages have also been created, providing tailored perspectives for
+            both educators and teachers.
+          </p>
+
+          {/* Link to the live project */}
+          <a
+            className="project-live-btn"
+            href="https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Live Project &#8599;
+          </a>
+        </div>
+
+        {/* Hero screenshot */}
+        <div className="project-hero__img">
+          <img
+            src="https://static.wixstatic.com/media/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png/v1/fit/w_1138,h_639,q_90,enc_avif,quality_auto/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png"
+            alt="Quiz App screenshot – Gör dina klasser roligare"
+          />
+        </div>
+      </section>
+
+      {/* ── DIVIDER ── */}
+      <div className="divider-custom">
+        <div className="divider-custom-line"></div>
+        <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
+        <div className="divider-custom-line"></div>
+      </div>
+
+      {/* ── RESEARCH IMAGES SECTION ── */}
+      <section className="project-research">
+        <h2 className="project-section-title">Research &amp; Design Process</h2>
+
+        <div className="project-research__grid">
+          {researchImages.map(({ src, caption }) => (
+            <figure key={caption} className="project-research__figure">
+              <img src={src} alt={caption} />
+              <figcaption>{caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* ── DIVIDER ── */}
+      <div className="divider-custom">
+        <div className="divider-custom-line"></div>
+        <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
+        <div className="divider-custom-line"></div>
+      </div>
+
+      {/* ── CHALLENGES SECTION ── */}
+      <section className="project-challenges">
+        <h2 className="project-section-title">Challenges</h2>
+        <p className="project-challenges__text">
+          Working on the development of an educational quiz app presented several challenges,
+          especially when conducting research and working independently throughout the process.
+          One of the main difficulties was ensuring that the research phase was comprehensive
+          and user-centered without the direct support of a team to brainstorm, validate ideas,
+          or provide diverse perspectives. Collecting insights from educators and students
+          required extra effort to engage participants, analyze qualitative data, and translate
+          findings into actionable design decisions on my own.
+        </p>
+        <p className="project-challenges__text">
+          Additionally, balancing research, ideation, prototyping, and iteration independently
+          made the process more complex. Without immediate feedback loops, I had to continuously
+          reevaluate my decisions, ensuring they aligned with the users' needs while maintaining
+          usability and engagement. Despite these challenges, this experience strengthened my
+          ability to self-manage, adapt, and refine my problem-solving approach, reinforcing the
+          importance of collaboration and iterative design in user-centered solutions.
+        </p>
+      </section>
+
+      {/* ── NEXT PROJECT NAVIGATION ── */}
+      <div className="project-nav">
+        <a
+          className="project-nav__next"
+          href="https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Next Project &#8250;
+        </a>
+      </div>
+
+    </div>
+  )
+}

@@ -6,6 +6,8 @@
 // 1. In ProjectCard: track if the description dropdown is open.
 // 2. In PortfolioSection: track how many projects are visible (pagination).
 import { useState } from 'react'
+// Link is the React Router component for internal navigation (no page reload).
+import { Link } from 'react-router-dom'
 
 // 'projects' is the data array for all portfolio items.
 // Each object contains the project's id, title, image, link, label, and description.
@@ -22,9 +24,10 @@ const projects = [
     id: 2,
     title: 'Quizz App Educational',
     img: `${import.meta.env.BASE_URL}images/projects/uxportfolio.png`,
-    href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1/',
-    linkLabel: 'UX/UI Portfolio\nClick to see the website!',
+    href: '/quizzapp',  // Internal route - opens the QuizzApp.jsx component page
+    linkLabel: 'UX/UI Portfolio\nClick to see the project!',
     description: 'UX/UI Portfolio.\nQuizz App Educational.\nBuilt on: Wix Studio, Figma.',
+    internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
   {
     id: 3,
@@ -69,8 +72,8 @@ const projects = [
 ]
 
 // ProjectCard is a reusable component that renders a single project card.
-// It receives all its data as props (title, img, href, linkLabel, description).
-function ProjectCard({ title, img, href, linkLabel, description }) {
+// It receives all its data as props (title, img, href, linkLabel, description, internal).
+function ProjectCard({ title, img, href, linkLabel, description, internal }) {
   // 'open' controls whether the description dropdown is visible.
   // It starts as false (closed) and toggles when the button is clicked.
   const [open, setOpen] = useState(false)
@@ -81,11 +84,17 @@ function ProjectCard({ title, img, href, linkLabel, description }) {
       {/* Hover container: shows an overlay link on top of the project image */}
       <div className="hover__container">
         <div className="hover__text">
-          {/* Link to the live project - opens in a new tab */}
-          <a href={href} target="_blank" rel="noopener noreferrer" title="Click to see the website!">
-            {/* Split the label by newlines and render each line separately */}
-            {linkLabel.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
-          </a>
+          {/* If internal is true, use React Router <Link> (no page reload).
+              Otherwise use a normal <a> tag that opens in a new browser tab. */}
+          {internal ? (
+            <Link to={href} title="Click to see the project!">
+              {linkLabel.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
+            </Link>
+          ) : (
+            <a href={href} target="_blank" rel="noopener noreferrer" title="Click to see the website!">
+              {linkLabel.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
+            </a>
+          )}
         </div>
         <img className="projects__item-img" src={img} alt={`Screenshot of ${title}`} />
       </div>
