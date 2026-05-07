@@ -101,7 +101,13 @@ function ProjectCard({ title, img, href, linkLabel, description }) {
 
         {/* Conditional rendering: the description only appears when open === true */}
         {open && (
-          <div className="dropdown-content p-1 text-muted" style={{ display: 'block', textAlign: 'center', padding: '8px 0 4px', fontSize: '1.4rem', color: '#555' }}>
+          <div className="dropdown-content p-1 text-muted" style={{ position: 'relative', display: 'block', textAlign: 'center', padding: '8px 0 4px', fontSize: '1.4rem', color: '#555' }}>
+            {/* Close button in the top-right corner of the description box */}
+            <button
+              className="dropdown-close"
+              onClick={() => setOpen(false)}
+              aria-label="Close"
+            >✕</button>
             <p>
               {/* Split description text by newlines and render each line */}
               {description.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
