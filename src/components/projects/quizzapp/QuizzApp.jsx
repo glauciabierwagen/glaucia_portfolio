@@ -5,6 +5,8 @@
 // Link is used for the back button - it navigates to '/' without a full page reload.
 import { Link } from 'react-router-dom'
 import './quizzapp.css'
+// Local cover image for the hero section
+import quizzCover from '../images/Quizz App cover.png'
 
 // Research process images from the live project
 const researchImages = [
@@ -27,8 +29,17 @@ export default function QuizzApp() {
         &#8592; Back to Portfolio
       </Link>
 
-      {/* ── HERO SECTION ── two columns: text | screenshot */}
+      {/* ── HERO SECTION ── image on top (centered), then text below */}
       <section className="project-hero">
+
+        {/* Hero screenshot - centered above the description */}
+        <div className="project-hero__img">
+          <img
+            src={quizzCover}
+            alt="Quiz App cover"
+          />
+        </div>
+
         <div className="project-hero__text">
           <h1 className="project-title">Quiz App</h1>
           <p className="project-role">UX/UI Designer</p>
@@ -57,14 +68,6 @@ export default function QuizzApp() {
           >
             View Live Project &#8599;
           </a>
-        </div>
-
-        {/* Hero screenshot */}
-        <div className="project-hero__img">
-          <img
-            src="https://static.wixstatic.com/media/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png/v1/fit/w_1138,h_639,q_90,enc_avif,quality_auto/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png"
-            alt="Quiz App screenshot – Gör dina klasser roligare"
-          />
         </div>
       </section>
 
