@@ -2,6 +2,8 @@
 // Layout follows the portfolio design system: Nunito font, #1abc9c accent, card sections.
 // Structure: hero (title + description | screenshot), research images, challenges text.
 
+// useState is used to track the current carousel slide index.
+import { useState } from 'react'
 // Link is used for the back button - it navigates to '/' without a full page reload.
 import { Link } from 'react-router-dom'
 import './quizzapp.css'
@@ -26,6 +28,11 @@ const researchImages = [
 ]
 
 export default function QuizzApp() {
+  // Carousel state: tracks which slide is currently visible
+  const [current, setCurrent] = useState(0)
+  const prev = () => setCurrent(i => (i - 1 + researchImages.length) % researchImages.length)
+  const next = () => setCurrent(i => (i + 1) % researchImages.length)
+
   return (
     <div className="project-page">
 
@@ -83,16 +90,40 @@ export default function QuizzApp() {
         <div className="divider-custom-line"></div>
       </div>
 
-      {/* ── RESEARCH IMAGES SECTION ── */}
+      {/* ── RESEARCH IMAGES SECTION – carousel ── */}
       <section className="project-research">
         <h2 className="project-section-title">Research &amp; Design Process</h2>
 
-        <div className="project-research__grid">
-          {researchImages.map(({ src, caption }) => (
-            <figure key={caption} className="project-research__figure">
-              <img src={src} alt={caption} />
-              <figcaption>{caption}</figcaption>
-            </figure>
+        <div className="carousel">
+          {/* Prev button */}
+          <button className="carousel__btn carousel__btn--prev" onClick={prev} aria-label="Previous">
+            &#8592;
+          </button>
+
+          {/* Card */}
+          <figure className="carousel__card">
+            <img
+              src={researchImages[current].src}
+              alt={researchImages[current].caption}
+            />
+            <figcaption>{researchImages[current].caption}</figcaption>
+          </figure>
+
+          {/* Next button */}
+          <button className="carousel__btn carousel__btn--next" onClick={next} aria-label="Next">
+            &#8594;
+          </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="carousel__dots">
+          {researchImages.map((_, i) => (
+            <button
+              key={i}
+              className={`carousel__dot${i === current ? ' carousel__dot--active' : ''}`}
+              onClick={() => setCurrent(i)}
+              aria-label={`Slide ${i + 1}`}
+            />
           ))}
         </div>
       </section>
