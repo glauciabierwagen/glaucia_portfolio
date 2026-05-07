@@ -31,6 +31,38 @@
 .line{
   color:#1abc9c;
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 2.4rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+
+  &:hover {
+    background-color: darken(#1abc9c, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
   
 .image {
   margin-top: 300px;
