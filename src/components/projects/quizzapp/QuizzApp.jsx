@@ -39,11 +39,22 @@ export default function QuizzApp() {
   const [showResearchDetail, setShowResearchDetail] = useState(false)
   // Style Guide detail modal: opens panel when clicking the second slide
   const [showStyleGuideDetail, setShowStyleGuideDetail] = useState(false)
+  // Teachers detail modal: opens panel when clicking the third slide
+  const [showTeachersDetail, setShowTeachersDetail] = useState(false)
+  // Students detail modal: opens panel when clicking the fourth slide
+  const [showStudentsDetail, setShowStudentsDetail] = useState(false)
+  // Dashboard detail modal: opens panel when clicking the fifth slide
+  const [showDashboardDetail, setShowDashboardDetail] = useState(false)
+  // Mockup detail modal: opens panel when clicking the sixth slide
+  const [showMockupDetail, setShowMockupDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowResearchDetail(true)
     else if (index === 1) setShowStyleGuideDetail(true)
-    else setZoomed(index)
+    else if (index === 2) setShowTeachersDetail(true)
+    else if (index === 3) setShowStudentsDetail(true)
+    else if (index === 4) setShowDashboardDetail(true)
+    else if (index === 5) setShowMockupDetail(true)
   }
 
   return (
@@ -51,7 +62,7 @@ export default function QuizzApp() {
 
       {/* ── Back link - uses React Router Link to go back to the portfolio without reload ── */}
       <Link to="/" className="project-back">
-        &#8592; Back to Portfolio
+        &#8592; Back to the Main page Portfolio
       </Link>
 
       {/* ── HERO SECTION ── image on top (centered), then text below */}
@@ -119,7 +130,7 @@ export default function QuizzApp() {
               src={researchImages[current].src}
               alt={researchImages[current].caption}
               onClick={() => handleCardClick(current)}
-              title={current <= 1 ? 'Click to see details' : 'Click to zoom'}
+              title="Click to see details"
             />
             <figcaption>{researchImages[current].caption}</figcaption>
           </figure>
@@ -176,11 +187,11 @@ export default function QuizzApp() {
       <div className="project-nav">
         <a
           className="project-nav__next"
-          href="https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project"
+          href="https://glauciabierwagen.github.io/glaucia_portfolio/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Next Project &#8250;
+          Back to the Main page Portfolio &#8250;
         </a>
       </div>
 
@@ -193,6 +204,168 @@ export default function QuizzApp() {
             alt={researchImages[zoomed].caption}
             onClick={e => e.stopPropagation()}
           />
+        </div>
+      )}
+
+      {/* ── MOCKUP DETAIL PANEL ── */}
+      {showMockupDetail && (
+        <div className="rd-overlay" onClick={() => setShowMockupDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowMockupDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgMockup} alt="Mockup Quizz App" />
+            </div>
+
+            {/* Col 2: title + description + Figma link */}
+            <div className="rd-text">
+              <h3>Mockup Quizz App</h3>
+              <p>
+                The concept embraces a space-themed journey,
+                incorporating clouds, rockets, and other visual elements to
+                enhance gamification. Students can earn badges and
+                points, with themed rewards such as &ldquo;Junior Astronaut&rdquo; and
+                &ldquo;Senior Astronaut&rdquo;, making learning more interactive and
+                fun. To improve usability, the mockup is being refined with
+                softer colors and card-based question presentation.
+              </p>
+              <p>
+                Additionally, a feature is being explored to enable teachers
+                to easily create quick content, such as texts and videos, to
+                complement classroom activities. The idea of animated
+                avatars is also being developed, with ongoing research into
+                the best ways to integrate them into the user experience.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-83162&t=1MGQYCnzjUxna7KK-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go to Figma
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── DASHBOARD DETAIL PANEL ── */}
+      {showDashboardDetail && (
+        <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowDashboardDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgDashboard} alt="System for Teachers to Produce Educational Content" />
+            </div>
+
+            {/* Col 2: title + description + Figma link */}
+            <div className="rd-text">
+              <h3>System for Teachers to Produce Educational Content</h3>
+              <p>
+                The first version of the prototype was developed to provide
+                an intuitive and user-friendly experience. It includes a
+                Landing Page designed specifically for teachers, along with
+                a Login Page for secure access.
+              </p>
+              <p>
+                The prototype introduces key system screens, such as a
+                Dashboard for an overview of activities, a Student
+                Information page for tracking progress, a Material Page to
+                access pre-existing questions, a Question Creation Page
+                where teachers can design custom questions, and a
+                Settings/Profile section for personalization.
+              </p>
+              <p>
+                This initial version lays the foundation for a structured and
+                efficient platform, ensuring a seamless experience for
+                educators.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-54441&t=sO95LLHW6yWSY7EC-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go to Figma
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── STUDENTS DETAIL PANEL ── */}
+      {showStudentsDetail && (
+        <div className="rd-overlay" onClick={() => setShowStudentsDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowStudentsDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgStudents} alt="Landing Page for Students and Parents" />
+            </div>
+
+            {/* Col 2: title + description + Figma link */}
+            <div className="rd-text">
+              <h3>Landing Page for Students and Parents</h3>
+              <p>
+                A Landing Page was designed for students and parents,
+                featuring an engaging and intuitive interface. A prominent
+                &ldquo;Spela Nu&rdquo; (Play Now) button allows seamless navigation to
+                the quiz game, which will include refined colors and
+                animations for a more immersive experience.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-80098&t=nYaAOyo9efaEbZxL-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go To Figma
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── TEACHERS DETAIL PANEL ── */}
+      {showTeachersDetail && (
+        <div className="rd-overlay" onClick={() => setShowTeachersDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowTeachersDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgTeachers} alt="Landing Page for Teachers" />
+            </div>
+
+            {/* Col 2: title + description + Figma link */}
+            <div className="rd-text">
+              <h3>Landing Page Teachers</h3>
+              <p>
+                The first version of the prototype was designed to offer an
+                intuitive and user-friendly experience tailored to teachers'
+                needs. The Landing Page features classroom imagery,
+                visually reinforcing how the system supports educators in
+                creating, managing, and organizing content for their students.
+              </p>
+              <p>
+                This design ensures a seamless and efficient workflow,
+                helping teachers focus on delivering engaging and effective
+                learning experiences.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-57800&t=i17QFDvc0lyPI6zb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go to Figma
+              </a>
+            </div>
+          </div>
         </div>
       )}
 

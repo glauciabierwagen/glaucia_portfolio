@@ -220,12 +220,13 @@
 .rd-panel {
   position: relative;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   border-radius: 16px;
   overflow: hidden;
   max-width: 1150px;
   width: 100%;
-  min-height: 620px;
+  min-height: 520px;
+  max-height: 85vh;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #f5f0f0;
 }
@@ -279,11 +280,12 @@
 
 /* Col 3 – title + text */
 .rd-text {
-  padding: 4rem 3rem;
+  padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #faf7f7;
+  overflow-y: auto;
 }
 .rd-text h3 {
   font-size: 3.2rem;
@@ -297,6 +299,16 @@
   line-height: 1.9;
   color: #555;
 }
+.rd-figma-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.rd-figma-link:hover { color: #1abc9c; }
 
 /* ── LIGHTBOX ── */
 .lightbox-overlay {
