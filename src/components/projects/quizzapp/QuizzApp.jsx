@@ -7,17 +7,22 @@ import { Link } from 'react-router-dom'
 import './quizzapp.css'
 // Local cover image for the hero section
 import quizzCover from '../images/Quizz App cover.png'
+// Research & design process images
+import imgResearch from '../images/Research Quizz App.png'
+import imgStyleGuide from '../images/Style Guide.png'
+import imgTeachers from '../images/Website Professores.png'
+import imgStudents from '../images/Website Alunos.png'
+import imgDashboard from '../images/Dashboard.png'
+import imgMockup from '../images/Quizz App.png'
 
-// Research process images from the live project
+// Research & design process images
 const researchImages = [
-  {
-    src: 'https://static.wixstatic.com/media/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png/v1/fit/w_1138,h_639,q_90,enc_avif,quality_auto/de8cf7_b78a56b03d1f4dc6b9ee670b529daf3e~mv2.png',
-    caption: 'Researching process',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/de8cf7_214617bad4204c3bb0468e4a704d9ad4~mv2.png/v1/fit/w_1046,h_596,q_90,enc_avif,quality_auto/de8cf7_214617bad4204c3bb0468e4a704d9ad4~mv2.png',
-    caption: 'Developing the Style Guide',
-  },
+  { src: imgResearch,   caption: 'Researching process' },
+  { src: imgStyleGuide, caption: 'Developing the Style Guide' },
+  { src: imgTeachers,   caption: 'Landing Page for Teachers' },
+  { src: imgStudents,   caption: 'Landing Page for Students and Parents' },
+  { src: imgDashboard,  caption: 'System for Teachers to Produce Educational Content' },
+  { src: imgMockup,     caption: 'Mockup Quizz App' },
 ]
 
 export default function QuizzApp() {
