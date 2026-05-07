@@ -35,11 +35,14 @@ export default function QuizzApp() {
 
   // Lightbox state: null = closed, number = index of zoomed image
   const [zoomed, setZoomed] = useState(null)
-  // Research detail modal: opens 3-col panel when clicking the first slide
+  // Research detail modal: opens panel when clicking the first slide
   const [showResearchDetail, setShowResearchDetail] = useState(false)
+  // Style Guide detail modal: opens panel when clicking the second slide
+  const [showStyleGuideDetail, setShowStyleGuideDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowResearchDetail(true)
+    else if (index === 1) setShowStyleGuideDetail(true)
     else setZoomed(index)
   }
 
@@ -110,13 +113,13 @@ export default function QuizzApp() {
             &#8592;
           </button>
 
-          {/* Card - first slide opens detail panel, others open lightbox */}
+          {/* Card - slides 0 and 1 open detail panels, others open lightbox */}
           <figure className="carousel__card">
             <img
               src={researchImages[current].src}
               alt={researchImages[current].caption}
               onClick={() => handleCardClick(current)}
-              title={current === 0 ? 'Click to see details' : 'Click to zoom'}
+              title={current <= 1 ? 'Click to see details' : 'Click to zoom'}
             />
             <figcaption>{researchImages[current].caption}</figcaption>
           </figure>
@@ -193,7 +196,40 @@ export default function QuizzApp() {
         </div>
       )}
 
-      {/* ── RESEARCH DETAIL PANEL ── 3-col modal: main image | thumbnails | text */}
+      {/* ── STYLE GUIDE DETAIL PANEL ── */}
+      {showStyleGuideDetail && (
+        <div className="rd-overlay" onClick={() => setShowStyleGuideDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowStyleGuideDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgStyleGuide} alt="Style Guide" />
+            </div>
+
+            {/* Col 2: title + description */}
+            <div className="rd-text">
+              <h3>Developing the Style Guide</h3>
+              <p>
+                The initial concepts for the Style Guide and cover page were
+                developed to ensure a cohesive and user-friendly design.
+              </p>
+              <p>
+                The Style Guide plays a key role in defining visual identity,
+                components, and design patterns, providing consistency
+                across the project.
+              </p>
+              <p>
+                This process occurred in parallel with design development,
+                allowing for iterative improvements that enhance both
+                usability and aesthetics.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── RESEARCH DETAIL PANEL ── */}
       {showResearchDetail && (
         <div className="rd-overlay" onClick={() => setShowResearchDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
