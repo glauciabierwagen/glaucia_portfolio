@@ -183,16 +183,19 @@ export default function QuizzApp() {
         </p>
       </section>
 
-      {/* ── NEXT PROJECT NAVIGATION ── */}
+      {/* ── PROJECT NAVIGATION ── */}
       <div className="project-nav">
         <a
-          className="project-nav__next"
-          href="https://glauciabierwagen.github.io/glaucia_portfolio/"
+          className="project-nav__prev"
+          href="./projects-portfolio/petadoption-project/index.html"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Back to the Main page Portfolio &#8250;
+          &#8249; Previous project
         </a>
+        <Link className="project-nav__next" to="/organization">
+          Next project &#8250;
+        </Link>
       </div>
 
       {/* ── LIGHTBOX OVERLAY ── renders when an image is zoomed */}

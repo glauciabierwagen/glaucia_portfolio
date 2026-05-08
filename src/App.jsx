@@ -17,7 +17,9 @@ import EducationSection from './components/sections/EducationSection'
 import PortfolioSection from './components/sections/PortfolioSection'
 
 // Importing project detail pages
-import QuizzApp from './components/projects/quizzapp/QuizzApp'
+import QuizzApp from './components/projects/quizzapp/QuizzApp.jsx'
+import Organization from './components/projects/organization/organization.jsx'
+import MinhaProva from './components/projects/minhaprova/minhaprova.jsx'
 
 // The App function returns the full page structure.
 export default function App() {
@@ -39,6 +41,10 @@ export default function App() {
 
       {/* Route '/quizzapp' shows the Quiz App project detail page */}
       <Route path="/quizzapp" element={<QuizzApp />} />
+      {/* Route '/organization' shows the Organization project detail page */}
+      <Route path="/organization" element={<Organization />} />
+      {/* Route '/minhaprova' shows the Minha Prova project detail page */}
+      <Route path="/minhaprova" element={<MinhaProva />} />
     </Routes>
   )
 }

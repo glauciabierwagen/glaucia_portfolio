@@ -57,9 +57,10 @@ const projects = [
     id: 6,
     title: 'UX/UI Website Project',
     img: `${import.meta.env.BASE_URL}images/teaching.png`,
-    href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project',
+    href: '/organization',  // Internal route - opens the Organization.jsx component page
     linkLabel: 'UX/UI Website Project\nClick to see the website!',
     description: 'UX/UI Portfolio.\nWebsite Organization.\nBuilt on: Figma and Wix.',
+    internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
   {
     id: 7,
@@ -82,22 +83,25 @@ function ProjectCard({ title, img, href, linkLabel, description, internal }) {
     <div className="box">
 
       {/* Hover container: shows an overlay link on top of the project image */}
-      <div className="hover__container">
-        <div className="hover__text">
-          {/* If internal is true, use React Router <Link> (no page reload).
-              Otherwise use a normal <a> tag that opens in a new browser tab. */}
-          {internal ? (
-            <Link to={href} title="Click to see the project!">
+      {internal ? (
+        <Link to={href} title="Click to see the project!" style={{ display: 'block', textDecoration: 'none' }}>
+          <div className="hover__container">
+            <div className="hover__text">
               {linkLabel.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
-            </Link>
-          ) : (
-            <a href={href} target="_blank" rel="noopener noreferrer" title="Click to see the website!">
+            </div>
+            <img className="projects__item-img" src={img} alt={`Screenshot of ${title}`} />
+          </div>
+        </Link>
+      ) : (
+        <a href={href} target="_blank" rel="noopener noreferrer" title="Click to see the website!" style={{ display: 'block', textDecoration: 'none' }}>
+          <div className="hover__container">
+            <div className="hover__text">
               {linkLabel.split('\n').map((line, i) => <span key={i}>{line}<br /></span>)}
-            </a>
-          )}
-        </div>
-        <img className="projects__item-img" src={img} alt={`Screenshot of ${title}`} />
-      </div>
+            </div>
+            <img className="projects__item-img" src={img} alt={`Screenshot of ${title}`} />
+          </div>
+        </a>
+      )}
 
       <div className="projects_info">
         <h2 className="title">{title}</h2>
