@@ -89,7 +89,7 @@ export default function QuizzApp() {
             informed decisions and improve learning outcomes.
           </p>
           <p className="project-description">
-            Additionally, an interactive quiz game has been designed to engage students through
+            Additionally, an interactive quizz game has been designed to engage students through
             gamified learning and instant feedback, making the learning process more dynamic and
             motivating. Landing pages have also been created, providing tailored perspectives for
             both educators and teachers.
