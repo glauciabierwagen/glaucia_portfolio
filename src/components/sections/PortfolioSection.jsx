@@ -49,9 +49,10 @@ const projects = [
     id: 5,
     title: 'Blogs post',
     img: `${import.meta.env.BASE_URL}images/projects/blog.png`,
-    href: 'https://www.uxmasterpiece.net/blog',
+    href: '/blog',
     linkLabel: "Blog's Posts\nClick to see the website!",
     description: "Blog's post.\nUX Research Exercise.\nBuilt on: Wix Studio and\nMedium Article.",
+    internal: true,
   },
   {
     id: 6,

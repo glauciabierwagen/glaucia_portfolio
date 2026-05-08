@@ -1,0 +1,190 @@
+/* blog.css - Styles for the Blog Posts listing page.
+   Reuses org-* nav/back classes. Adds blog-specific card layout. */
+
+/* ── Page wrapper ── */
+.blog-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem 6rem;
+  font-family: "Nunito", sans-serif;
+  color: #444;
+}
+
+/* ── Page title ── */
+.blog-page__title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2.4rem;
+}
+
+/* ── Thin divider under title ── */
+.blog-divider {
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
+  margin-bottom: 4rem;
+}
+
+/* ── Posts list ── */
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ── Single post card ── */
+.blog-card {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 4rem;
+}
+
+/* Image side */
+.blog-card__img-wrap {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.blog-card__img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.blog-card__img-wrap:hover .blog-card__img {
+  transform: scale(1.03);
+}
+
+/* Content side */
+.blog-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Author row */
+.blog-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.blog-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.blog-card__avatar {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: #1abc9c;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.blog-card__author-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+.blog-card__date {
+  font-size: 1.3rem;
+  color: #888;
+  padding-left: 4.3rem;
+}
+
+/* Title */
+.blog-card__title-link {
+  text-decoration: none;
+}
+.blog-card__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.blog-card__title-link:hover .blog-card__title {
+  color: #1abc9c;
+}
+
+/* Subtitle */
+.blog-card__subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Excerpt */
+.blog-card__excerpt {
+  font-size: 1.5rem;
+  color: #777;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer row */
+.blog-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.blog-card__tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.blog-card__tag {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1abc9c;
+  background: rgba(26, 188, 156, 0.1);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+.blog-card__read-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.2s, letter-spacing 0.2s;
+  white-space: nowrap;
+}
+.blog-card__read-btn:hover {
+  color: #159a80;
+  letter-spacing: 0.03em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .blog-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .blog-card__img {
+    height: 220px;
+  }
+  .blog-page__title {
+    font-size: 3rem;
+  }
+}
