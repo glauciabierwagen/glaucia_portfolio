@@ -89,20 +89,6 @@ export default function Blog() {
         ))}
       </ul>
 
-      {/* ── PROJECT NAVIGATION ── */}
-      <div className="org-nav">
-        <a
-          className="org-nav__prev"
-          href="./projects-portfolio/boxes-main/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          &#8249; Previous project
-        </a>
-        <Link className="org-nav__next" to="/organization">
-          Next project &#8250;
-        </Link>
-      </div>
 
     </div>
   )
