@@ -90,8 +90,7 @@
 }
 .org-hero__img img {
   width: 100%;
-  height: auto;
-  min-height: 580px;
+  height: 580px;
   object-fit: cover;
   display: block;
 }

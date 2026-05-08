@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import './minhaprova.css'
 import mpCover from '../images/MinhaProvaCover.png'
 // Research & design process images
-import imgReferences        from '../images/Prototype_Minha Prova.png'
-import imgStyleWireframes   from '../images/References.png'
-import imgPrototype         from '../images/Wireframes-Style.png'
+import imgReferences        from '../images/References.png'
+import imgStyleWireframes   from '../images/Wireframes-Style.png'
+import imgPrototype         from '../images/Prototype_Minha Prova.png'
 
 
 // Research & design process images
