@@ -66,9 +66,10 @@ const projects = [
     id: 7,
     title: 'Minha Prova App',
     img: `${import.meta.env.BASE_URL}images/projects/Minha Prova.png`,
-    href: 'https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1-1',
+    href: '/minhaprova',  // Internal route - opens the MinhaProva.jsx component page,
     linkLabel: 'UX/UI Portfolio\nClick to see the website!',
     description: 'UX/UI Portfolio.\nMinha Prova.\nBuilt on: Figma and Wix.',
+    internal: true,
   },
 ]
 

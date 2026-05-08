@@ -82,8 +82,9 @@
 
 /* Hero image */
 .org-hero__img {
-  width: 100%;
-  max-width: 1400px;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  margin-right: -3rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -91,7 +92,7 @@
 .org-hero__img img {
   width: 100%;
   height: auto;
-  min-height: 780px;
+  min-height: 680px;
   object-fit: cover;
   display: block;
 }
