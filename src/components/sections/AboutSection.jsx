@@ -178,7 +178,7 @@ export default function AboutSection() {
         {/* Loop over the items array to render one card per skill/topic */}
         <div className="row justify-content-center">
           {items.map(item => (
-            <div key={item.id} className="col-md-6 col-lg-6 mb-5">
+            <div key={item.id} className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 role="button"       // Makes it behave like a button for accessibility
