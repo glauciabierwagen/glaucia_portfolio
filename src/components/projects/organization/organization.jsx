@@ -4,7 +4,7 @@ import './organization.css'
 import twbCover from '../images/TWB cover.png'
 // Research & design process images
 import imgPersonas    from '../images/Persona e User Flow.png'
-import imgWireframe   from '../images/Wireframes-Style.png'
+import imgWireframe   from '../images/Wireframes.png'
 import imgUserNeeds   from '../images/User needs.png'
 import imgStyleGuide  from '../images/Style Guide.png'
 import imgPrototype   from '../images/Prototype.png'
@@ -12,7 +12,7 @@ import imgPrototype   from '../images/Prototype.png'
 // Research & design process images
 const researchImages = [
   { src: imgPersonas,   caption: 'Understanding the User Needs' },
-  { src: imgWireframe,  caption: 'Wireframes & Style Guide' },
+  { src: imgWireframe,  caption: 'Wireframes' },
   { src: imgUserNeeds,  caption: 'Personas & User Flow' },
   { src: imgStyleGuide, caption: 'Creation of Style Guide' },
   { src: imgPrototype,  caption: 'Prototype' },
