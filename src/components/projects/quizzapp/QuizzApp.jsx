@@ -11,7 +11,7 @@ import './quizzapp.css'
 import quizzCover from '../images/Quizz App cover.png'
 // Research & design process images
 import imgResearch from '../images/Research Quizz App.png'
-import imgStyleGuide from '../images/Style Guide.png'
+import imgStyleGuide from '../images/Style GuideApp.png'
 import imgTeachers from '../images/Website Professores.png'
 import imgStudents from '../images/Website Alunos.png'
 import imgDashboard from '../images/Dashboard.png'
@@ -92,13 +92,13 @@ export default function QuizzApp() {
             Additionally, an interactive quizz game has been designed to engage students through
             gamified learning and instant feedback, making the learning process more dynamic and
             motivating. Landing pages have also been created, providing tailored perspectives for
-            both educators and teachers.
+            both educators and students.
           </p>
 
           {/* Link to the live project */}
           <a
             className="project-live-btn"
-            href="https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1/"
+            href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-83162&t=1MGQYCnzjUxna7KK-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856&show-proto-sidebar=1"
             target="_blank"
             rel="noopener noreferrer"
           >

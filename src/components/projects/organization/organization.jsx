@@ -73,7 +73,7 @@ export default function Organization() {
 
           <a
             className="org-live-btn"
-            href="https://www.uxmasterpiece.net/portfolio-collections/my-portfolio/my-project-1/"
+            href="https://www.figma.com/proto/e5t9k0ywJ7T28vBXiyAEKx/TWB-%7C-Oficial?node-id=1870-6798&t=jekROu9al9SPpRFc-1&scaling=scale-down&content-scaling=fixed&page-id=45%3A2&starting-point-node-id=1458%3A4005&show-proto-sidebar=1"
             target="_blank"
             rel="noopener noreferrer"
           >
