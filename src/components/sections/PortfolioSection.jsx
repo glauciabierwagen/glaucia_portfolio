@@ -39,12 +39,14 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Boxes Landing Page',
+    title: 'Courses Projects',
     img: `${import.meta.env.BASE_URL}images/projects/boxes-main.png`,
-    href: './projects-portfolio/boxes-main/index.html',
-    linkLabel: 'Boxes Landing Page\nClick to see the website!',
-    description: 'Landing Page (boxes).\nBuilt on: CSS, HTML,\nJavaScript.',
+    href: '/activities',
+    linkLabel: 'Courses Projects\nClick to see the website!',
+    description: 'Diverse Projects.\nBuilt on: CSS, HTML,\nJavaScript.',
+    internal: true,
   },
+
   {
     id: 5,
     title: 'Blogs post',
