@@ -43,6 +43,8 @@ export default function Activities() {
   const [showBoxesDetail, setShowBoxesDetail] = useState(false)
   // Mockup detail modal: opens panel when clicking the sixth slide
   const [showMockupDetail, setShowMockupDetail] = useState(false)
+  // Dashboard detail modal
+  const [showDashboardDetail, setShowDashboardDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowResearchDetail(true)
