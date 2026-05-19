@@ -218,7 +218,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../projects-portfolio/bootstrap/index.html"
+                href="./projects-portfolio/bootstrap/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -259,7 +259,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../projects-portfolio/boxes-main/index.html"
+                href="./projects-portfolio/boxes-main/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -301,7 +301,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../projects-portfolio/price-cards/index.html"
+                href="./projects-portfolio/price-cards/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -336,7 +336,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../projects-portfolio/bhromaon/index.html"
+                href="./projects-portfolio/bhromaon/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
