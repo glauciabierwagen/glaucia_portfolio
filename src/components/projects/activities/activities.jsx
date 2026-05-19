@@ -31,28 +31,20 @@ export default function Activities() {
 
   // Lightbox state: null = closed, number = index of zoomed image
   const [zoomed, setZoomed] = useState(null)
-  // Research detail modal: opens panel when clicking the first slide
-  const [showResearchDetail, setShowResearchDetail] = useState(false)
-  // Style Guide detail modal: opens panel when clicking the second slide
-  const [showStyleGuideDetail, setShowStyleGuideDetail] = useState(false)
-  // Teachers detail modal: opens panel when clicking the third slide
-  const [showTeachersDetail, setShowTeachersDetail] = useState(false)
-  // Students detail modal: opens panel when clicking the fourth slide
-  const [showStudentsDetail, setShowStudentsDetail] = useState(false)
-  // Boxes 3D detail modal: opens panel when clicking the fifth slide
-  const [showBoxesDetail, setShowBoxesDetail] = useState(false)
-  // Mockup detail modal: opens panel when clicking the sixth slide
-  const [showMockupDetail, setShowMockupDetail] = useState(false)
-  // Dashboard detail modal
+  // Price Cards detail modal: opens panel when clicking slide 0
+  const [showPriceCardsDetail, setShowPriceCardsDetail] = useState(false)
+  // Landing Page detail modal: opens panel when clicking slide 1
+  const [showLandingPageDetail, setShowLandingPageDetail] = useState(false)
+  // Boxes 3D detail modal: opens panel when clicking slide 2
   const [showDashboardDetail, setShowDashboardDetail] = useState(false)
+  // Bootstrap detail modal: opens panel when clicking slide 3
+  const [showBootstrapDetail, setShowBootstrapDetail] = useState(false)
 
   const handleCardClick = (index) => {
-    if (index === 0) setShowResearchDetail(true)
-    else if (index === 1) setShowStyleGuideDetail(true)
-    else if (index === 2) setShowTeachersDetail(true)
-    else if (index === 3) setShowStudentsDetail(true)
-    else if (index === 4) setShowBoxesDetail(true)
-    else if (index === 5) setShowMockupDetail(true)
+    if (index === 0) setShowPriceCardsDetail(true)
+    else if (index === 1) setShowLandingPageDetail(true)
+    else if (index === 2) setShowDashboardDetail(true)
+    else if (index === 3) setShowBootstrapDetail(true)
   }
 
   return (
@@ -200,11 +192,11 @@ export default function Activities() {
         </div>
       )}
 
-      {/* ── MOCKUP DETAIL PANEL ── */}
-      {showMockupDetail && (
-        <div className="rd-overlay" onClick={() => setShowMockupDetail(false)}>
+      {/* ── BOOTSTRAP DETAIL PANEL ── */}
+      {showBootstrapDetail && (
+        <div className="rd-overlay" onClick={() => setShowBootstrapDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowMockupDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowBootstrapDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
@@ -226,7 +218,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../../projects-portfolio/bootstrap-project/index.html"
+                href="../projects-portfolio/bootstrap/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -237,7 +229,7 @@ export default function Activities() {
         </div>
       )}
 
-      {/* ── DASHBOARD DETAIL PANEL ── */}
+      {/* ── BOXES 3D DETAIL PANEL ── */}
       {showDashboardDetail && (
         <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -267,7 +259,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../../projects-portfolio/boxes-3d/index.html"
+                href="../projects-portfolio/boxes-main/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -278,11 +270,11 @@ export default function Activities() {
         </div>
       )}
 
-      {/* ── STUDENTS DETAIL PANEL ── */}
-      {showStudentsDetail && (
-        <div className="rd-overlay" onClick={() => setShowStudentsDetail(false)}>
+      {/* ── PRICE CARDS DETAIL PANEL ── */}
+      {showPriceCardsDetail && (
+        <div className="rd-overlay" onClick={() => setShowPriceCardsDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowStudentsDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowPriceCardsDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
@@ -309,7 +301,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../../projects-portfolio/price-cards/index.html"
+                href="../projects-portfolio/price-cards/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -320,11 +312,11 @@ export default function Activities() {
         </div>
       )}
 
-      {/* ── TEACHERS DETAIL PANEL ── */}
-      {showTeachersDetail && (
-        <div className="rd-overlay" onClick={() => setShowTeachersDetail(false)}>
+      {/* ── LANDING PAGE DETAIL PANEL ── */}
+      {showLandingPageDetail && (
+        <div className="rd-overlay" onClick={() => setShowLandingPageDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowTeachersDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowLandingPageDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
@@ -344,7 +336,7 @@ export default function Activities() {
               </p>
               <a
                 className="rd-figma-link"
-                href="../../projects-portfolio/bhromaon/index.html"
+                href="../projects-portfolio/bhromaon/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
