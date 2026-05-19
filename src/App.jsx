@@ -21,6 +21,7 @@ import QuizzApp from './components/projects/quizzapp/QuizzApp.jsx'
 import Organization from './components/projects/organization/organization.jsx'
 import MinhaProva from './components/projects/minhaprova/minhaprova.jsx'
 import Blog from './components/projects/blog/Blog.jsx'
+import Activities from './components/projects/activities/activities.jsx'
 
 // The App function returns the full page structure.
 export default function App() {
@@ -48,6 +49,8 @@ export default function App() {
       <Route path="/minhaprova" element={<MinhaProva />} />
       {/* Route '/blog' shows the Blog Posts project detail page */}
       <Route path="/blog" element={<Blog />} />
+      {/* Route '/activities' shows the Courses Projects page */}
+      <Route path="/activities" element={<Activities />} />
     </Routes>
   )
 }

@@ -6,28 +6,24 @@
 import { useState } from 'react'
 // Link is used for the back button - it navigates to '/' without a full page reload.
 import { Link } from 'react-router-dom'
-import './quizzapp.css'
+import './activities.css'
 // Local cover image for the hero section
-import imgBoxes from '../images/boxes=main.png'
-// Research & design process images
-import imgResearch from '../images/Research Quizz App.png'
-import imgStyleGuide from '../images/Style GuideApp.png'
-import imgPriceCards from '../images/price-cards.png'
-import imgStudents from '../images/Website Alunos.png'
 import imgBoxes from '../images/boxes-main.png'
+// Research & design process images
+import imgPriceCards from '../images/price-cards.png'
+import imgLandingPage from '../images/landingpage.png'
 import imgBootstrap from '../images/bootstrap.png'
 
 // Research & design process images
 const researchImages = [
-  { src: imgResearch,   caption: 'Researching process' },
-  { src: imgStyleGuide, caption: 'Developing the Style Guide' },
-  { src: imgPriceCards,   caption: 'Landing Page for Teachers' },
-  { src: imgStudents,   caption: 'Landing Page for Students and Parents' },
+  
+  { src: imgPriceCards,   caption: 'Landing Page Price Cards' },
+  { src: imgLandingPage,   caption: 'Landing Page for Bhromaon' },
   { src: imgBoxes,      caption: 'Boxes 3D' },
   { src: imgBootstrap,     caption: ' Bootstrap Project' },
 ]
 
-export default function QuizzApp() {
+export default function Activities() {
   // Carousel state: tracks which slide is currently visible
   const [current, setCurrent] = useState(0)
   const prev = () => setCurrent(i => (i - 1 + researchImages.length) % researchImages.length)
@@ -71,8 +67,8 @@ export default function QuizzApp() {
         {/* Hero screenshot - centered above the description */}
         <div className="project-hero__img">
           <img
-            src={quizzCover}
-            alt="Quiz App cover"
+            src={imgBoxes}
+            alt="Courses Projects cover"
           />
         </div>
 
@@ -247,7 +243,7 @@ export default function QuizzApp() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgDashboard} alt="Boxes 3D" />
+              <img src={imgBoxes} alt="Boxes 3D" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
@@ -288,7 +284,7 @@ export default function QuizzApp() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgStudents} alt="Landing Page for Students and Parents" />
+              <img src={imgPriceCards} alt="Landing Page for Price Cards" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
@@ -330,7 +326,7 @@ export default function QuizzApp() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgTeachers} alt="Landing Page for Teachers" />
+              <img src={imgLandingPage} alt="Landing Page Bhromaon" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
@@ -346,76 +342,18 @@ export default function QuizzApp() {
               </p>
               <a
                 className="rd-figma-link"
-                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-57800&t=i17QFDvc0lyPI6zb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                href="../../projects-portfolio/bhromaon/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                &#8250; Go to Figma
+                &#8250; Go to Project
               </a>
             </div>
           </div>
         </div>
       )}
 
-      {/* ── STYLE GUIDE DETAIL PANEL ── */}
-      {showStyleGuideDetail && (
-        <div className="rd-overlay" onClick={() => setShowStyleGuideDetail(false)}>
-          <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowStyleGuideDetail(false)} aria-label="Close">&times;</button>
-
-            {/* Col 1: main large image */}
-            <div className="rd-main">
-              <img src={imgStyleGuide} alt="Style Guide" />
-            </div>
-
-            {/* Col 2: title + description */}
-            <div className="rd-text">
-              <h3>Developing the Style Guide</h3>
-              <p>
-                The initial concepts for the Style Guide and cover page were
-                developed to ensure a cohesive and user-friendly design.
-              </p>
-              <p>
-                The Style Guide plays a key role in defining visual identity,
-                components, and design patterns, providing consistency
-                across the project.
-              </p>
-              <p>
-                This process occurred in parallel with design development,
-                allowing for iterative improvements that enhance both
-                usability and aesthetics.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── RESEARCH DETAIL PANEL ── */}
-      {showResearchDetail && (
-        <div className="rd-overlay" onClick={() => setShowResearchDetail(false)}>
-          <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowResearchDetail(false)} aria-label="Close">&times;</button>
-
-            {/* Col 1: main large image */}
-            <div className="rd-main">
-              <img src={imgResearch} alt="Research process" />
-            </div>
-
-            {/* Col 2: title + description */}
-            <div className="rd-text">
-              <h3>Researching process</h3>
-              <p>
-                A FigJam board was created to document and organize key references,
-                including inspirations, competitor analysis, research findings, and user
-                flowcharts. This serves as a centralized resource, making it easier to
-                visualize insights, track progress, and ensure user-centered design
-                decisions throughout the project.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
+      
     </div>
   )
 }
