@@ -41,12 +41,11 @@ const projects = [
     id: 4,
     title: 'Courses Projects',
     img: `${import.meta.env.BASE_URL}images/projects/boxes-main.png`,
-    href: '/activities',
+    href: '/activities', // Internal route - opens the Activities.jsx component page
     linkLabel: 'Courses Projects\nClick to see the website!',
     description: 'Diverse Projects.\nBuilt on: CSS, HTML,\nJavaScript.',
-    internal: true,
+    internal: true, // Flag to use React Router Link instead of <a target="_blank">
   },
-
   {
     id: 5,
     title: 'Blogs post',
@@ -54,7 +53,7 @@ const projects = [
     href: '/blog',
     linkLabel: "Blog's Posts\nClick to see the website!",
     description: "Blog's post.\nUX Research Exercise.\nBuilt on: Wix Studio and\nMedium Article.",
-    internal: true,
+    internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
   {
     id: 6,
@@ -69,10 +68,10 @@ const projects = [
     id: 7,
     title: 'Minha Prova App',
     img: `${import.meta.env.BASE_URL}images/projects/Minha Prova.png`,
-    href: '/minhaprova',  // Internal route - opens the MinhaProva.jsx component page,
+    href: '/minhaprova',  // Internal route - opens the MinhaProva.jsx component page
     linkLabel: 'UX/UI Portfolio\nClick to see the website!',
     description: 'UX/UI Portfolio.\nMinha Prova.\nBuilt on: Figma and Wix.',
-    internal: true,
+    internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
 ]
 
