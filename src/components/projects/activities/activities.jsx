@@ -76,10 +76,13 @@ export default function Activities() {
           <p className="project-role">Front End and Backend Developer</p>
 
           <p className="project-description">
-            The idea is to show some relevant projects developed during the courses and self-studies, such as websites and landing pages.
+            The idea is to showcase relevant projects developed during courses and self-studies, including websites and landing pages.
+            This collection features five projects: a landing page with interactive price cards, a landing page for Bhromaon,
+            an animated 3D boxes page, a Bootstrap-based responsive layout, and a pet adoption webpage built as a group project.
           </p>
           <p className="project-description">
-            XXXXXX 
+            Each project reflects different skills and technologies explored throughout the learning journey.
+            Additional projects can be found on my GitHub profile.
           </p>
 
           {/* Link to the live project */}
