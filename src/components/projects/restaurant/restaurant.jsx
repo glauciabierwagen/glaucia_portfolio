@@ -10,7 +10,7 @@ import './restaurant.css'
 // Local cover image for the hero section
 import resataurantCover from '../images/restaurant.png'
 // Research & design process images
-import imgResearch from '../images/Research Quizz App.png'
+
 import imgAuthentication from '../images/authentication.png'
 import imgEmployer from '../images/employerview.jpg'
 import imgEmployer2 from '../images/employerview2.png'
@@ -21,7 +21,7 @@ import imgTesting from '../images/testing.png'
 
 // Research & design process images
 const researchImages = [
-  { src: imgResearch,   caption: 'Authentication process' },
+  { src: imgAuthentication,   caption: 'Authentication process' },
   { src: imgEmployer,  caption: 'Employer View' },
   { src: imgEmployer2,   caption: 'Employer View - Work Schedules' },
   { src: imgEmployee,   caption: 'Employee View - Availability' },
@@ -160,21 +160,30 @@ export default function QuizzApp() {
       <section className="project-challenges">
         <h2 className="project-section-title">Challenges</h2>
         <p className="project-challenges__text">
-          Working on the development of an educational quiz app presented several challenges,
-          especially when conducting research and working independently throughout the process.
-          One of the main difficulties was ensuring that the research phase was comprehensive
-          and user-centered without the direct support of a team to brainstorm, validate ideas,
-          or provide diverse perspectives. Collecting insights from educators and students
-          required extra effort to engage participants, analyze qualitative data, and translate
-          findings into actionable design decisions on my own.
+          <strong>Docker</strong> removed the "works on my machine" problem by running the backend, frontend,
+          and database in containers that behave the same everywhere. It taught us how multi-service
+          applications are structured in practice.
         </p>
         <p className="project-challenges__text">
-          Additionally, balancing research, ideation, prototyping, and iteration independently
-          made the process more complex. Without immediate feedback loops, I had to continuously
-          reevaluate my decisions, ensuring they aligned with the users' needs while maintaining
-          usability and engagement. Despite these challenges, this experience strengthened my
-          ability to self-manage, adapt, and refine my problem-solving approach, reinforcing the
-          importance of collaboration and iterative design in user-centered solutions.
+          <strong>Testing</strong> was harder than expected because the tests had to work without a real
+          database or Auth0 credentials, which meant learning how to mock dependencies. Once we got it
+          working, having CI run every test on every push made deploying much less stressful.
+        </p>
+        <p className="project-challenges__text">
+          <strong>Deployment</strong> was the most detail-heavy part. Every piece has to be correct at the
+          same time — the Render URL, the Vercel URL, the Auth0 callback URLs, and the cookie flags.
+          Working across three platforms at once meant a misconfiguration in one could look like a bug in
+          another, which taught us to check each layer separately.
+        </p>
+        <p className="project-challenges__text">
+          <strong>Database and ORM</strong> — Prisma made schema changes trackable through migrations and
+          the seed script kept test data consistent across machines. Getting migrations to run at the right
+          moment inside Docker took some trial and error.
+        </p>
+        <p className="project-challenges__text">
+          <strong>Authentication with Auth0</strong> was the most complex part. Understanding the OAuth 2.0
+          flow — the redirect, the callback, and the session cookie — was challenging at first, but it showed
+          us the value of delegating security-critical work to a dedicated service.
         </p>
       </section>
 
@@ -386,9 +395,18 @@ export default function QuizzApp() {
                 <code>EmployerView</code>, <code>RegisterEmployeeForm</code>, and the <code>App</code> auth guard,
                 checking rendering, role-based display, form validation, and navigation behaviour.
               </p>
+              <a
+                className="rd-figma-link"
+                href="https://github.com/deborah-boat/Employee_Scheduling"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go To GitHub
+              </a>
             </div>
           </div>
         </div>
+        
       )}
 
     </div>
