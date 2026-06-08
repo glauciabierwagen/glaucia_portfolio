@@ -88,7 +88,7 @@ export default function Activities() {
           {/* Link to the live project */}
           <a
             className="project-live-btn"
-            href="#"
+            href="https://github.com/glauciabierwagen/udemy-50projects"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -155,21 +155,16 @@ export default function Activities() {
       <section className="project-challenges">
         <h2 className="project-section-title">Challenges</h2>
         <p className="project-challenges__text">
-          Working on the development of an educational quiz app presented several challenges,
-          especially when conducting research and working independently throughout the process.
-          One of the main difficulties was ensuring that the research phase was comprehensive
-          and user-centered without the direct support of a team to brainstorm, validate ideas,
-          or provide diverse perspectives. Collecting insights from educators and students
-          required extra effort to engage participants, analyze qualitative data, and translate
-          findings into actionable design decisions on my own.
+          Working through these projects independently presented several challenges, especially when learning new concepts
+          and applying them without direct guidance. One of the main difficulties was translating theory into practice —
+          understanding not just how a technique works, but when and why to use it. Each project required making design
+          and development decisions on my own, which pushed me to research, experiment, and iterate continuously.
         </p>
         <p className="project-challenges__text">
-          Additionally, balancing research, ideation, prototyping, and iteration independently
-          made the process more complex. Without immediate feedback loops, I had to continuously
-          reevaluate my decisions, ensuring they aligned with the users' needs while maintaining
-          usability and engagement. Despite these challenges, this experience strengthened my
-          ability to self-manage, adapt, and refine my problem-solving approach, reinforcing the
-          importance of collaboration and iterative design in user-centered solutions.
+          Balancing different technologies across projects — from pure HTML and CSS to JavaScript interactivity and
+          Bootstrap's framework — made it important to stay organized and consistent. Despite these challenges, this
+          experience strengthened my ability to learn independently, adapt to new tools, and build structured,
+          user-friendly interfaces from scratch.
         </p>
       </section>
 
