@@ -14,11 +14,12 @@ import { Link } from 'react-router-dom'
 const projects = [
   {
     id: 1,
-    title: "Pet Adoption's Project",
-    img: `${import.meta.env.BASE_URL}images/projects/petadotption.png`,
-    href: './projects-portfolio/petadoption-project/index.html',
-    linkLabel: 'Pet Adoptions Project\nClick to see the website!',
-    description: "Pet's adoptions page.\nGroup project.\nBuilt on: Figma, CSS, Sass,\nJavascript, HTML.",
+    title: "Restaurant App",
+    img: `${import.meta.env.BASE_URL}images/projects/restaurant.png`,
+    href: '/restaurant',  // Internal route - opens the Restaurant.jsx component page
+    linkLabel: 'Restaurant App\nClick to see the website!',
+    description: "Restaurant App.\nGroup project.\nBuilt on: Figma, React, \n Node.js, Express.",
+    internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
   {
     id: 2,

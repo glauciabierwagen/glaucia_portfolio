@@ -13,18 +13,20 @@ import resataurancover from '../images/restaurant.png'
 import imgResearch from '../images/Research Quizz App.png'
 import imgAuthentication from '../images/authentication.png'
 import imgEmployer from '../images/employeview.jpg'
-import imgEmploye2 from '../images/employeview2.png'
-import imgDashboard from '../images/Dashboard.png'
-import imgMockup from '../images/Quizz App.png'
+import imgEmployer2 from '../images/employeview2.png'
+import imgEmployee from '../images/employee.png'
+import imgTesting from '../images/testing.png'
+import imgStyleGuide from '../images/Style Guide.png'
+
 
 // Research & design process images
 const researchImages = [
   { src: imgResearch,   caption: 'Authentication process' },
-  { src: imgStyleGuide, caption: 'Developing the Style Guide' },
-  { src: imgEmploye,   caption: 'Employer View' },
-  { src: imgStudents,   caption: 'Landing Page for Students and Parents' },
-  { src: imgDashboard,  caption: 'System for Teachers to Produce Educational Content' },
-  { src: imgMockup,     caption: 'Mockup Quizz App' },
+  { src: imgStyleGuide, caption: 'Style Guide' },
+  { src: imgEmployer,  caption: 'Employer View' },
+  { src: imgEmployer2,   caption: 'Employer View - Work Schedules' },
+  { src: imgEmployee,   caption: 'Employee View - Availability' },
+  { src: imgTesting,    caption: 'Testing' },
 ]
 
 export default function QuizzApp() {
@@ -35,26 +37,26 @@ export default function QuizzApp() {
 
   // Lightbox state: null = closed, number = index of zoomed image
   const [zoomed, setZoomed] = useState(null)
-  // Research detail modal: opens panel when clicking the first slide
-  const [showResearchDetail, setShowResearchDetail] = useState(false)
-  // Style Guide detail modal: opens panel when clicking the second slide
+  // Authentication detail modal: opens panel when clicking slide 0
+  const [showAuthenticationDetail, setShowAuthenticationDetail] = useState(false)
+  // Style Guide detail modal: opens panel when clicking slide 1
   const [showStyleGuideDetail, setShowStyleGuideDetail] = useState(false)
-  // Teachers detail modal: opens panel when clicking the third slide
-  const [showTeachersDetail, setShowTeachersDetail] = useState(false)
-  // Students detail modal: opens panel when clicking the fourth slide
-  const [showStudentsDetail, setShowStudentsDetail] = useState(false)
-  // Dashboard detail modal: opens panel when clicking the fifth slide
-  const [showDashboardDetail, setShowDashboardDetail] = useState(false)
-  // Mockup detail modal: opens panel when clicking the sixth slide
-  const [showMockupDetail, setShowMockupDetail] = useState(false)
+  // Employer View detail modal: opens panel when clicking slide 2
+  const [showEmployerDetail, setShowEmployerDetail] = useState(false)
+  // Employer Work Schedule detail modal: opens panel when clicking slide 3
+  const [showEmployer2Detail, setShowEmployer2Detail] = useState(false)
+  // Employee Availability detail modal: opens panel when clicking slide 4
+  const [showEmployeesDetail, setShowEmployeesDetail] = useState(false)
+  // Testing detail modal: opens panel when clicking slide 5
+  const [showTestingDetail, setShowTestingDetail] = useState(false)
 
   const handleCardClick = (index) => {
-    if (index === 0) setShowResearchDetail(true)
+    if (index === 0) setShowAuthenticationDetail(true)
     else if (index === 1) setShowStyleGuideDetail(true)
-    else if (index === 2) setShowTeachersDetail(true)
-    else if (index === 3) setShowStudentsDetail(true)
-    else if (index === 4) setShowDashboardDetail(true)
-    else if (index === 5) setShowMockupDetail(true)
+    else if (index === 2) setShowEmployerDetail(true)
+    else if (index === 3) setShowEmployer2Detail(true)
+    else if (index === 4) setShowEmployeesDetail(true)
+    else if (index === 5) setShowTestingDetail(true)
   }
 
   return (
@@ -239,14 +241,14 @@ export default function QuizzApp() {
       )}
 
       {/* ── EMPLOYER VIEW PANEL 1 ── */}
-      {showDashboardDetail && (
-        <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
+      {showEmployerDetail && (
+        <div className="rd-overlay" onClick={() => setShowEmployerDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowDashboardDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowEmployerDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmploye} alt="Employer View" />
+              <img src={imgEmployer} alt="Employer View" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
@@ -270,7 +272,7 @@ export default function QuizzApp() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                &#8250; Go To Figma
+                &#8250; Go To Project
               </a>
             </div>
           </div>
@@ -278,14 +280,14 @@ export default function QuizzApp() {
       )}
 
        {/* ── EMPLOYER VIEW PANEL 2── */}
-      {showDashboardDetail && (
-        <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
+      {showEmployer2Detail && (
+        <div className="rd-overlay" onClick={() => setShowEmployer2Detail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowDashboardDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowEmployer2Detail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmploye2} alt="Employer View - Work Schedule" />
+              <img src={imgEmployer2} alt="Employer View - Work Schedule" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
@@ -316,98 +318,77 @@ export default function QuizzApp() {
 
         
 
-      {/* ── TEACHERS DETAIL PANEL ── */}
-      {showTeachersDetail && (
-        <div className="rd-overlay" onClick={() => setShowTeachersDetail(false)}>
+      {/* ── EMPLOYEE DETAIL PANEL ── */}
+      {showEmployeesDetail && (
+        <div className="rd-overlay" onClick={() => setShowEmployeesDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowTeachersDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowEmployeesDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgTeachers} alt="Landing Page for Teachers" />
+              <img src={imgEmployees} alt="Landing Page for Employees" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
-              <h3>Landing Page Teachers</h3>
+              <h3>Employee View — Availability</h3>
               <p>
-                The first version of the prototype was designed to offer an
-                intuitive and user-friendly experience tailored to teachers'
-                needs. The Landing Page features classroom imagery,
-                visually reinforcing how the system supports educators in
-                creating, managing, and organizing content for their students.
+                The Availability screen allows each employee to set their schedule preferences for the week.
+                The grid shows all shifts (Morning, Afternoon, and Evening) across each day of the week.
               </p>
               <p>
-                This design ensures a seamless and efficient workflow,
-                helping teachers focus on delivering engaging and effective
-                learning experiences.
+                Each cell can be marked as <strong>Available</strong> (green), <strong>Unavailable</strong> (red),
+                or left as <strong>Choose Availability</strong> (default). Cells already assigned by the employer
+                appear as <strong>Scheduled</strong> with the shift time confirmed.
+                Clicking on a date header opens a modal to set availability for the entire day at once.
               </p>
               <a
                 className="rd-figma-link"
-                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-57800&t=i17QFDvc0lyPI6zb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
+                href="https://employeeschedulingsecond.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                &#8250; Go to Figma
+                &#8250; Go To Project
               </a>
             </div>
           </div>
         </div>
       )}
 
-      {/* ── STYLE GUIDE DETAIL PANEL ── */}
-      {showStyleGuideDetail && (
-        <div className="rd-overlay" onClick={() => setShowStyleGuideDetail(false)}>
+      {/* ── TESTING PANEL ── */}
+      {showTestingDetail && (
+        <div className="rd-overlay" onClick={() => setShowTestingDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowStyleGuideDetail(false)} aria-label="Close">&times;</button>
+            <button className="rd-close" onClick={() => setShowTestingDetail(false)} aria-label="Close">&times;</button>
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgStyleGuide} alt="Style Guide" />
+              <img src={imgTesting} alt="Testing" />
             </div>
 
             {/* Col 2: title + description */}
             <div className="rd-text">
-              <h3>Developing the Style Guide</h3>
+              <h3>Testing</h3>
               <p>
-                The initial concepts for the Style Guide and cover page were
-                developed to ensure a cohesive and user-friendly design.
+                The project includes automated tests across three layers to ensure reliability and correctness.
               </p>
               <p>
-                The Style Guide plays a key role in defining visual identity,
-                components, and design patterns, providing consistency
-                across the project.
+                <strong>Unit Tests — Backend:</strong> Pure helper functions are tested in isolation (no database,
+                no network, no Express). Functions covered include <code>normalizeEmail</code>, <code>isValidRole</code>,
+                <code>parseId</code>, <code>filterEmployeesByName</code>, <code>validateEmployeeInput</code>, and
+                <code>validateAvailabilityInput</code>, verifying edge cases such as empty strings, invalid formats,
+                and missing fields.
               </p>
               <p>
-                This process occurred in parallel with design development,
-                allowing for iterative improvements that enhance both
-                usability and aesthetics.
+                <strong>Integration Tests — API:</strong> All main endpoints are tested against real scenarios,
+                including authentication, employee management, availability, and schedule routes. Tests verify
+                correct HTTP status codes (200, 201, 204, 400, 401, 403) for both valid and invalid inputs.
               </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── RESEARCH DETAIL PANEL ── */}
-      {showResearchDetail && (
-        <div className="rd-overlay" onClick={() => setShowResearchDetail(false)}>
-          <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowResearchDetail(false)} aria-label="Close">&times;</button>
-
-            {/* Col 1: main large image */}
-            <div className="rd-main">
-              <img src={imgResearch} alt="Research process" />
-            </div>
-
-            {/* Col 2: title + description */}
-            <div className="rd-text">
-              <h3>Researching process</h3>
               <p>
-                A FigJam board was created to document and organize key references,
-                including inspirations, competitor analysis, research findings, and user
-                flowcharts. This serves as a centralized resource, making it easier to
-                visualize insights, track progress, and ensure user-centered design
-                decisions throughout the project.
+                <strong>Frontend — Unit Tests:</strong> React components are tested in isolation using Testing Library
+                with jsdom. Components covered include <code>LoginScreen</code>, <code>EmployeeList</code>,
+                <code>EmployerView</code>, <code>RegisterEmployeeForm</code>, and the <code>App</code> auth guard,
+                checking rendering, role-based display, form validation, and navigation behaviour.
               </p>
             </div>
           </div>
