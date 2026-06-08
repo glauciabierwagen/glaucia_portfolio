@@ -12,8 +12,8 @@ import resataurancover from '../images/restaurant.png'
 // Research & design process images
 import imgResearch from '../images/Research Quizz App.png'
 import imgAuthentication from '../images/authentication.png'
-import imgEmploye from '../images/employeview.jpg'
-import imgStudents from '../images/Website Alunos.png'
+import imgEmployer from '../images/employeview.jpg'
+import imgEmploye2 from '../images/employeview2.png'
 import imgDashboard from '../images/Dashboard.png'
 import imgMockup from '../images/Quizz App.png'
 
@@ -238,7 +238,7 @@ export default function QuizzApp() {
         </div>
       )}
 
-      {/* ── EMPLOYER VIEW PANEL ── */}
+      {/* ── EMPLOYER VIEW PANEL 1 ── */}
       {showDashboardDetail && (
         <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -264,36 +264,10 @@ export default function QuizzApp() {
                 <strong> Job Schedule</strong> (manage shift definitions), and
                 <strong> Work Schedule</strong> (assign shifts to employees for each day of the week).
               </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── STUDENTS DETAIL PANEL ── */}
-      {showStudentsDetail && (
-        <div className="rd-overlay" onClick={() => setShowStudentsDetail(false)}>
-          <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowStudentsDetail(false)} aria-label="Close">&times;</button>
-
-            {/* Col 1: main large image */}
-            <div className="rd-main">
-              <img src={imgStudents} alt="Landing Page for Students and Parents" />
-            </div>
-
-            {/* Col 2: title + description + Figma link */}
-            <div className="rd-text">
-              <h3>Landing Page for Students and Parents</h3>
-              <p>
-                A Landing Page was designed for students and parents,
-                featuring an engaging and intuitive interface. A prominent
-                &ldquo;Spela Nu&rdquo; (Play Now) button allows seamless navigation to
-                the quiz game, which will include refined colors and
-                animations for a more immersive experience.
-              </p>
               <a
                 className="rd-figma-link"
-                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-80098&t=nYaAOyo9efaEbZxL-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
-                target="_blank"
+                href="https://employeeschedulingsecond.vercel.app/"
+                target="_blank" 
                 rel="noopener noreferrer"
               >
                 &#8250; Go To Figma
@@ -302,6 +276,45 @@ export default function QuizzApp() {
           </div>
         </div>
       )}
+
+       {/* ── EMPLOYER VIEW PANEL 2── */}
+      {showDashboardDetail && (
+        <div className="rd-overlay" onClick={() => setShowDashboardDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowDashboardDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgEmploye2} alt="Employer View - Work Schedule" />
+            </div>
+
+            {/* Col 2: title + description + Figma link */}
+            <div className="rd-text">
+              <h3>Employer View — Work Schedule</h3>
+              <p>
+                The Work Schedule tab gives the employer a weekly calendar view of all assigned shifts.
+                Each row represents a shift (Morning, Afternoon, or Night), and each column is a day of the week.
+                Cells show the number of employees scheduled versus the total slots available (e.g. 1/2 or 1/3).
+              </p>
+              <p>
+                When an employee is assigned to a shift, their photo and name appear in the cell.
+                Green cells indicate available slots, making it easy to spot gaps in coverage at a glance.
+                Clicking an employee name opens their availability details for that shift.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="https://employeeschedulingsecond.vercel.app/"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                &#8250; Go To Project
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+        
 
       {/* ── TEACHERS DETAIL PANEL ── */}
       {showTeachersDetail && (
