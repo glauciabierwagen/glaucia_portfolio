@@ -8,21 +8,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './restaurant.css'
 // Local cover image for the hero section
-import resataurancover from '../images/restaurant.png'
+import resataurantCover from '../images/restaurant.png'
 // Research & design process images
 import imgResearch from '../images/Research Quizz App.png'
 import imgAuthentication from '../images/authentication.png'
-import imgEmployer from '../images/employeview.jpg'
-import imgEmployer2 from '../images/employeview2.png'
+import imgEmployer from '../images/employerview.jpg'
+import imgEmployer2 from '../images/employerview2.png'
 import imgEmployee from '../images/employee.png'
 import imgTesting from '../images/testing.png'
-import imgStyleGuide from '../images/Style Guide.png'
+
 
 
 // Research & design process images
 const researchImages = [
   { src: imgResearch,   caption: 'Authentication process' },
-  { src: imgStyleGuide, caption: 'Style Guide' },
   { src: imgEmployer,  caption: 'Employer View' },
   { src: imgEmployer2,   caption: 'Employer View - Work Schedules' },
   { src: imgEmployee,   caption: 'Employee View - Availability' },
@@ -39,24 +38,21 @@ export default function QuizzApp() {
   const [zoomed, setZoomed] = useState(null)
   // Authentication detail modal: opens panel when clicking slide 0
   const [showAuthenticationDetail, setShowAuthenticationDetail] = useState(false)
-  // Style Guide detail modal: opens panel when clicking slide 1
-  const [showStyleGuideDetail, setShowStyleGuideDetail] = useState(false)
-  // Employer View detail modal: opens panel when clicking slide 2
+  // Employer View detail modal: opens panel when clicking slide 1
   const [showEmployerDetail, setShowEmployerDetail] = useState(false)
-  // Employer Work Schedule detail modal: opens panel when clicking slide 3
+  // Employer Work Schedule detail modal: opens panel when clicking slide 2
   const [showEmployer2Detail, setShowEmployer2Detail] = useState(false)
-  // Employee Availability detail modal: opens panel when clicking slide 4
+  // Employee Availability detail modal: opens panel when clicking slide 3
   const [showEmployeesDetail, setShowEmployeesDetail] = useState(false)
-  // Testing detail modal: opens panel when clicking slide 5
+  // Testing detail modal: opens panel when clicking slide 4
   const [showTestingDetail, setShowTestingDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowAuthenticationDetail(true)
-    else if (index === 1) setShowStyleGuideDetail(true)
-    else if (index === 2) setShowEmployerDetail(true)
-    else if (index === 3) setShowEmployer2Detail(true)
-    else if (index === 4) setShowEmployeesDetail(true)
-    else if (index === 5) setShowTestingDetail(true)
+    else if (index === 1) setShowEmployerDetail(true)
+    else if (index === 2) setShowEmployer2Detail(true)
+    else if (index === 3) setShowEmployeesDetail(true)
+    else if (index === 4) setShowTestingDetail(true)
   }
 
   return (
@@ -73,8 +69,8 @@ export default function QuizzApp() {
         {/* Hero screenshot - centered above the description */}
         <div className="project-hero__img">
           <img
-            src={quizzCover}
-            alt="Quiz App cover"
+            src={resataurantCover}
+            alt="Restaurant App cover"
           />
         </div>
 
@@ -326,7 +322,7 @@ export default function QuizzApp() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmployees} alt="Landing Page for Employees" />
+              <img src={imgEmployee} alt="Employee Availability" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
