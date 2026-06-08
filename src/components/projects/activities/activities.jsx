@@ -13,6 +13,7 @@ import imgBoxes from '../images/boxes-main.png'
 import imgPriceCards from '../images/price-cards.png'
 import imgLandingPage from '../images/landingpage.png'
 import imgBootstrap from '../images/bootstrap.png'
+import imgPetAdoption from '../images/petadotption.png'
 
 // Research & design process images
 const researchImages = [
@@ -21,6 +22,7 @@ const researchImages = [
   { src: imgLandingPage,   caption: 'Landing Page for Bhromaon' },
   { src: imgBoxes,      caption: 'Boxes 3D' },
   { src: imgBootstrap,     caption: ' Bootstrap Project' },
+  {src: imgPetAdoption, caption: 'Pet Adoption Webpage'}
 ]
 
 export default function Activities() {
@@ -39,12 +41,15 @@ export default function Activities() {
   const [showDashboardDetail, setShowDashboardDetail] = useState(false)
   // Bootstrap detail modal: opens panel when clicking slide 3
   const [showBootstrapDetail, setShowBootstrapDetail] = useState(false)
+  // Pet Adoption detail modal: opens panel when clicking slide 4
+  const [showPetAdoptionDetail, setShowPetAdoptionDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowPriceCardsDetail(true)
     else if (index === 1) setShowLandingPageDetail(true)
     else if (index === 2) setShowDashboardDetail(true)
     else if (index === 3) setShowBootstrapDetail(true)
+    else if (index === 4) setShowPetAdoptionDetail(true)
   }
 
   return (
@@ -203,7 +208,7 @@ export default function Activities() {
               <img src={imgBootstrap} alt="Mockup Bootstrap Project" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: title + description + webpage */}
             <div className="rd-text">
               <h3> Bootstrap Project</h3>
               <p>
@@ -240,7 +245,7 @@ export default function Activities() {
               <img src={imgBoxes} alt="Boxes 3D" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: title + description + webpage */}
             <div className="rd-text">
               <h3> Boxes 3D</h3>
               <p>
@@ -281,7 +286,7 @@ export default function Activities() {
               <img src={imgPriceCards} alt="Landing Page for Price Cards" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: title + description + webpage */}
             <div className="rd-text">
               <h3> Price Cards</h3>
               <p>
@@ -323,7 +328,7 @@ export default function Activities() {
               <img src={imgLandingPage} alt="Landing Page Bhromaon" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: title + description + webpage */}
             <div className="rd-text">
               <h3>Landing Page Bhromaon</h3>
               <p>
@@ -347,7 +352,41 @@ export default function Activities() {
         </div>
       )}
 
-      
+        {/* ── PET ADOPTION WEBPAGE DETAIL PANEL ── */}
+      {showPetAdoptionDetail && (
+        <div className="rd-overlay" onClick={() => setShowPetAdoptionDetail(false)}>
+          <div className="rd-panel" onClick={e => e.stopPropagation()}>
+            <button className="rd-close" onClick={() => setShowPetAdoptionDetail(false)} aria-label="Close">&times;</button>
+
+            {/* Col 1: main large image */}
+            <div className="rd-main">
+              <img src={imgPetAdoption} alt="Pet Adoption Webpage" />
+            </div>
+
+            {/* Col 2: title + description + webpage */}
+            <div className="rd-text">
+              <h3>Pet Adoption Webpage</h3>
+              <p>
+                This project involved creating a simple and responsive webpage using HTML and CSS. 
+                The main goal was to design a clean and well-structured layout with a focus on visual organization and user-friendly presentation.
+              </p>
+              <p>
+                Through this project, I learned more about how HTML organizes content and how CSS changes the look of a webpage. It also helped me improve my layout design skills and create simple, easy-to-read pages. 
+                This group project also gave me the chance to work and collaborate with a team.
+              </p>
+              <a
+                className="rd-figma-link"
+                href="./projects-portfolio/petadoption-project/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &#8250; Go to Project
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
