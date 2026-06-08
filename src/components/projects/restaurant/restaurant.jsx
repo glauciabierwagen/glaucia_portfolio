@@ -246,39 +246,24 @@ export default function QuizzApp() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgDashboard} alt="System for Teachers to Produce Educational Content" />
+              <img src={imgEmploye} alt="Employer View" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
-              <h3>System for Teachers to Produce Educational Content</h3>
+              <h3>Employer View</h3>
               <p>
-                The first version of the prototype was developed to provide
-                an intuitive and user-friendly experience. It includes a
-                Landing Page designed specifically for teachers, along with
-                a Login Page for secure access.
+                After logging in, the employer sees a welcome screen confirming their role.
+                The main dashboard displays a list of all registered employees — including their name,
+                photo, and job role — with options to view, edit, or delete each profile.
               </p>
               <p>
-                The prototype introduces key system screens, such as a
-                Dashboard for an overview of activities, a Student
-                Information page for tracking progress, a Material Page to
-                access pre-existing questions, a Question Creation Page
-                where teachers can design custom questions, and a
-                Settings/Profile section for personalization.
+                From the top navigation, the employer can switch between four sections:
+                <strong> Employees</strong> (view all staff),
+                <strong> Register Employee</strong> (add new members),
+                <strong> Job Schedule</strong> (manage shift definitions), and
+                <strong> Work Schedule</strong> (assign shifts to employees for each day of the week).
               </p>
-              <p>
-                This initial version lays the foundation for a structured and
-                efficient platform, ensuring a seamless experience for
-                educators.
-              </p>
-              <a
-                className="rd-figma-link"
-                href="https://www.figma.com/proto/vJRPOnXWwZ7YZWnIVhgPKw/Quizz-App-Meu?node-id=2-54441&t=sO95LLHW6yWSY7EC-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A56856"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                &#8250; Go to Figma
-              </a>
             </div>
           </div>
         </div>
