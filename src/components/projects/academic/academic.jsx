@@ -6,26 +6,26 @@
 import { useState } from 'react'
 // Link is used for the back button - it navigates to '/' without a full page reload.
 import { Link } from 'react-router-dom'
-import './restaurant.css'
+import './academic.css'
 // Local cover image for the hero section
-import resataurantCover from '../images/restaurant.png'
+import academicCover from '../images/Xover Academic.png'
 // Research & design process images
 
-import imgAuthentication from '../images/authentication.png'
-import imgEmployer from '../images/employerview.jpg'
-import imgEmployer2 from '../images/employerview2.png'
-import imgEmployee from '../images/employee.png'
-import imgTesting from '../images/testing.png'
+import imgBooks from '../images/Ebook.png'
+import imgEducationalProducts from '../images/EducationalProducts.png'
+import imgPaper from '../images/employerview2.png'
+import imgEmployee from '../images/Paper.png'
+import imgResearchGroup from '../images/Mecom imagem.png'
 
 
 
 // Research & design process images
 const researchImages = [
-  { src: imgAuthentication,   caption: 'Authentication process' },
-  { src: imgEmployer,  caption: 'Employer View' },
-  { src: imgEmployer2,   caption: 'Employer View - Work Schedules' },
-  { src: imgEmployee,   caption: 'Employee View - Availability' },
-  { src: imgTesting,    caption: 'Testing' },
+  { src: imgBooks,   caption: 'Books' },
+  { src: imgEducationalProducts,  caption: 'Educational Products' },
+  { src: imgPaper,   caption: 'Paper' },
+  { src: imgEmployee,   caption: 'Employee' },
+  { src: imgResearchGroup,    caption: 'Research Group' },
 ]
 
 export default function QuizzApp() {
@@ -69,13 +69,13 @@ export default function QuizzApp() {
         {/* Hero screenshot - centered above the description */}
         <div className="project-hero__img">
           <img
-            src={resataurantCover}
-            alt="Restaurant App cover"
+            src={academicCover}
+            alt="Academic Project cover"
           />
         </div>
 
         <div className="project-hero__text">
-          <h1 className="project-title">Restaurant Scheduling App</h1>
+          <h1 className="project-title">Academic Project</h1>
           <p className="project-role">Front End and Back End Developer</p>
 
           <p className="project-description">
