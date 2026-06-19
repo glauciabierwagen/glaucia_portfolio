@@ -23,6 +23,7 @@ import MinhaProva from './components/projects/minhaprova/minhaprova.jsx'
 import Blog from './components/projects/blog/Blog.jsx'
 import Activities from './components/projects/activities/activities.jsx'
 import Restaurant from './components/projects/restaurant/restaurant.jsx'
+import Academic from './components/projects/academic/academic.jsx'
 
 // The App function returns the full page structure.
 export default function App() {
@@ -54,6 +55,8 @@ export default function App() {
       <Route path="/activities" element={<Activities />} />
       {/* Route '/restaurant' shows the Restaurant Scheduling App page */}
       <Route path="/restaurant" element={<Restaurant />} />
+      {/* Route '/academic' shows the Academic Production page */}
+      <Route path="/academic" element={<Academic />} />
     </Routes>
   )
 }

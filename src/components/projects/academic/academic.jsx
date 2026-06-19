@@ -1,6 +1,6 @@
-﻿// Restaurant.jsx - Project detail page for the Restaurant UX/UI project.
+﻿// Academic.jsx - Project detail page for the Academic Production section.
 // Layout follows the portfolio design system: Nunito font, #1abc9c accent, card sections.
-// Structure: hero (title + description | screenshot), research images, challenges text.
+// Structure: hero (title + description | Lattes link), research carousel, panels per slide.
 
 // useState is used to track the current carousel slide index.
 import { useState } from 'react'
@@ -150,30 +150,19 @@ export default function Academic() {
       <section className="project-challenges">
         <h2 className="project-section-title">Challenges</h2>
         <p className="project-challenges__text">
-          <strong>Docker</strong> removed the "works on my machine" problem by running the backend, frontend,
-          and database in containers that behave the same everywhere. It taught us how multi-service
-          applications are structured in practice.
+          X
         </p>
         <p className="project-challenges__text">
-          <strong>Testing</strong> was harder than expected because the tests had to work without a real
-          database or Auth0 credentials, which meant learning how to mock dependencies. Once we got it
-          working, having CI run every test on every push made deploying much less stressful.
+          X
         </p>
         <p className="project-challenges__text">
-          <strong>Deployment</strong> was the most detail-heavy part. Every piece has to be correct at the
-          same time — the Render URL, the Vercel URL, the Auth0 callback URLs, and the cookie flags.
-          Working across three platforms at once meant a misconfiguration in one could look like a bug in
-          another, which taught us to check each layer separately.
+          <strong>X</strong> X 
         </p>
         <p className="project-challenges__text">
-          <strong>Database and ORM</strong> — Prisma made schema changes trackable through migrations and
-          the seed script kept test data consistent across machines. Getting migrations to run at the right
-          moment inside Docker took some trial and error.
+          <strong>X</strong> X
         </p>
         <p className="project-challenges__text">
-          <strong>Authentication with Auth0</strong> was the most complex part. Understanding the OAuth 2.0
-          flow — the redirect, the callback, and the session cookie — was challenging at first, but it showed
-          us the value of delegating security-critical work to a dedicated service.
+          <strong> X</strong> X 
         </p>
       </section>
 
@@ -192,7 +181,7 @@ export default function Academic() {
         </Link>
       </div>
 
-      {/* ── BOOKSLIGHTBOX OVERLAY ── renders when an image is zoomed */}
+      {/* ── LIGHTBOX OVERLAY ── renders when an image is zoomed */}
       {zoomed !== null && (
         <div className="lightbox-overlay" onClick={() => setZoomed(null)}>
           <button className="lightbox-close" onClick={() => setZoomed(null)} aria-label="Close">&times;</button>
@@ -212,23 +201,17 @@ export default function Academic() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgAuthentication} alt="Mockup Restaurant App Authentication" />
+              <img src={imgBooks} alt="Books" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: List of chapters published */}
             <div className="rd-text">
               <h3> Books</h3>
               <p>
-                Authentication is handled by Auth0. When a user logs in, they are redirected to the Auth0 login page
-                and, after signing in, a session cookie is created automatically. Protected routes check if the user
-                is logged in — if not, the request is rejected with 401 Unauthorized.
+                A
               </p>
               <p>
-                To keep the app secure: secrets are stored in <code>.env</code> and never committed to Git;
-                protected routes return 401 or 403 for unauthorized access; CORS only allows requests from the
-                frontend origin; session state is stored in a cookie (not localStorage) to prevent XSS attacks;
-                and the session cookie uses <code>sameSite</code> and <code>secure</code> flags to reduce CSRF risk.
-                Passwords are hashed with bcrypt, and all request bodies are validated with Zod before reaching the database.
+                T
               </p>
             </div>
           </div>
@@ -243,23 +226,17 @@ export default function Academic() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEducationalProduct} alt="Educational Product View" />
+              <img src={imgEducationalProducts} alt="Educational Products" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
               <h3>Educational Products</h3>
               <p>
-                After logging in, the employer sees a welcome screen confirming their role.
-                The main dashboard displays a list of all registered employees — including their name,
-                photo, and job role — with options to view, edit, or delete each profile.
+                X
               </p>
               <p>
-                From the top navigation, the employer can switch between four sections:
-                <strong> Employees</strong> (view all staff),
-                <strong> Register Employee</strong> (add new members),
-                <strong> Job Schedule</strong> (manage shift definitions), and
-                <strong> Work Schedule</strong> (assign shifts to employees for each day of the week).
+               X
               </p>
              
             </div>
@@ -267,7 +244,7 @@ export default function Academic() {
         </div>
       )}
 
-      {/* ── PAPERS PANEL ── */}}
+      {/* ── PAPERS PANEL ── */}
       {showEmployer2Detail && (
         <div className="rd-overlay" onClick={() => setShowEmployer2Detail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -315,83 +292,25 @@ export default function Academic() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmployee} alt="Employee Availability" />
+              <img src={imgResearchGroup} alt="Research Group" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
-              <h3>Employee View — Availability</h3>
+              <h3>Research Group </h3>
               <p>
-                The Availability screen allows each employee to set their schedule preferences for the week.
-                The grid shows all shifts (Morning, Afternoon, and Evening) across each day of the week.
+                T
               </p>
               <p>
-                Each cell can be marked as <strong>Available</strong> (green), <strong>Unavailable</strong> (red),
-                or left as <strong>Choose Availability</strong> (default). Cells already assigned by the employer
-                appear as <strong>Scheduled</strong> with the shift time confirmed.
-                Clicking on a date header opens a modal to set availability for the entire day at once.
+                E
               </p>
-              <a
-                className="rd-figma-link"
-                href="https://employeeschedulingsecond.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                &#8250; Go To Project
-              </a>
+              
             </div>
           </div>
         </div>
       )}
 
-      {/* ── TESTING PANEL ── */}
-      {showTestingDetail && (
-        <div className="rd-overlay" onClick={() => setShowTestingDetail(false)}>
-          <div className="rd-panel" onClick={e => e.stopPropagation()}>
-            <button className="rd-close" onClick={() => setShowTestingDetail(false)} aria-label="Close">&times;</button>
-
-            {/* Col 1: main large image */}
-            <div className="rd-main">
-              <img src={imgTesting} alt="Testing" />
-            </div>
-
-            {/* Col 2: title + description */}
-            <div className="rd-text">
-              <h3>Testing</h3>
-              <p>
-                The project includes automated tests across three layers to ensure reliability and correctness.
-              </p>
-              <p>
-                <strong>Unit Tests — Backend:</strong> Pure helper functions are tested in isolation (no database,
-                no network, no Express). Functions covered include <code>normalizeEmail</code>, <code>isValidRole</code>,
-                <code>parseId</code>, <code>filterEmployeesByName</code>, <code>validateEmployeeInput</code>, and
-                <code>validateAvailabilityInput</code>, verifying edge cases such as empty strings, invalid formats,
-                and missing fields.
-              </p>
-              <p>
-                <strong>Integration Tests — API:</strong> All main endpoints are tested against real scenarios,
-                including authentication, employee management, availability, and schedule routes. Tests verify
-                correct HTTP status codes (200, 201, 204, 400, 401, 403) for both valid and invalid inputs.
-              </p>
-              <p>
-                <strong>Frontend — Unit Tests:</strong> React components are tested in isolation using Testing Library
-                with jsdom. Components covered include <code>LoginScreen</code>, <code>EmployeeList</code>,
-                <code>EmployerView</code>, <code>RegisterEmployeeForm</code>, and the <code>App</code> auth guard,
-                checking rendering, role-based display, form validation, and navigation behaviour.
-              </p>
-              <a
-                className="rd-figma-link"
-                href="https://github.com/deborah-boat/Employee_Scheduling"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                &#8250; Go To GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-        
-      )}
+      
 
     </div>
   )

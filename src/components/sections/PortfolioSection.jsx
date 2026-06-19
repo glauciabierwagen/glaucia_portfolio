@@ -33,10 +33,11 @@ const projects = [
   {
     id: 3,
     title: 'Academic Production',
-    img: `${import.meta.env.BASE_URL}images/projects/bootstrap.png`,
-    href: 'academic',  // External link - opens the academic production website in a new tab
+    img: `${import.meta.env.BASE_URL}images/projects/academic.png`,
+    href: '/academic',
     linkLabel: 'Academic Production\nClick to see the website!',
-    description: 'Academic Production.\nBuilt on: CSS, HTML,\nBootstrap.',
+    description: 'Academic Production.\nBooks, papers and\nresearch contributions.',
+    internal: true,
   },
   {
     id: 4,
