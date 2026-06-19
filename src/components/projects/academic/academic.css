@@ -222,12 +222,13 @@
   position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
   border-radius: 16px;
   overflow: hidden;
   max-width: 1150px;
   width: 100%;
   min-height: 520px;
-  max-height: 85vh;
+  max-height: 90vh;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #f5f0f0;
 }
@@ -284,7 +285,7 @@
   padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background: #faf7f7;
   overflow-y: auto;
 }
@@ -299,6 +300,31 @@
   font-size: 1.7rem;
   line-height: 1.9;
   color: #555;
+}
+.rd-list {
+  margin: 0.8rem 0 0 1.6rem;
+  padding: 0;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.rd-list li {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #555;
+}
+.rd-list li em {
+  font-style: italic;
+  color: #333;
+}
+.rd-list li a {
+  color: #1abc9c;
+  font-weight: 600;
+  text-decoration: none;
+}
+.rd-list li a:hover {
+  text-decoration: underline;
 }
 .rd-figma-link {
   display: inline-block;
