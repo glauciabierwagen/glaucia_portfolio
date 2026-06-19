@@ -32,11 +32,11 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Bootstrap Test Project',
+    title: 'Academic Production',
     img: `${import.meta.env.BASE_URL}images/projects/bootstrap.png`,
-    href: './projects-portfolio/bootstrap/index.html',
-    linkLabel: 'Bootstrap Test Project\nClick to see the website!',
-    description: 'Bootstrap Project.\nBuilt on: CSS, HTML,\nBootstrap.',
+    href: 'academic',  // External link - opens the academic production website in a new tab
+    linkLabel: 'Academic Production\nClick to see the website!',
+    description: 'Academic Production.\nBuilt on: CSS, HTML,\nBootstrap.',
   },
   {
     id: 4,

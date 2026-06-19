@@ -8,14 +8,18 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './academic.css'
 // Local cover image for the hero section
-import academicCover from '../images/Xover Academic.png'
+import academicCover from '../images/Cover Academic.png'
 // Research & design process images
-
 import imgBooks from '../images/Ebook.png'
-import imgEducationalProducts from '../images/EducationalProducts.png'
-import imgPaper from '../images/employerview2.png'
-import imgEmployee from '../images/Paper.png'
+import imgEducationalProducts from '../images/Educational Product.png'
+import imgPaper from '../images/Paper.png'
+import imgEmployee from '../images/employee.png'
 import imgResearchGroup from '../images/Mecom imagem.png'
+// Panel detail images
+import imgAuthentication from '../images/authentication.png'
+import imgEmployer from '../images/Dashboard.png'
+import imgEmployer2 from '../images/employerview2.png'
+import imgTesting from '../images/testing.png'
 
 
 
@@ -24,11 +28,10 @@ const researchImages = [
   { src: imgBooks,   caption: 'Books' },
   { src: imgEducationalProducts,  caption: 'Educational Products' },
   { src: imgPaper,   caption: 'Paper' },
-  { src: imgEmployee,   caption: 'Employee' },
-  { src: imgResearchGroup,    caption: 'Research Group' },
+   { src: imgResearchGroup,    caption: 'Research Group' },
 ]
 
-export default function QuizzApp() {
+export default function Academic() {
   // Carousel state: tracks which slide is currently visible
   const [current, setCurrent] = useState(0)
   const prev = () => setCurrent(i => (i - 1 + researchImages.length) % researchImages.length)
