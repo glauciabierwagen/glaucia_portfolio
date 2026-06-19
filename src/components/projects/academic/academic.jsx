@@ -1,4 +1,4 @@
-// Restaurant.jsx - Project detail page for the Restaurant UX/UI project.
+﻿// Restaurant.jsx - Project detail page for the Restaurant UX/UI project.
 // Layout follows the portfolio design system: Nunito font, #1abc9c accent, card sections.
 // Structure: hero (title + description | screenshot), research images, challenges text.
 
@@ -192,7 +192,7 @@ export default function Academic() {
         </Link>
       </div>
 
-      {/* ── LIGHTBOX OVERLAY ── renders when an image is zoomed */}
+      {/* ── BOOKSLIGHTBOX OVERLAY ── renders when an image is zoomed */}
       {zoomed !== null && (
         <div className="lightbox-overlay" onClick={() => setZoomed(null)}>
           <button className="lightbox-close" onClick={() => setZoomed(null)} aria-label="Close">&times;</button>
@@ -204,7 +204,7 @@ export default function Academic() {
         </div>
       )}
 
-      {/* ── AUTHENTICATION PANEL ── */}
+      {/* ── BOOKS PANEL ── */}
       {showAuthenticationDetail && (
         <div className="rd-overlay" onClick={() => setShowAuthenticationDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -217,7 +217,7 @@ export default function Academic() {
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
-              <h3> Authentication</h3>
+              <h3> Books</h3>
               <p>
                 Authentication is handled by Auth0. When a user logs in, they are redirected to the Auth0 login page
                 and, after signing in, a session cookie is created automatically. Protected routes check if the user
@@ -235,7 +235,7 @@ export default function Academic() {
         </div>
       )}
 
-      {/* ── EMPLOYER VIEW PANEL 1 ── */}
+      {/* ── EDUCATIONAL PRODUCTS PANEL ── */}
       {showEmployerDetail && (
         <div className="rd-overlay" onClick={() => setShowEmployerDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -243,12 +243,12 @@ export default function Academic() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmployer} alt="Employer View" />
+              <img src={imgEducationalProduct} alt="Educational Product View" />
             </div>
 
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
-              <h3>Employer View</h3>
+              <h3>Educational Products</h3>
               <p>
                 After logging in, the employer sees a welcome screen confirming their role.
                 The main dashboard displays a list of all registered employees — including their name,
@@ -261,20 +261,13 @@ export default function Academic() {
                 <strong> Job Schedule</strong> (manage shift definitions), and
                 <strong> Work Schedule</strong> (assign shifts to employees for each day of the week).
               </p>
-              <a
-                className="rd-figma-link"
-                href="https://employeeschedulingsecond.vercel.app/"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                &#8250; Go To Project
-              </a>
+             
             </div>
           </div>
         </div>
       )}
 
-       {/* ── EMPLOYER VIEW PANEL 2── */}
+      {/* ── PAPERS PANEL ── */}}
       {showEmployer2Detail && (
         <div className="rd-overlay" onClick={() => setShowEmployer2Detail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
@@ -282,30 +275,31 @@ export default function Academic() {
 
             {/* Col 1: main large image */}
             <div className="rd-main">
-              <img src={imgEmployer2} alt="Employer View - Work Schedule" />
+              <img src={imgPaper} alt="Paper" />
             </div>
 
-            {/* Col 2: title + description + Figma link */}
+            {/* Col 2: title + paper list */}
             <div className="rd-text">
-              <h3>Employer View — Work Schedule</h3>
+              <h3>Conference Papers</h3>
               <p>
-                The Work Schedule tab gives the employer a weekly calendar view of all assigned shifts.
-                Each row represents a shift (Morning, Afternoon, or Night), and each column is a day of the week.
-                Cells show the number of employees scheduled versus the total slots available (e.g. 1/2 or 1/3).
+                Papers presented at national and international academic conferences (APA 7),
+                with English translations of Portuguese titles.
               </p>
-              <p>
-                When an employee is assigned to a shift, their photo and name appear in the cell.
-                Green cells indicate available slots, making it easy to spot gaps in coverage at a glance.
-                Clicking an employee name opens their availability details for that shift.
-              </p>
-              <a
-                className="rd-figma-link"
-                href="https://employeeschedulingsecond.vercel.app/"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                &#8250; Go To Project
-              </a>
+              <ul className="rd-list">
+                <li>Bierwagen, G. S., &amp; Soledade, R. T. (2023). <em>O que esperar da educação pós-pandemia? Uma visão educomunicativa amparada na análise da experiência do ERE</em> [What to expect from post-pandemic education? An educommunicative perspective based on the analysis of emergency remote education experiences]. In <em>Anais do 46º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom. <a href="https://sistemas.intercom.org.br/pdf/link_aceite/nacional/11/0816202323252164dd851104e43.pdf" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li>Bierwagen, G. S., &amp; Soledade, R. T. (2022). <em>A formação docente e seus reflexos no uso de plataformas de videoconferência durante o ensino remoto emergencial</em> [Teacher education and its impacts on the use of videoconferencing platforms during emergency remote teaching]. In <em>Anais do 45º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom.</li> 
+                <li>Bierwagen, G. S., &amp; Soledade, R. T. (2021). <em>Adaptação docente ao ERE: Desafios e adoção de metodologias ativas</em> [Teachers&#39; adaptation to emergency remote education: Challenges and adoption of active learning methodologies]. In <em>Anais do 44º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom.</li>
+                <li>Bierwagen, G. S. (2022). <em>As múltiplas alfabetizações docentes para o século XXI</em> [Multiple teacher literacies for the twenty-first century]. In <em>III Conferência Euroamericana para o Desenvolvimento dos Direitos Humanos</em>.</li>
+                <li>Bierwagen, G. S. (2020). <em>Formação continuada docente em tempos de pandemia da COVID-19: Os media e as tecnologias de informação e comunicação</em> [Continuing teacher education during the COVID-19 pandemic: Media and information and communication technologies]. In <em>Anais do 43º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom.</li>
+                <li>Bierwagen, G. S., &amp; Teles, E. C. (2019). <em>Educação midiática e tecnológica na formação docente</em> [Media and technology education in teacher education]. In <em>Anais do 42º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom.</li>
+                <li>Bierwagen, G. S. (2018). <em>Plataforma Khan Academy na educação básica</em> [The Khan Academy platform in basic education]. In <em>Congresso Internacional de Educação e Tecnologias: Docência e mediação pedagógica</em>.</li>
+                <li>Bierwagen, G. S. (2018). <em>Revisão sistemática: Gamificação na educação</em> [Systematic review: Gamification in education]. In <em>Anais Eletrônicos do XI Simpósio Nacional da ABCiber</em>.</li>
+                <li>Bierwagen, G. S. (2018). <em>Revisão de literatura: Formação continuada docente para educação midiática</em> [Literature review: Continuing teacher education for media education]. In <em>Anais do Congresso Educação Campus do Pantanal da Universidade Federal de Mato Grosso do Sul</em>.</li>
+                <li>Bierwagen, G. S. (2017). <em>Educação midiática e os professores no locus da sala de aula</em> [Media education and teachers in the classroom context]. In <em>40º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom.</li>
+                <li>Bierwagen, G. S. (2017). <em>Práticas apoiadas em tecnologias digitais de comunicação e informação (TDIC) na educação básica: Perspectiva educomunicativa</em> [Practices supported by digital information and communication technologies in basic education: An educommunicative perspective] (pp. 1315–1334). In <em>IBERCOM 2017: Livro de Anais</em>.</li>
+                <li>Bierwagen, G. S. (2017). <em>Plataforma educativa Guten News: Reflexões acerca das literacias de mídia e informação</em> [Guten News educational platform: Reflections on media and information literacies]. In <em>Anais do X Simpósio Nacional da ABCiber</em>.</li>
+                <li>Bierwagen, G. S. (2009). <em>O uso de blogs como ferramenta pedagógica para a formação de professores no ensino de Ciências</em> [The use of blogs as a pedagogical tool for teacher education in science education]. In <em>II Simpósio de Pesquisa em Ensino e História de Ciências da Terra e IV Simpósio Nacional</em>.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -313,7 +307,7 @@ export default function Academic() {
 
         
 
-      {/* ── EMPLOYEE DETAIL PANEL ── */}
+      {/* ── RESEARCH GROUP ── */}
       {showEmployeesDetail && (
         <div className="rd-overlay" onClick={() => setShowEmployeesDetail(false)}>
           <div className="rd-panel" onClick={e => e.stopPropagation()}>
