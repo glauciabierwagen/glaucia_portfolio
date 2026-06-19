@@ -13,22 +13,15 @@ import academicCover from '../images/Cover Academic.png'
 import imgBooks from '../images/Ebook.png'
 import imgEducationalProducts from '../images/Educational Product.png'
 import imgPaper from '../images/Paper.png'
-import imgEmployee from '../images/employee.png'
 import imgResearchGroup from '../images/Mecom imagem.png'
-// Panel detail images
-import imgAuthentication from '../images/authentication.png'
-import imgEmployer from '../images/Dashboard.png'
-import imgEmployer2 from '../images/employerview2.png'
-import imgTesting from '../images/testing.png'
-
 
 
 // Research & design process images
 const researchImages = [
-  { src: imgBooks,   caption: 'Books' },
-  { src: imgEducationalProducts,  caption: 'Educational Products' },
-  { src: imgPaper,   caption: 'Paper' },
-   { src: imgResearchGroup,    caption: 'Research Group' },
+  { src: imgBooks,             caption: 'Books' },
+  { src: imgEducationalProducts, caption: 'Educational Products' },
+  { src: imgPaper,             caption: 'Paper' },
+  { src: imgResearchGroup,     caption: 'Research Group' },
 ]
 
 export default function Academic() {
@@ -39,23 +32,20 @@ export default function Academic() {
 
   // Lightbox state: null = closed, number = index of zoomed image
   const [zoomed, setZoomed] = useState(null)
-  // Authentication detail modal: opens panel when clicking slide 0
+  // Books detail modal: opens panel when clicking slide 0
   const [showAuthenticationDetail, setShowAuthenticationDetail] = useState(false)
-  // Employer View detail modal: opens panel when clicking slide 1
+  // Educational Products detail modal: opens panel when clicking slide 1
   const [showEmployerDetail, setShowEmployerDetail] = useState(false)
-  // Employer Work Schedule detail modal: opens panel when clicking slide 2
+  // Paper detail modal: opens panel when clicking slide 2
   const [showEmployer2Detail, setShowEmployer2Detail] = useState(false)
-  // Employee Availability detail modal: opens panel when clicking slide 3
+  // Research Group detail modal: opens panel when clicking slide 3
   const [showEmployeesDetail, setShowEmployeesDetail] = useState(false)
-  // Testing detail modal: opens panel when clicking slide 4
-  const [showTestingDetail, setShowTestingDetail] = useState(false)
 
   const handleCardClick = (index) => {
     if (index === 0) setShowAuthenticationDetail(true)
     else if (index === 1) setShowEmployerDetail(true)
     else if (index === 2) setShowEmployer2Detail(true)
     else if (index === 3) setShowEmployeesDetail(true)
-    else if (index === 4) setShowTestingDetail(true)
   }
 
   return (
@@ -78,29 +68,26 @@ export default function Academic() {
         </div>
 
         <div className="project-hero__text">
-          <h1 className="project-title">Academic Project</h1>
-          <p className="project-role">Front End and Back End Developer</p>
+          <h1 className="project-title">Academic Production</h1>
+          <p className="project-role">Academic literature</p>
 
           <p className="project-description">
-            This is an employee scheduling web application designed to simplify shift management for both employers and employees.
-            Employers can manage registered staff, assign morning, afternoon, and night shifts for each day of the week,
-            and get a visual overview of the full weekly schedule. Shift definitions — including name, start time, and end time —
-            can also be configured through the Job Schedule feature.
+            This section showcases my academic production, including educational online products, chapters of books,
+            scientific papers, and participation in technology research led by Brazilian teachers and research groups.
           </p>
           <p className="project-description">
-            Employees have access to their personal schedule for the current week, can submit and update their availability
-            preferences for each day and shift, and view their profile information and role details. The project is still in progress,
-            with the goal of creating a clear and accessible interface for both roles.
+            These works reflect my engagement with education and technology, contributing to the development of
+            digital learning materials and collaborative research in the Brazilian academic community.
           </p>
 
           {/* Link to the live project */}
           <a
             className="project-live-btn"
-            href="https://employeeschedulingsecond.vercel.app/"
+            href="http://lattes.cnpq.br/1678414427664271"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Live Project &#8599;
+            Brazilian Lattes Platform  &#8599;
           </a>
         </div>
       </section>
