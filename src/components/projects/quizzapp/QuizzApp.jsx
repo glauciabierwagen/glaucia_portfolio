@@ -187,7 +187,7 @@ export default function QuizzApp() {
       <div className="project-nav">
         <a
           className="project-nav__prev"
-          href="./projects-portfolio/petadoption-project/index.html"
+          href="./restaurant"
           target="_blank"
           rel="noopener noreferrer"
         >

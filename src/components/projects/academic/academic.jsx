@@ -208,10 +208,10 @@ export default function Academic() {
             <div className="rd-text">
               <h3> Books</h3>
               <p>
-                A
+                Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
               </p>
               <p>
-                T
+                Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> (pp. não informadas). Editus. (Comunicação e educação; v. 8).
               </p>
             </div>
           </div>
@@ -262,6 +262,7 @@ export default function Academic() {
                 Papers presented at national and international academic conferences (APA 7),
                 with English translations of Portuguese titles.
               </p>
+              <p>
               <ul className="rd-text">
                 <li>Bierwagen, G. S., &amp; Soledade, R. T. (2023). <em>O que esperar da educação pós-pandemia? Uma visão educomunicativa amparada na análise da experiência do ERE</em> [What to expect from post-pandemic education? An educommunicative perspective based on the analysis of emergency remote education experiences]. In <em>Anais do 46º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom. <a href="https://sistemas.intercom.org.br/pdf/link_aceite/nacional/11/0816202323252164dd851104e43.pdf" target="_blank" rel="noopener noreferrer">Link</a></li>
                 <li>Bierwagen, G. S., &amp; Soledade, R. T. (2022). <em>A formação docente e seus reflexos no uso de plataformas de videoconferência durante o ensino remoto emergencial</em> [Teacher education and its impacts on the use of videoconferencing platforms during emergency remote teaching]. In <em>Anais do 45º Congresso Brasileiro de Ciências da Comunicação</em>. Intercom. <a href="https://portalintercom.org.br/anais/nacional2022/resumo/0805202218100262ed872a33af2.pdf" target="_blank" rel="noopener noreferrer">Link</a></li>
@@ -276,6 +277,7 @@ export default function Academic() {
                 <li>Bierwagen, G. S. (2017). <em>Práticas apoiadas em tecnologias digitais de comunicação e informação (TDIC) na educação básica: Perspectiva educomunicativa</em> [Practices supported by digital information and communication technologies in basic education: An educommunicative perspective] (pp. 1315–1334). In <em>IBERCOM 2017: Livro de Anais</em>. <a href="https://www.cecs.uminho.pt/assibercom/wp-content/uploads/2021/05/ebook-ibercom-2017.pdf" target="_blank" rel="noopener noreferrer">Link</a></li>
                 <li>Bierwagen, G. S. (2017). <em>Plataforma educativa Guten News: Reflexões acerca das literacias de mídia e informação</em> [Guten News educational platform: Reflections on media and information literacies]. In <em>Anais do X Simpósio Nacional da ABCiber</em>. <a href="https://www.abciber.org.br/anais-abciber-2017.pdf?_gl=1*1fr1z5i*_ga*MTY1MDY5MTgwOC4xNzgyMjMyNDk2*_ga_G0HZJCDKBW*czE3ODIyMzI0OTUkbzEkZzEkdDE3ODIyMzMxMzQkajQ4JGwwJGgw" target="_blank" rel="noopener noreferrer">Link</a></li>
               </ul>
+              </p>
             </div>
           </div>
         </div>
@@ -298,10 +300,10 @@ export default function Academic() {
             <div className="rd-text">
               <h3>Research Group </h3>
               <p>
-                T
+                Citelli, A. (Coord.). (2023). Ensino remoto emergencial e transições associadas [recurso eletrônico] [Emergency remote teaching and associated transitions] . São Paulo: ECA-USP. <a href="https://mecom.eca.usp.br/2023.htm" target="_blank" rel="noopener noreferrer">Link</a>
               </p>
               <p>
-                E
+                Citelli, A. (Org.). (2020). Inter-relações comunicação e educação no contexto do ensino básico [recurso eletrônico] [Interrelations between communication and education in the context of basic education]. São Paulo: ECA-USP. <a href="https://mecom.eca.usp.br/2021.html" target="_blank" rel="noopener noreferrer">Link</a>
               </p>
               
             </div>
