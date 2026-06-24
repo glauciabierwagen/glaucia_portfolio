@@ -101,7 +101,7 @@ export default function Academic() {
 
       {/* ── RESEARCH IMAGES SECTION – carousel ── */}
       <section className="project-research">
-        <h2 className="project-section-title">Research &amp; Design Process</h2>
+        <h2 className="project-section-title">Academic &amp; Research </h2>
 
         <div className="carousel">
           {/* Prev button */}
