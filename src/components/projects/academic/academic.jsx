@@ -207,6 +207,9 @@ export default function Academic() {
             {/* Col 2: List of chapters published */}
             <div className="rd-text">
               <h3> Books</h3>
+               <p>
+                Chapters of books. 
+              </p>
               <p>
                 Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
               </p>
@@ -232,12 +235,17 @@ export default function Academic() {
             {/* Col 2: title + description + Figma link */}
             <div className="rd-text">
               <h3>Educational Products</h3>
-              <p>
-                X
+               <p>
+                Products created for educational online courses and workshops.
               </p>
-              <p>
-               X
-              </p>
+              <ul className="rd-text">
+                <li>
+                  Moletta, A. K., Bierwagen, G. S., & Toledo, M. E. R. de O. (2018). A educação infantil e a garantia dos direitos fundamentais da infância [E-book] [Early childhood education and the guarantee of fundamental childhood rights]. SAGAH. <a href="https://integrada.minhabiblioteca.com.br/reader/books/9788595027732" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Universidade Anhanguera. (n.d.). Teoria dos jogos e gamificação [Course, 40 hours] [Game theory and gamification]. <a href="https://www.posuniderp.com.br/teoria-dos-jogos-e-gamificacao-anhanguera-extensao/p" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+              </ul>
              
             </div>
           </div>
@@ -300,12 +308,16 @@ export default function Academic() {
             <div className="rd-text">
               <h3>Research Group </h3>
               <p>
+                Participation in national research of application of technologies in education in Brazil.
+              </p>
+               <ul className="rd-text">
+                <li>
                 Citelli, A. (Coord.). (2023). Ensino remoto emergencial e transições associadas [recurso eletrônico] [Emergency remote teaching and associated transitions] . São Paulo: ECA-USP. <a href="https://mecom.eca.usp.br/2023.htm" target="_blank" rel="noopener noreferrer">Link</a>
-              </p>
-              <p>
+                </li>
+              <li>
                 Citelli, A. (Org.). (2020). Inter-relações comunicação e educação no contexto do ensino básico [recurso eletrônico] [Interrelations between communication and education in the context of basic education]. São Paulo: ECA-USP. <a href="https://mecom.eca.usp.br/2021.html" target="_blank" rel="noopener noreferrer">Link</a>
-              </p>
-              
+              </li>
+              </ul>
             </div>
           </div>
         </div>
