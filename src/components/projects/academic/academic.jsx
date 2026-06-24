@@ -208,7 +208,7 @@ export default function Academic() {
             <div className="rd-text">
               <h3> Books</h3>
                <p>
-                Chapters of books. 
+                Chapters of books in training teachers in media and technology. 
               </p>
               <p>
                 Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
@@ -322,9 +322,6 @@ export default function Academic() {
           </div>
         </div>
       )}
-
-      
-
     </div>
   )
 }
