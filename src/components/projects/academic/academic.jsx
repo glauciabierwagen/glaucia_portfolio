@@ -210,12 +210,17 @@ export default function Academic() {
                <p>
                 Chapters of books in training teachers in media and technology. 
               </p>
-              <p>
-                Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
-              </p>
-              <p>
-                Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> (pp. não informadas). Editus. (Comunicação e educação; v. 8).
-              </p>
+              <ul className="rd-text">
+                <li>
+                  Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S., &amp; Teles, E. C. (2020). Formação docente em tempos de pandemia da COVID-19: Os media e as tecnologias de informação e comunicação. In A. Citelli (Ed.), <em>Comunicação e educação: desafios do ensino remoto emergencial</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> (pp. não informadas). Editus. (Comunicação e educação; v. 8).
+                </li>
+               </ul>
             </div>
           </div>
         </div>
