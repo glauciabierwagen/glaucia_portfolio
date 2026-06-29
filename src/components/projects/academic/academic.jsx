@@ -150,19 +150,16 @@ export default function Academic() {
       <section className="project-challenges">
         <h2 className="project-section-title">Challenges</h2>
         <p className="project-challenges__text">
-          X
+          <strong>1. Digital inequality in education</strong> Exploring how differences in access to technology, internet infrastructure, robotics kits, AI tools, and digital devices affect teaching and learning, especially in public education contexts.
         </p>
         <p className="project-challenges__text">
-          X
+          <strong>2. Teacher competencies for digital, AI, and computational education</strong> Investigating how teacher education programs can better support educators in developing digital literacy, AI awareness, programming basics, and the confidence to integrate technologies such as robotics and coding into classroom practice.
         </p>
         <p className="project-challenges__text">
-          <strong>X</strong> X 
+          <strong>3. Transition to emergency remote teaching (ERE) and digital adaptation</strong> Studying the challenges teachers faced when rapidly shifting from in-person to online teaching, including adapting methodologies, learning new platforms, and maintaining engagement in technology-mediated environments.
         </p>
         <p className="project-challenges__text">
-          <strong>X</strong> X
-        </p>
-        <p className="project-challenges__text">
-          <strong> X</strong> X 
+          <strong>4. Meaningful integration of technology in learning experiences</strong> Focusing on how digital tools, including programming activities, robotics, and AI-based resources, can move beyond functional use to support active learning, creativity, problem-solving, and student-centered experiences.
         </p>
       </section>
 
