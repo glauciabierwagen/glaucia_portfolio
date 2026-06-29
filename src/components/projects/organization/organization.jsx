@@ -156,14 +156,9 @@ export default function Organization() {
         <Link className="org-nav__prev" to="/quizzapp">
           &#8249; Previous project
         </Link>
-        <a
-          className="org-nav__next"
-          href="./projects-portfolio/bootstrap/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="org-nav__next" to="/academic">
           Next project &#8250;
-        </a>
+        </Link>
       </div>
 
       {/* ── LIGHTBOX OVERLAY ── */}
