@@ -83,7 +83,7 @@
 /* Hero image - aligned with text block */
 .project-hero__img {
   width: 100%;
-  max-width: 720px;
+  max-width: 580px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -91,7 +91,7 @@
 .project-hero__img img {
   width: 100%;
   height: auto;
-  min-height: 340px;
+  min-height: 280px;
   object-fit: cover;
   display: block;
 }
