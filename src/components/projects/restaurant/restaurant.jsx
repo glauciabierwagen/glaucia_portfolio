@@ -67,7 +67,7 @@ export default function QuizzApp() {
       <section className="project-hero">
 
         {/* Hero screenshot - centered above the description */}
-        <div className="project-hero__img">
+        <div className="project-hero__img restaurant-hero__img">
           <img
             src={resataurantCover}
             alt="Restaurant App cover"
@@ -111,7 +111,7 @@ export default function QuizzApp() {
 
       {/* ── RESEARCH IMAGES SECTION – carousel ── */}
       <section className="project-research">
-        <h2 className="project-section-title">Research &amp; Design Process</h2>
+        <h2 className="project-section-title">Design &amp; Front/Back End Process</h2>
 
         <div className="carousel">
           {/* Prev button */}
