@@ -203,7 +203,7 @@ export default function Academic() {
 
             {/* Col 2: List of chapters published */}
             <div className="rd-text">
-              <h3> Books</h3>
+              <h3> Books and thesis</h3>
                <p>
                 Chapters of books in training teachers in media and technology. 
               </p>
@@ -216,6 +216,18 @@ export default function Academic() {
                 </li>
                 <li>
                   Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> (pp. não informadas). Editus. (Comunicação e educação; v. 8).
+                </li>
+                <li>
+                  Bierwagen, G. S. (2021). Vozes da (trans)formação docente na perspectiva da comunicação/educação (Tese de doutorado, Universidade de São Paulo). Repositório da Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/27/27164/tde-31082021-195415/publico/GlauciaSilvaBierwagenVC.pdf" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S. (2011). Uma proposta de uso do blog como ferramenta de auxílio ao ensino de ciências nas séries finais do ensino fundamental [Dissertação de mestrado não publicada]. Faculdade de Educação, Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/48/48134/tde-20012012-085003/pt-br.html" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S. (2021). Vozes da (trans)formação docente na perspectiva da comunicação/educação (Tese de doutorado, Universidade de São Paulo). Repositório da Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/27/27164/tde-31082021-195415/publico/GlauciaSilvaBierwagenVC.pdf" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S. (2011). Uma proposta de uso do blog como ferramenta de auxílio ao ensino de ciências nas séries finais do ensino fundamental [Dissertação de mestrado não publicada]. Faculdade de Educação, Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/48/48134/tde-20012012-085003/pt-br.html" target="_blank" rel="noopener noreferrer">Link</a>
                 </li>
                </ul>
             </div>
