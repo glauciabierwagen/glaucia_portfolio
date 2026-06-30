@@ -156,17 +156,12 @@ export default function MinhaProva() {
 
       {/* ── PROJECT NAVIGATION ── */}
       <div className="org-nav">
-        <Link className="org-nav__prev" to="/quizzapp">
+        <Link className="org-nav__prev" to="/organization">
           &#8249; Previous project
         </Link>
-        <a
-          className="org-nav__next"
-          href="./projects-portfolio/bootstrap/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="org-nav__next" to="/restaurant">
           Next project &#8250;
-        </a>
+        </Link>
       </div>
 
       {/* ── LIGHTBOX OVERLAY ── */}

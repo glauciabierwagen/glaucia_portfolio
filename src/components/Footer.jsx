@@ -3,13 +3,13 @@
 
 // socialLinks is an array of objects. Each object holds:
 // - href: the URL to open when clicked
-// - img: the path to the social media icon image
-// - label: a text description used for accessibility (aria-label and alt)
+// - icon: the Font Awesome class for the icon
+// - label: a text description used for accessibility (aria-label)
 const socialLinks = [
-  { href: 'https://github.com/glauciabierwagen',                                        img: `${import.meta.env.BASE_URL}images/github.png`,    label: 'Github' },
-  { href: 'https://www.facebook.com/glaucia.silva.121',                                 img: `${import.meta.env.BASE_URL}images/facebook.png`,  label: 'Facebook' },
-  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',         img: `${import.meta.env.BASE_URL}images/Linkedin.png`,  label: 'LinkedIn' },
-  { href: 'https://www.instagram.com/galbierwagen/',                                     img: `${import.meta.env.BASE_URL}images/instagram.png`, label: 'Instagram' },
+  { href: 'https://github.com/glauciabierwagen',                                      icon: 'fab fa-github',    label: 'Github' },
+  { href: 'https://www.facebook.com/glaucia.silva.121',                               icon: 'fab fa-facebook-f', label: 'Facebook' },
+  { href: 'https://www.linkedin.com/in/gl%C3%A1ucia-silva-bierwagen-09860420/',       icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/galbierwagen/',                                   icon: 'fab fa-instagram',  label: 'Instagram' },
 ]
 
 export default function Footer() {
@@ -17,23 +17,23 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* Loop through the socialLinks array and create an <a> tag for each one.
-            We use .map() to turn each item in the array into a JSX element.
-            The key prop is required by React to track list items efficiently. */}
-        <div className="footer-social">
-          {socialLinks.map(({ href, img, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"          // Opens the link in a new tab
-              rel="noopener noreferrer" // Security best practice for external links
-              className="footer-social-icon"
-              aria-label={label}       // Helps screen readers describe the link
-            >
-              <img src={img} alt={label} />
-            </a>
-          ))}
-        </div>
+        <nav className="bottom-nav">
+          <ul className="icons">
+            {socialLinks.map(({ href, icon, label }) => (
+              <li key={label} className="icon-item">
+                <a
+                  href={href}
+                  className="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                >
+                  <i className={icon}></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Copyright text at the bottom */}
         <div className="footer-links">
