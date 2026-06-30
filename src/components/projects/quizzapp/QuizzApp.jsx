@@ -185,15 +185,10 @@ export default function QuizzApp() {
 
       {/* ── PROJECT NAVIGATION ── */}
       <div className="project-nav">
-        <a
-          className="project-nav__prev"
-          href="./restaurant"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="project-nav__prev" to="/restaurant">
           &#8249; Previous project
-        </a>
-        <Link className="project-nav__next" to="/organization">
+        </Link>
+        <Link className="project-nav__next" to="/academic">
           Next project &#8250;
         </Link>
       </div>
