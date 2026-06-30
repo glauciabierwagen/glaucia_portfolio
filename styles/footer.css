@@ -1,18 +1,17 @@
 
 
 .footer {
-    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
 .footer-container {
-    padding-left: 45rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .footer-social {
@@ -35,7 +34,7 @@
 }
 
 .footer-link {
-    color: white;
+    color: #262626;
     margin: 5px 15px;
     text-decoration: none;
 }
@@ -46,8 +45,8 @@
 
 @media (min-width: 600px) {
     .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
@@ -56,7 +55,7 @@
     }
 
     .footer-links {
-        justify-content: flex-end;
+        justify-content: center;
     }
 }
 
@@ -84,9 +83,10 @@
 }
 
 .icon-link {
-    width: 200px;
-    height: 200px;
-    border: 8px solid #fff;
+    width: 120px;
+    height: 120px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0 5px #555, inset 0 0 0 5px #555;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@
     content: '';
     height: 25px;
     width: 5px;
-    background-color: #fff;
+    background-color: #555;
     position: absolute;
     top: 0;
 }
@@ -113,16 +113,16 @@
     content: '';
     height: 25px;
     width: 5px;
-    background-color: #fff;
+    background-color: #555;
     position: absolute;
     bottom: 0;
 }
 
 .icon-link i {
     color: #fff;
-    font-size: 60px;
-    width: 150px;
-    height: 150px;
+    font-size: 36px;
+    width: 90px;
+    height: 90px;
     background-color: #555;
     display: flex;
     justify-content: center;
