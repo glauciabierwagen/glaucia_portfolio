@@ -192,7 +192,7 @@ export default function QuizzApp() {
         <Link className="project-nav__prev" to="/minhaprova">
           &#8249; Previous project
         </Link>
-        <Link className="project-nav__next" to="/organization">
+        <Link className="project-nav__next" to="/quizzapp">
           Next project &#8250;
         </Link>
       </div>
