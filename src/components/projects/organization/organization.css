@@ -83,7 +83,7 @@
 /* Hero image */
 .org-hero__img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -91,7 +91,7 @@
 .org-hero__img img {
   width: 100%;
   height: auto;
-  min-height: 320px;
+  min-height: 400px;
   object-fit: cover;
   object-position: left center;
   display: block;
