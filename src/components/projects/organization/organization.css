@@ -83,17 +83,16 @@
 /* Hero image */
 .org-hero__img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 .org-hero__img img {
   width: 100%;
-  height: auto;
-  min-height: 400px;
+  height: 620px;
   object-fit: cover;
-  object-position: left center;
+  object-position: center top;
   display: block;
 }
 
