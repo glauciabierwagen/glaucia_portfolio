@@ -24,10 +24,10 @@ const projects = [
   {
     id: 2,
     title: 'Quizz App Educational',
-    img: `${import.meta.env.BASE_URL}images/projects/uxportfolio.png`,
+    img: `${import.meta.env.BASE_URL}images/projects/quizzapp.png`,
     href: '/quizzapp',  // Internal route - opens the QuizzApp.jsx component page
     linkLabel: 'UX/UI Portfolio\nClick to see the project!',
-    description: 'UX/UI Portfolio.\nQuizz App Educational.\nBuilt on: Wix Studio, Figma.',
+    description: 'UX/UI Portfolio.\nQuizz App Educational.\nBuilt on: Figma.',
     internal: true,    // Flag to use React Router Link instead of <a target="_blank">
   },
   {
