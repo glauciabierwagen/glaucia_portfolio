@@ -150,13 +150,13 @@ export default function Academic() {
       <section className="project-challenges">
         <h2 className="project-section-title">Challenges</h2>
         <p className="project-challenges__text">
-          <strong>1. Digital inequality in education</strong> Exploring how differences in access to technology, internet infrastructure, robotics kits, AI tools, and digital devices affect teaching and learning, especially in public education contexts.
+          <strong>1. Digital inequality in education. </strong> Exploring how differences in access to technology, internet infrastructure, robotics kits, AI tools, and digital devices affect teaching and learning, especially in public education contexts.
         </p>
         <p className="project-challenges__text">
           <strong>2. Teacher competencies for digital, AI, and computational education</strong> Investigating how teacher education programs can better support educators in developing digital literacy, AI awareness, programming basics, and the confidence to integrate technologies such as robotics and coding into classroom practice.
         </p>
         <p className="project-challenges__text">
-          <strong>3. Transition to emergency remote teaching (ERE) and digital adaptation</strong> Studying the challenges teachers faced when rapidly shifting from in-person to online teaching, including adapting methodologies, learning new platforms, and maintaining engagement in technology-mediated environments.
+          <strong>3. Transition to emergency remote teaching (ERE) and digital adaptation. </strong> Studying the challenges teachers faced when rapidly shifting from in-person to online teaching, including adapting methodologies, learning new platforms, and maintaining engagement in technology-mediated environments.
         </p>
         <p className="project-challenges__text">
           <strong>4. Meaningful integration of technology in learning experiences</strong> Focusing on how digital tools, including programming activities, robotics, and AI-based resources, can move beyond functional use to support active learning, creativity, problem-solving, and student-centered experiences.
@@ -165,15 +165,10 @@ export default function Academic() {
 
       {/* ── PROJECT NAVIGATION ── */}
       <div className="project-nav">
-        <a
-          className="project-nav__prev"
-          href="./projects/activities/activities.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="project-nav__prev" to="/quizzapp">
           &#8249; Previous project
-        </a>
-        <Link className="project-nav__next" to="/organization">
+        </Link>
+        <Link className="project-nav__next" to="/activities">
           Next project &#8250;
         </Link>
       </div>
@@ -209,19 +204,22 @@ export default function Academic() {
               </p>
               <ul className="rd-list">
                 <li>
-                  Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
+                  Teles, E. C., &amp; Bierwagen, G. S. (2021). Formação midiática e tecnológica de docentes [Media and technological education of teachers]. In A. Citelli (Ed.), <em>Comunicação e educação: dinâmicas midiáticas e cenários escolares</em> [Communication and education: media dynamics and school scenarios] (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
                 </li>
                 <li>
-                  Bierwagen, G. S., &amp; Teles, E. C. (2020). Formação docente em tempos de pandemia da COVID-19: Os media e as tecnologias de informação e comunicação. In A. Citelli (Ed.), <em>Comunicação e educação: desafios do ensino remoto emergencial</em> (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
+                  Bierwagen, G. S., &amp; Teles, E. C. (2020). Formação docente em tempos de pandemia da COVID-19: Os media e as tecnologias de informação e comunicação [Teacher education during the COVID-19 pandemic: Media and information and communication technologies]. In A. Citelli (Ed.), <em>Comunicação e educação: desafios do ensino remoto emergencial</em> [Communication and education: challenges of emergency remote teaching] (pp. 79–100). EDITUS. <a href="https://doi.org/10.7476/9786586213379.0008" target="_blank" rel="noopener noreferrer">Link</a>
                 </li>
                 <li>
-                  Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> (pp. não informadas). Editus. (Comunicação e educação; v. 8).
+                  Bierwagen, G. S., &amp; Soledade, R. T. (2024). Infraestrutura tecnológica escolar no ensino remoto emergencial: alcance e limitações para os(as) docentes [School technological infrastructure in emergency remote teaching: reach and limitations for teachers]. In A. Citelli (Org.), <em>Educomunicação no contexto pandêmico: desafios do ensino remoto</em> [Educommunication in the pandemic context: challenges of remote teaching] (pp. não informadas). Editus. (Comunicação e educação; v. 8).
                 </li>
                 <li>
-                  Bierwagen, G. S. (2021). Vozes da (trans)formação docente na perspectiva da comunicação/educação (Tese de doutorado, Universidade de São Paulo). Repositório da Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/27/27164/tde-31082021-195415/publico/GlauciaSilvaBierwagenVC.pdf" target="_blank" rel="noopener noreferrer">Link</a>
+                  Bierwagen, G. S. (2021). Vozes da (trans)formação docente na perspectiva da comunicação/educação [Voices of teacher (trans)formation from the perspective of communication/education] (Tese de doutorado, Universidade de São Paulo). Repositório da Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/27/27164/tde-31082021-195415/publico/GlauciaSilvaBierwagenVC.pdf" target="_blank" rel="noopener noreferrer">Link</a>
                 </li>
                 <li>
-                  Bierwagen, G. S. (2011). Uma proposta de uso do blog como ferramenta de auxílio ao ensino de ciências nas séries finais do ensino fundamental [Dissertação de mestrado não publicada]. Faculdade de Educação, Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/48/48134/tde-20012012-085003/pt-br.html" target="_blank" rel="noopener noreferrer">Link</a>
+                  Bierwagen, G. S. (2011). Uma proposta de uso do blog como ferramenta de auxílio ao ensino de ciências nas séries finais do ensino fundamental [A proposal for using the blog as a tool to support science teaching in the final years of elementary school] [Unpublished master's dissertation]. Faculdade de Educação, Universidade de São Paulo. <a href="https://teses.usp.br/teses/disponiveis/48/48134/tde-20012012-085003/pt-br.html" target="_blank" rel="noopener noreferrer">Link</a>
+                </li>
+                <li>
+                  Bierwagen, G. S. (2025r). Technologies for learning curriculum: Perceptions of Brazilian teachers in digital education labs [Master’s thesis, University of Gothenburg]. University of Gothenburg. <a href="https://gupea.ub.gu.se/handle/2077/77190" target="_blank" rel="noopener noreferrer">Link</a>
                 </li>
               </ul>
             </div>
