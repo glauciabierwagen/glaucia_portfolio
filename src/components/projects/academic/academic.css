@@ -226,6 +226,7 @@
   max-width: 1150px;
   width: 100%;
   min-height: 520px;
+  height: 90vh;
   max-height: 90vh;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #f5f0f0;
