@@ -1,4 +1,4 @@
-// AboutSection.jsx - This section shows an 'About me' grid with clickable cards.
+﻿// AboutSection.jsx - This section shows an 'About me' grid with clickable cards.
 // Each card opens a modal (a pop-up window) with more details about that topic.
 
 // useState lets us store which modal is currently open (or null if none is open)
@@ -32,10 +32,12 @@ const items = [
     title: 'Programming Skills',
     content: (
       <h2 className="mb-4">
-        Some of my programming skills and computer programs knowledge:<br /><br />
+        Some of my design, programming skills and computer programs knowledge:<br /><br />
         • Microsoft Office Word, Excel and Powerpoint.<br />
-        • HTML, CSS, Sass, Bootstrap, JavaScript, React and Git / GitHub.<br />
-        • Learning Manage Systems: Canva, Moodle.
+        • Front End: HTML, CSS, Sass, Bootstrap, JavaScript, React and Git / GitHub.<br />
+        • Back End: Node.js, Express, MongoDB, PostgreSQL, RESTful APIs.<br />
+        • Learning Manage Systems: Canva, Moodle.<br />
+        • Design &amp; Prototyping Tools: Figma, Adobe XD, Adobe Photoshop, Wix Studio and Canva.<br />
       </h2>
     ),
   },
