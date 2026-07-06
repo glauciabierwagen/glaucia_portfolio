@@ -1,4 +1,4 @@
-﻿// AboutSection.jsx - This section shows an 'About me' grid with clickable cards.
+// AboutSection.jsx - This section shows an 'About me' grid with clickable cards.
 // Each card opens a modal (a pop-up window) with more details about that topic.
 
 // useState lets us store which modal is currently open (or null if none is open)
@@ -21,7 +21,7 @@ const items = [
         My academic journey also includes research and advanced studies. In this space, I developed my ability to study independently and think critically.<br /><br />
         More recently, I completed a master&apos;s degree in Learning, Information, and Technology at the University of Gothenburg. I also studied UX Design at Hyper Island, where I learned about user-centered design and research methods.<br /><br />
         Through internships and projects, I have applied UX/UI skills in different contexts, such as designing an educational quiz app, improving a website for a non-profit organization, and helping design a tool for chronic pain management. I also worked on an app to help teachers evaluate student exams.<br /><br />
-        Now I live in Sweden and I am changing my career path. I want to become a developer and continue learning about technology, design, and how people use digital tools.
+        Now I live in Sweden and I am changing my career path. I want to become a UX/UI Designer who understands programming and continue learning about technology, design, and how people use digital tools.
       </h2>
     ),
   },
@@ -37,7 +37,7 @@ const items = [
         • Front End: HTML, CSS, Sass, Bootstrap, JavaScript, React and Git / GitHub.<br />
         • Back End: Node.js, Express, MongoDB, PostgreSQL, RESTful APIs.<br />
         • Learning Manage Systems: Canva, Moodle.<br />
-        • Design &amp; Prototyping Tools: Figma, Adobe XD, Adobe Photoshop, Wix Studio and Canva.<br />
+        • Design & Prototyping Tools: Figma, Adobe XD, Adobe Photoshop, Wix Studio and Canva.<br />
       </h2>
     ),
   },
