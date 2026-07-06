@@ -14,17 +14,14 @@ const items = [
     title: 'My history',
     content: (
       <h2 className="mb-5">
-        I am from Brazil. There I grown up and had my first experiences.
-        It is a country with a beautiful and rich culture.<br /><br />
-        I majored in Pedagogy and worked as a teacher in elementary schools where I learned about
-        the diversity of this big country, but also some difficulties. In the schools, I learned
-        with students and co-workers about solidarity, cooperation, collaborative learning,
-        culture and social critical analysis.<br /><br />
-        When I was already a teacher I majored in Information Technology, but I never worked as
-        developer. I used the course to understand technologies applied in learning.<br /><br />
-        I also did academic advanced studies. The scholar space was the spot where I learned to
-        research and constantly develop my autonomy. And, now I&apos;ve been in Sweden, learning
-        to change my career, intending to be a developer.
+        I am from Brazil, where I grew up and had my first experiences. It is a country with a rich and diverse culture.<br /><br />
+        I have a bachelor&apos;s degree in Pedagogy and worked for more than 15 years as an elementary school teacher. During this time, I learned a lot from my students and colleagues about cooperation, solidarity, and how children learn in different ways. I also understood many of the challenges in education, especially in public schools.<br /><br />
+        Later, I studied Information Technology. Even though I did not work as a developer, this course helped me understand how technology can support learning and teaching.<br /><br />
+        I also worked with online education and helped design and create courses for teacher training. This experience showed me how digital tools can improve learning and make education more flexible.<br /><br />
+        My academic journey also includes research and advanced studies. In this space, I developed my ability to study independently and think critically.<br /><br />
+        More recently, I completed a master&apos;s degree in Learning, Information, and Technology at the University of Gothenburg. I also studied UX Design at Hyper Island, where I learned about user-centered design and research methods.<br /><br />
+        Through internships and projects, I have applied UX/UI skills in different contexts, such as designing an educational quiz app, improving a website for a non-profit organization, and helping design a tool for chronic pain management. I also worked on an app to help teachers evaluate student exams.<br /><br />
+        Now I live in Sweden and I am changing my career path. I want to become a developer and continue learning about technology, design, and how people use digital tools.
       </h2>
     ),
   },

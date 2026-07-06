@@ -69,65 +69,211 @@ section {
   padding: 2rem 0;
 }
 
-/* media queries  */
+/* =============================================
+   MEDIA QUERIES — Mobile-first breakpoints
+   576px  → mobile
+   768px  → tablet
+   992px  → small desktop
+   1200px → large desktop
+   ============================================= */
 
+/* --- Large desktop (≤ 1200px) --- */
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
   }
 
   .home {
-    padding: 1rem 4rem;
+    padding: 1rem 6rem;
+  }
+
+  .portfolio-b .box-container {
+    padding: 3rem 8rem;
+    gap: 3rem;
+  }
+
+  .education {
+    padding: 4rem 6%;
   }
 }
 
-@media (max-width: 991px) {
-  header {
-   left: -120%;
+/* --- Small desktop / large tablet (≤ 992px) --- */
+@media (max-width: 992px) {
+  html {
+    font-size: 52%;
   }
 
-  #menu {
-    display: block;
+  .home {
+    padding: 1rem 3rem;
   }
 
-  header.toggle {
-    left: 0%;
+  .home h1 {
+    font-size: 4rem;
   }
 
-  body {
-    padding: 0;
+  .home p {
+    font-size: 2.2rem;
+  }
+
+  /* Portfolio: 2 columns */
+  .portfolio-b .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 4rem;
+    gap: 3rem;
+  }
+
+  .education {
+    padding: 4rem 4%;
+  }
+
+  /* Navbar hamburger always visible on tablet */
+  .hamburger-menu {
+    top: 20px;
+    right: 20px;
   }
 }
 
+/* --- Tablet (≤ 768px) --- */
 @media (max-width: 768px) {
   html {
     font-size: 50%;
   }
 
-   .home {
-    padding: 1rem 2rem;
+  .home {
+    padding: 2rem 2rem;
+  }
+
+  .home h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .home p {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Stack the home card vertically */
+  .container-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  /* Profile image responsive */
+  .card-imagem {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .card-imagem img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Portfolio: 2 columns on tablet */
+  .portfolio-b .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .education {
+    padding: 3rem 2%;
   }
 
   .footer-container {
-    padding: 0 2rem; 
+    padding: 0 2rem;
   }
 
-   .container-card {
-    flex-direction: column; /* Muda para coluna em telas menores */
-    /* Outras propriedades flexbox podem ser ajustadas aqui */
-    justify-content: center;
-    align-items: center;
+  .heading {
+    font-size: 3.2rem;
+    margin: 0 2rem;
   }
 }
 
+/* --- Mobile (≤ 576px) --- */
+@media (max-width: 576px) {
+  html {
+    font-size: 45%;
+  }
+
+  .home {
+    padding: 2rem 1.5rem;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .home p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .container-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .card-imagem img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Portfolio: 1 column on mobile */
+  .portfolio-b .box-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .education {
+    padding: 2rem 1.5rem;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+    margin: 0 1rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 0.6rem 2rem;
+  }
+
+  .hamburger-menu {
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 25px;
+  }
+
+  /* About section: 1 column */
+  .row.justify-content-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-6.col-lg-4 {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* --- Very small mobile (≤ 400px) --- */
 @media (max-width: 400px) {
   header .container-card {
     width: 100vw;
-}
+  }
 
   .heading {
-    margin: 0 3rem;
-
+    margin: 0 1rem;
   }
 
   .about .row .counter .box {
@@ -144,5 +290,15 @@ section {
 
   .contact .row form {
     margin: 3rem 0;
+  }
+
+  .card-imagem img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .portfolio-b .box-container {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
   }
 }

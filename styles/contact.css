@@ -164,4 +164,59 @@ html {
   margin-top: 3rem;
   cursor: pointer;
 }
-  
+
+/* =============================================
+   CONTACT — Media Queries
+   ============================================= */
+
+/* Large desktop (≤ 1200px) */
+@media (max-width: 1200px) {
+  .form-wrapper { width: 85rem; height: 65rem; }
+  .signup-form  { width: 55rem; }
+}
+
+/* Small desktop (≤ 992px) */
+@media (max-width: 992px) {
+  .form-wrapper { width: 70rem; height: 60rem; }
+  .signup-form  { width: 46rem; }
+  .banner h1    { font-size: 3.2rem; }
+  .signup-form h1 { font-size: 3.2rem; }
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .container_cont { align-items: flex-start; padding-top: 4rem; height: auto; min-height: 100vh; }
+  .form-wrapper {
+    width: 95vw;
+    height: auto;
+    min-height: 55rem;
+    border-radius: 2rem;
+  }
+  .signup-form {
+    width: 100%;
+    position: relative;
+    padding: 6rem 2rem 4rem;
+  }
+  .green-bg { height: 18rem; width: 100%; }
+  .container.change .green-bg { width: 100%; height: 35%; }
+  .banner { top: 5rem; left: 50%; transform: translateX(-50%); }
+  .container.change .banner { left: 50%; }
+  .banner h1 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+  .banner p  { font-size: 1.6rem; }
+  .input-group input { width: 24rem; }
+}
+
+/* Mobile (≤ 576px) */
+@media (max-width: 576px) {
+  .form-wrapper { width: 98vw; border-radius: 1.5rem; }
+  .signup-form h1 { font-size: 2.8rem; }
+  .input-group input { width: 22rem; height: 4.5rem; }
+  .signup-form button { width: 14rem; height: 4.5rem; font-size: 1.4rem; }
+  .green-bg button    { width: 14rem; height: 4.5rem; font-size: 1.4rem; }
+}
+
+/* Very small mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .input-group input  { width: 20rem; }
+  .signup-form button { width: 13rem; }
+}

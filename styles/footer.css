@@ -59,6 +59,32 @@
     }
 }
 
+/* =============================================
+   FOOTER — Media Queries
+   ============================================= */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .footer { padding: 16px 0; }
+  .footer-container { gap: 0.8rem; padding: 0 1.5rem; }
+  .footer-social-icon img { width: 26px; height: 26px; }
+  .footer-link { font-size: 1.3rem; margin: 4px 10px; }
+}
+
+/* Mobile (≤ 576px) */
+@media (max-width: 576px) {
+  .footer-links { flex-direction: column; align-items: center; gap: 4px; }
+  .footer-link { margin: 3px 0; font-size: 1.2rem; }
+  .footer-social-icon { margin: 0 6px; }
+  .footer-social-icon img { width: 24px; height: 24px; }
+}
+
+/* Very small mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .footer-social-icon img { width: 20px; height: 20px; }
+  .footer-link { font-size: 1.1rem; }
+}
+
 
 .bottom-nav {
     width: 100%;

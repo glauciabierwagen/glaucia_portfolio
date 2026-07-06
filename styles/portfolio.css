@@ -315,7 +315,11 @@ img « {
 
 /*https://www.w3schools.com/css/css_dropdowns.asp*/
 
-/* ── Responsive grid breakpoints ── */
+/* =============================================
+   PORTFOLIO — Media Queries
+   ============================================= */
+
+/* Large desktop (≤ 1100px) */
 @media (max-width: 1100px) {
   .portfolio-b .box-container {
     padding: 3rem 4rem;
@@ -323,27 +327,45 @@ img « {
   }
 }
 
+/* Small desktop / large tablet (≤ 900px) — 2 columns */
 @media (max-width: 900px) {
   .portfolio-b .box-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2.5rem 3rem;
     gap: 2rem;
   }
-  .hover__container {
-    height: 220px;
-  }
+  .hover__container { aspect-ratio: 4 / 3; }
+  .hover__text a { font-size: 18px; }
 }
 
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .portfolio-b .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 2rem;
+    gap: 1.8rem;
+  }
+  .title { font-size: 1.5rem; }
+  .show-btn { font-size: 1.3rem; padding: 6px 18px; }
+}
+
+/* Mobile (≤ 560px) — 1 column */
 @media (max-width: 560px) {
   .portfolio-b .box-container {
     grid-template-columns: 1fr;
     padding: 2rem 1.5rem;
     gap: 1.8rem;
   }
-  .hover__container {
-    height: 200px;
+  .title { font-size: 1.6rem; }
+  .hover__text a { font-size: 16px; }
+  .show-btn { font-size: 1.4rem; }
+}
+
+/* Very small mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .portfolio-b .box-container {
+    padding: 1.5rem 1rem;
+    gap: 1.4rem;
   }
-  .title {
-    font-size: 1.6rem;
-  }
+  .title { font-size: 1.5rem; }
 }

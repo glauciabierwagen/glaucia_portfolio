@@ -285,3 +285,102 @@
     display: none;
   }
 }
+
+/* =============================================
+   EDUCATION — Media Queries (Carousel)
+   ============================================= */
+
+/* Large desktop (≤ 1200px) — shrink cards slightly */
+@media (max-width: 1200px) {
+  .edu-card--active {
+    width: 400px;
+    height: 380px;
+  }
+  .edu-card--prev1,
+  .edu-card--next1 {
+    width: 280px;
+    height: 300px;
+  }
+  .edu-card--prev1 { transform: translate(calc(-50% - 340px), -50%) scale(0.85); }
+  .edu-card--next1 { transform: translate(calc(-50% + 340px), -50%) scale(0.85); }
+  .edu-card--prev2 { transform: translate(calc(-50% - 590px), -50%) scale(0.7); }
+  .edu-card--next2 { transform: translate(calc(-50% + 590px), -50%) scale(0.7); }
+  .edu-track { height: 460px; }
+  .edu-card__text { font-size: 14px; padding: 18px 22px; }
+}
+
+/* Small desktop / large tablet (≤ 992px) — hide outer cards */
+@media (max-width: 992px) {
+  .edu-card--active {
+    width: 340px;
+    height: 320px;
+  }
+  .edu-card--prev1,
+  .edu-card--next1 {
+    width: 220px;
+    height: 250px;
+  }
+  .edu-card--prev1 { transform: translate(calc(-50% - 270px), -50%) scale(0.85); }
+  .edu-card--next1 { transform: translate(calc(-50% + 270px), -50%) scale(0.85); }
+  .edu-card--prev2,
+  .edu-card--next2 {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .edu-track { height: 400px; }
+  .edu-arrow { font-size: 4.5rem; padding: 0 14px; }
+}
+
+/* Tablet (≤ 768px) — narrower cards */
+@media (max-width: 768px) {
+  .edu-card--active {
+    width: 280px;
+    height: 270px;
+  }
+  .edu-card--prev1,
+  .edu-card--next1 {
+    width: 180px;
+    height: 210px;
+  }
+  .edu-card--prev1 { transform: translate(calc(-50% - 220px), -50%) scale(0.85); }
+  .edu-card--next1 { transform: translate(calc(-50% + 220px), -50%) scale(0.85); }
+  .edu-track { height: 340px; }
+  .edu-arrow { font-size: 3.5rem; padding: 0 10px; }
+  .edu-card__text { font-size: 13px; padding: 14px 16px; }
+  /* Panels accordion */
+  .panel { flex: 0.5; margin: 6px; }
+  .panel h3 { font-size: 15px; }
+}
+
+/* Mobile (≤ 576px) — single card, hide side cards */
+@media (max-width: 576px) {
+  .edu-carousel { padding: 20px 0; }
+  .edu-card--active {
+    width: 82vw;
+    height: 240px;
+  }
+  .edu-card--prev1,
+  .edu-card--next1,
+  .edu-card--prev2,
+  .edu-card--next2 {
+    display: none;
+  }
+  .edu-track { height: 280px; }
+  .edu-arrow { font-size: 3rem; padding: 0 6px; }
+  .edu-card__text { font-size: 12px; padding: 12px 14px; }
+  /* Panels: hide last two */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) { display: none; }
+  .panel { height: 40vh; margin: 5px; }
+  .panel h3 { font-size: 14px; bottom: 12px; left: 12px; }
+}
+
+/* Very small mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .edu-card--active {
+    width: 88vw;
+    height: 200px;
+  }
+  .edu-track { height: 240px; }
+  .edu-arrow { font-size: 2.5rem; padding: 0 4px; }
+}

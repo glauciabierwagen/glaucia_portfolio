@@ -32,15 +32,16 @@ export default function HomeSection() {
             {/* animate__animated and animate__slideInUp are Animate.css classes
                 that add a slide-up animation when the page loads */}
             <p className="animate__animated animate__slideInUp">
-              and inspired by a Brazilian educator, I view learning as discovery, imagination,
-              and transformation. With over 10 years in education, I have worked in classrooms,
-              online learning, and technology integration, gaining deep insights into how people
-              learn.
+              and I consider myself an educator at heart. Inspired by Paulo Freire&apos;s belief
+              that education is an act of liberation — where curiosity, dialogue, and critical
+              thinking transform both the learner and the world — I have spent over 15 years
+              working in classrooms, online learning, and teacher training.
               <br /><br />
-              Transitioning into UX/UI design and research, I have contributed to educational and
-              digital health projects, always prioritizing user needs and engagement. Passionate
-              about creating meaningful experiences, I thrive in collaborative and dynamic
-              environments, using research-driven design to shape innovative solutions.
+              But I have always been passionate about technology. I see it not just as a tool,
+              but as a way to open doors, connect people, and create meaningful learning
+              experiences. That passion led me to explore UX/UI design and development, where
+              I can bring together my background in education, research, and human-centered
+              thinking to build digital solutions that truly serve people.
             </p>
 
             {/* Button that opens the video in a new tab */}
