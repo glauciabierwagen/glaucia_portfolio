@@ -60,7 +60,7 @@ const projects = [
   {
     id: 6,
     title: 'UX/UI Website Project',
-    img: `${import.meta.env.BASE_URL}images/teaching.png`,
+    img: `${import.meta.env.BASE_URL}images/projects/organization.png`,
     href: '/organization',  // Internal route - opens the Organization.jsx component page
     linkLabel: 'UX/UI Website Project\nClick to see the website!',
     description: 'UX/UI Portfolio.\nWebsite Organization.\nBuilt on: Figma and Wix.',
