@@ -38,17 +38,16 @@
     margin-top:1rem;font-size:5rem;border-radius:5%}
 
 .container-card {
-    display: flex; /* Alinha os elementos filhos em linha */
-    /*border: 1px solid #ccc; Borda para o card */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px; /* Margem externa */
-    /*border-radius: 8px;  Cantos arredondados */
-    max-width: 1600px; /* Largura máxima */
+    display: flex;
+    align-items: flex-start;
+    gap: 8rem;
+    padding: 20px;
+    margin: 20px;
+    max-width: 1600px;
 }
 
 .card-imagem {
-    margin-top: 4rem;
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0;
 }
 
 .card-imagem img {
@@ -91,6 +90,235 @@
 .card-texto a:hover {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
+
+
+.cube-scene {
+    height: 820px;
+    width: 500px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.viewport {
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1300px;
+}
+
+.viewport::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    background-color: rgba(0,0,0,0.25);
+    z-index: -1;
+    top: 140%;
+    left: -10%;
+    filter: blur(20px);
+}
+
+.cube {
+    width: 100%;
+    height: 33.3333333%;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.cube-1 {
+    transition: transform .4s;
+}
+
+.cube-2 {
+    z-index: 10;
+    transition: transform .4s .2s;
+    margin-top: -2px;
+}
+
+.cube-3 {
+    transition: transform .4s .4s;
+    margin-top: -2px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Rounded outer corners when cube is at rest */
+.cube-1:not(.cube-animating) .front,
+.cube-1:not(.cube-animating) .back,
+.cube-1:not(.cube-animating) .left,
+.cube-1:not(.cube-animating) .right {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    transition: border-radius 0.3s;
+}
+
+.cube-3:not(.cube-animating) .front,
+.cube-3:not(.cube-animating) .back,
+.cube-3:not(.cube-animating) .left,
+.cube-3:not(.cube-animating) .right {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    transition: border-radius 0.3s;
+}
+
+/* Remove rounded during rotation */
+.cube-1.cube-animating .front,
+.cube-1.cube-animating .back,
+.cube-1.cube-animating .left,
+.cube-1.cube-animating .right,
+.cube-3.cube-animating .front,
+.cube-3.cube-animating .back,
+.cube-3.cube-animating .left,
+.cube-3.cube-animating .right {
+    border-radius: 0;
+    transition: border-radius 0.1s;
+}
+
+.front {
+    transform: translateZ(230px);
+}
+
+.cube-1 .front {
+    background: url(../images/FotoCV2.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .front {
+    background: url(../images/FotoCV2.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .front {
+    background: url(../images/FotoCV2.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.back {
+    transform: translateZ(-230px) rotateY(180deg);
+}
+
+.cube-1 .back {
+    background: url(../images/FotoCV3.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .back {
+    background: url(../images/FotoCV3.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .back {
+    background: url(../images/FotoCV3.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.left {
+    transform: translateX(-230px) rotateY(-90deg);
+}
+
+
+.cube-1 .left {
+    background: url(../images/FotoCV4.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .left {
+    background: url(../images/FotoCV4.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .left {
+    background: url(../images/FotoCV4.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.right {
+    transform: translateX(230px) rotateY(90deg);
+}
+
+
+.cube-1 .right {
+    background: url(../images/FotoCV5.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .right {
+    background: url(../images/FotoCV5.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .right {
+    background: url(../images/FotoCV5.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.top {
+    height: 460px;
+    background-color: #111;
+    transform: translateY(-230px) rotateX(90deg);
+}
+
+.bottom {
+    height: 460px;
+    background-color: #111;
+    transform: translateY(-153px) rotateX(-90deg);
+}
+
+.control {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: rgba(59, 52, 50, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color .3s;
+}
+
+.control:hover {
+    background-color: rgba(42, 38, 36, .8);
+}
+
+.control i {
+    pointer-events: none;
+}
+
+.left-arrow {
+    top: 50%;
+    left: 5%;
+}
+
+.right-arrow {
+    top: 50%;
+    left: 95%;
+}
+
+.play-pause {
+    top: 88%;
+    left: 88%;
+}
+
+
+
+
 
 /* =============================================
    HOME — Media Queries

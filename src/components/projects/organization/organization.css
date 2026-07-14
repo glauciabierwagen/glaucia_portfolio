@@ -222,12 +222,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
   border-radius: 16px;
   overflow: hidden;
   max-width: 1150px;
   width: 100%;
-  min-height: 520px;
-  max-height: 85vh;
+  height: 85vh;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #f5f0f0;
 }
@@ -251,11 +251,13 @@
 /* Col 1 – main image */
 .org-panel__img {
   background: #c9bcbc;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
 }
 .org-panel__img img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -265,9 +267,10 @@
   padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background: #faf7f7;
   overflow-y: auto;
+  min-height: 0;
 }
 .org-panel__text h3 {
   font-size: 3.2rem;

@@ -140,7 +140,7 @@ function ProjectCard({ title, img, href, linkLabel, description, internal }) {
 export default function PortfolioSection() {
   // 'visible' controls how many project cards are shown at once.
   // It starts at 6. Clicking 'Show more' adds 3 more cards each time.
-  const [visible, setVisible] = useState(6)
+  const [visible, setVisible] = useState(7)
 
   return (
     // id="portfolio" links this section to the 'My works' menu item in the Navbar
